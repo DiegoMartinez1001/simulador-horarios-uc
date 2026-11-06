@@ -1,0 +1,24 @@
+<section class="panel compare-panel" id="comparePanel">
+    <div class="panel-head">
+      <div><div class="eyebrow">Simulación tipo DAE</div><h3>Comparar tres opciones de horario</h3><div class="compare-subtitle">Agrega las materias que deseas inscribir. Para cada una puedes seleccionar una sección diferente en las opciones 1, 2 y 3; la página mostrará los tres horarios y señalará sus cruces.</div></div>
+      <span class="section-tag">3 alternativas</span>
+    </div>
+    <div class="compare-controls">
+      <div>
+        <label class="compare-search-label" for="compareSearch">Buscar materia para agregar a la comparación</label>
+        <div class="compare-search-wrap"><input id="compareSearch" type="search" autocomplete="off" placeholder="Ej. CA5B02 o Computación II"></div>
+        <div class="compare-search-results" id="compareSearchResults" aria-live="polite"></div>
+      </div>
+      <div class="compare-search-actions"><button class="btn" id="clearCompareBtn" type="button">Limpiar comparación</button></div>
+    </div>
+    <div id="compareRowsWrap" class="compare-table-wrap" hidden>
+      <table class="compare-picker" aria-label="Selección de tres secciones alternativas"><thead><tr><th></th><th>Materia</th><th>Nombre</th><th>Opción 1</th><th>Opción 2</th><th>Opción 3</th></tr></thead><tbody id="compareRows"></tbody></table>
+    </div>
+    <div class="compare-empty" id="compareEmpty"><strong>Comienza agregando materias.</strong><br>Busca una asignatura arriba. Al agregarla, se cargarán tres secciones iniciales que podrás cambiar en cada opción.</div>
+    <div class="compare-summary" id="compareSummary" hidden><span id="compareSummaryText">0 materias agregadas.</span><span class="compare-best" id="compareBest">Selecciona las materias para comparar</span></div>
+    <div class="option-schedules" id="optionSchedules">
+      <article class="option-card" id="optionCard1"><div class="option-card-head"><strong>HORARIO DE OPCIÓN 1</strong><span id="optionMeta1">0 materias</span></div><div class="option-table-scroll"><table class="option-table"><thead><tr><th>Hora</th><th>Lu</th><th>Ma</th><th>Mi</th><th>Ju</th><th>Vi</th><th>Sa</th><th>Do</th></tr></thead><tbody id="optionBody1"></tbody></table></div><div class="option-status" id="optionStatus1"></div></article>
+      <article class="option-card" id="optionCard2"><div class="option-card-head"><strong>HORARIO DE OPCIÓN 2</strong><span id="optionMeta2">0 materias</span></div><div class="option-table-scroll"><table class="option-table"><thead><tr><th>Hora</th><th>Lu</th><th>Ma</th><th>Mi</th><th>Ju</th><th>Vi</th><th>Sa</th><th>Do</th></tr></thead><tbody id="optionBody2"></tbody></table></div><div class="option-status" id="optionStatus2"></div></article>
+      <article class="option-card" id="optionCard3"><div class="option-card-head"><strong>HORARIO DE OPCIÓN 3</strong><span id="optionMeta3">0 materias</span></div><div class="option-table-scroll"><table class="option-table"><thead><tr><th>Hora</th><th>Lu</th><th>Ma</th><th>Mi</th><th>Ju</th><th>Vi</th><th>Sa</th><th>Do</th></tr></thead><tbody id="optionBody3"></tbody></table></div><div class="option-status" id="optionStatus3"></div></article>
+    </div>
+  </section>
