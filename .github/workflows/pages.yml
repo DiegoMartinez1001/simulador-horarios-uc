@@ -26,9 +26,20 @@ jobs:
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
       - name: Preparar archivos del sitio
+        run: |
+          mkdir -p dist/data
+          python - <<'PY'
+          import base64, gzip
+          from pathlib import Path
+          encoded = Path("site-assets/index.html.gz.b64").read_text().strip()
+          Path("dist/index.html").write_bytes(gzip.decompress(base64.b64decode(encoded)))
+          Path("dist/data/courses.json.gz.b64").write_bytes(Path("data/courses.json.gz.b64").read_bytes())
+          Path("dist/data/meta.json").write_bytes(Path("data/meta.json").read_bytes())
+          PY
+      - name: Subir archivos del sitio
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."
+          path: dist
       - name: Publicar
         id: deployment
         uses: actions/deploy-pages@v4
