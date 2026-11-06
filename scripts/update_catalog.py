@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 CATALOG = DATA / "courses.json.gz.b64"
 META = DATA / "meta.json"
-SLOT = re.compile(r"\b(LU|MA|MI|JU|VI|SA|DO)(\d{4})\s+([A-Z0-9]+)\b")
+SLOT = re.compile(r"\b(LU|MA|MI|JU|VI|SA|DO)(0800|0850|0940|1030|1120|1210|1300|1350|1440|1530|1620|1710|1800|1850|1940)\s+([A-Z0-9]+)\b")
 HEADER = re.compile(r"^([A-Z][A-Z0-9]{3,7})\s+(.+?)\s+(\d{2})(?:\s+PROF\.\s*(.*?))?(?:\s+\((CERRADA|NUEVA)\))?$", re.I)
 
 def fetch_text():
