@@ -252,3 +252,79 @@ body[data-theme="dark"] .conflict-cell .option-block small{
   .schedule-table th,.option-table th,
   .schedule-table td,.option-table td{border-color:#929ba8}
 }
+
+
+/* Fichas detalladas de materias sobre el horario individual */
+.selected-chip-detailed{
+  align-items:flex-start;
+  flex:1 1 235px;
+  min-width:220px;
+  max-width:100%;
+  gap:10px;
+  padding:10px 11px;
+  border:1px solid #d6e1ef;
+  border-radius:12px;
+  background:#f8fafd;
+}
+.selected-chip-detailed .chip-color-picker{
+  margin-top:2px;
+  flex:0 0 25px;
+}
+.selected-chip-info{
+  display:flex;
+  flex:1 1 auto;
+  min-width:0;
+  flex-direction:column;
+  gap:3px;
+  line-height:1.35;
+}
+.selected-chip-code{
+  color:#25456e;
+  font-size:11px;
+  font-weight:900;
+  overflow-wrap:anywhere;
+}
+.selected-chip-name{
+  color:#263a55;
+  font-size:11px;
+  font-weight:750;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+.selected-chip-meta{
+  color:#64748b;
+  font-size:10px;
+  font-weight:600;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+.selected-chip-meta b{
+  color:#425875;
+  font-weight:850;
+}
+.selected-chip-detailed .chip-remove{
+  flex:0 0 23px;
+  margin-top:1px;
+}
+body[data-theme="dark"] .selected-chip-detailed{
+  background:#17283f;
+  border-color:#506782;
+}
+body[data-theme="dark"] .selected-chip-code{
+  color:#d8e8ff;
+}
+body[data-theme="dark"] .selected-chip-name{
+  color:#f3f7fd;
+}
+body[data-theme="dark"] .selected-chip-meta{
+  color:#c1cfe0;
+}
+body[data-theme="dark"] .selected-chip-meta b{
+  color:#e0eafa;
+}
+@media(max-width:520px){
+  .selected-chip-detailed{
+    flex-basis:100%;
+    min-width:0;
+  }
+}
