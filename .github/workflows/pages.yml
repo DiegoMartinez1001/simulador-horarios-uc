@@ -23,6 +23,24 @@ jobs:
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
+      - name: Validar JavaScript del simulador
+        run: |
+          python - <<'PY'
+          import base64, gzip, re
+          from pathlib import Path
+          page = gzip.decompress(base64.b64decode(Path("site-assets/index.html.gz.b64").read_text().strip())).decode("utf-8")
+          compare = gzip.decompress(base64.b64decode(Path("site-assets/three-options.js.gz.b64").read_text().strip())).decode("utf-8")
+          preferences = Path("site-assets/preferences.js").read_text(encoding="utf-8")
+          anchor = "$('search').addEventListener('input',renderResults);"
+          if anchor not in page:
+              raise SystemExit("No se encontró el punto de integración.")
+          page = page.replace(anchor, compare + "\\n" + preferences + "\\n" + anchor, 1)
+          match = re.search(r"<script>\\s*(.*?)\\s*</script>", page, re.S)
+          if not match:
+              raise SystemExit("No se encontró el JavaScript principal.")
+          Path("/tmp/simulador-completo.js").write_text(match.group(1), encoding="utf-8")
+          PY
+          node --check /tmp/simulador-completo.js
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
       - name: Preparar archivos del sitio
