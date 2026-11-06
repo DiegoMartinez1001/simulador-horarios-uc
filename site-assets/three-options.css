@@ -101,3 +101,154 @@ body[data-theme="dark"] .conflict-cell .class-block,body[data-theme="dark"] .con
 
 .chip-color-picker{width:25px;height:24px;flex:0 0 25px;padding:1px;border:1px solid #d5deea;border-radius:6px;background:#fff;cursor:pointer}
 body[data-theme="dark"] .chip-color-picker{background:#17263b;border-color:#425673}
+
+
+/* Cuadrículas más definidas y texto legible en ambos temas */
+.schedule-table,
+.option-table{
+  border:1.5px solid #8795a6;
+  border-collapse:separate;
+  border-spacing:2px;
+  border-radius:6px;
+}
+.schedule-table th,
+.option-table th{
+  border:1.5px solid #a1adbb;
+  border-radius:4px;
+  color:#34465f;
+}
+.schedule-table th:first-child,
+.option-table th:first-child{
+  background:#edf1f6;
+  color:#34465f;
+  border:1.5px solid #a1adbb;
+}
+.schedule-table td:not(.time-cell),
+.option-table td:not(.time-cell){
+  border:1.5px solid #a5b0be;
+  border-radius:4px;
+  background:#f8fafc;
+}
+.schedule-table td.time-cell,
+.option-table td.time-cell{
+  background:#edf1f6;
+  border:1.5px solid #a5b0be;
+  border-radius:4px;
+  color:#263951;
+}
+.schedule-table td.time-cell span,
+.option-table td.time-cell small{
+  color:#53657d;
+  opacity:1;
+}
+.class-block,
+.option-block{
+  background:var(--course-bg,#e6eef8);
+  border-left:4px solid var(--course-accent,#416fb5);
+  color:#233a58;
+  text-shadow:none;
+}
+.class-block strong,
+.option-block strong{
+  color:#203653;
+  font-weight:900;
+  text-shadow:none;
+}
+.class-block small,
+.option-block small{
+  color:#334a68;
+  opacity:1;
+  font-weight:700;
+  text-shadow:none;
+}
+.conflict-cell .class-block,
+.conflict-cell .option-block{
+  background:#ffe4e1;
+  border-left-color:#b42318;
+  color:#7f1d1d;
+}
+.conflict-cell .class-block strong,
+.conflict-cell .option-block strong,
+.conflict-cell .class-block small,
+.conflict-cell .option-block small{
+  color:#7f1d1d;
+}
+
+/* Modo oscuro: contornos claros en cada fila y columna */
+body[data-theme="dark"] .schedule-table,
+body[data-theme="dark"] .option-table{
+  border-color:#788da7;
+  background:#15243a;
+}
+body[data-theme="dark"] .schedule-table th,
+body[data-theme="dark"] .option-table th{
+  background:#263b57;
+  border:1.5px solid #7187a2;
+  color:#f4f7fc;
+}
+body[data-theme="dark"] .schedule-table th:first-child,
+body[data-theme="dark"] .option-table th:first-child{
+  background:#20344f;
+  border-color:#7187a2;
+  color:#f4f7fc;
+}
+body[data-theme="dark"] .schedule-table td:not(.time-cell),
+body[data-theme="dark"] .option-table td:not(.time-cell){
+  background:#111f33;
+  border:1.5px solid #60758f;
+}
+body[data-theme="dark"] .schedule-table td.time-cell,
+body[data-theme="dark"] .option-table td.time-cell{
+  background:#20344f;
+  border:1.5px solid #7187a2;
+  color:#f5f8ff;
+}
+body[data-theme="dark"] .schedule-table td.time-cell span,
+body[data-theme="dark"] .option-table td.time-cell small{
+  color:#c5d2e2;
+  opacity:1;
+}
+body[data-theme="dark"] .class-block,
+body[data-theme="dark"] .option-block{
+  background:var(--course-bg,#27405f);
+  border-left:4px solid var(--course-accent,#78a9ed);
+  color:#f7fbff !important;
+}
+body[data-theme="dark"] .class-block strong,
+body[data-theme="dark"] .option-block strong{
+  color:#ffffff !important;
+  font-weight:900;
+  text-shadow:0 1px 1px rgba(0,0,0,.55);
+}
+body[data-theme="dark"] .class-block small,
+body[data-theme="dark"] .option-block small{
+  color:#edf4ff !important;
+  opacity:1 !important;
+  font-weight:750;
+  text-shadow:0 1px 1px rgba(0,0,0,.55);
+}
+body[data-theme="dark"] .schedule-table td.conflict-cell,
+body[data-theme="dark"] .option-table td.conflict-cell{
+  background:#512d38;
+  border:1.5px solid #ff8f87;
+  box-shadow:inset 0 0 0 1px rgba(255,143,135,.16);
+}
+body[data-theme="dark"] .conflict-cell .class-block,
+body[data-theme="dark"] .conflict-cell .option-block{
+  background:#6a3440;
+  border-left-color:#ff9c93;
+  color:#fff7f6 !important;
+}
+body[data-theme="dark"] .conflict-cell .class-block strong,
+body[data-theme="dark"] .conflict-cell .option-block strong,
+body[data-theme="dark"] .conflict-cell .class-block small,
+body[data-theme="dark"] .conflict-cell .option-block small{
+  color:#fff7f6 !important;
+}
+
+/* En impresión se mantienen separaciones y líneas visibles */
+@media print{
+  .schedule-table,.option-table{border-color:#667085}
+  .schedule-table th,.option-table th,
+  .schedule-table td,.option-table td{border-color:#929ba8}
+}
