@@ -52,3 +52,49 @@
 @media(max-width:820px){.compare-controls{grid-template-columns:1fr}.compare-search-actions{justify-content:flex-start}.option-schedules{grid-template-columns:1fr}.compare-subtitle{max-width:none}}
 @media(max-width:480px){.compare-controls{padding:13px}.compare-table-wrap{padding:10px}.compare-summary{padding:10px}.option-schedules{padding:0 9px 12px}.option-card-head{padding:9px}.option-table{min-width:420px}}
 @media print{.compare-controls,.compare-remove,.compare-search-results{display:none!important}.compare-panel{break-before:page;break-inside:auto}.option-schedules{grid-template-columns:repeat(3,1fr);gap:5px;padding:0}.option-table-scroll{overflow:visible;padding:3px}.option-table{min-width:0;border-spacing:1px}.option-table td{height:25px}.option-table th{font-size:6px}.option-table td.time-cell{font-size:6px}.option-block{min-height:18px;padding:1px}.option-block strong{font-size:5px}.option-block small{font-size:4px}.compare-picker{min-width:0}.compare-picker select{border:0;padding:2px;font-size:7px;appearance:none}.compare-summary{padding:7px}}
+
+/* Preferencias del usuario: tema y colores individuales por materia */
+.compare-picker{min-width:970px}
+.compare-picker th:nth-child(4){width:72px;text-align:center}
+.course-color-cell{text-align:center}
+.course-color-picker{width:34px;height:29px;padding:2px;border:1px solid #d5deea;border-radius:7px;background:#fff;cursor:pointer;vertical-align:middle}
+.option-actions{display:flex;justify-content:flex-end;padding:0 10px 11px}
+.apply-option-btn{font-size:9px;padding:8px 10px}
+body[data-theme="dark"]{--white:#162338;--ink:#e6edf7;--muted:#a5b4c8;--line:#2b3b52;--soft:#101b2c;--shadow:0 16px 44px rgba(0,0,0,.26);background:#0c1626;color:var(--ink)}
+body[data-theme="dark"] main{color:var(--ink)}
+body[data-theme="dark"] .intro h2,body[data-theme="dark"] .panel-head h3,body[data-theme="dark"] .course-name,body[data-theme="dark"] .stat-value,body[data-theme="dark"] .conflict-head h3{color:#edf3fb}
+body[data-theme="dark"] .intro p,body[data-theme="dark"] .source-note,body[data-theme="dark"] .eyebrow,body[data-theme="dark"] .course-meta,body[data-theme="dark"] .results-top,body[data-theme="dark"] .compare-subtitle,body[data-theme="dark"] .compare-search-label,body[data-theme="dark"] .compare-summary,body[data-theme="dark"] .option-card-head span{color:#a4b3c8}
+body[data-theme="dark"] .panel,body[data-theme="dark"] .stat,body[data-theme="dark"] .result-card,body[data-theme="dark"] .option-card,body[data-theme="dark"] .compare-search-result{background:#162338;border-color:#2b3b52;box-shadow:none}
+body[data-theme="dark"] .panel-head,body[data-theme="dark"] .compare-controls,body[data-theme="dark"] .option-card-head{border-color:#2b3b52}
+body[data-theme="dark"] .panel-head,body[data-theme="dark"] .option-card-head{background:#1a2a42}
+body[data-theme="dark"] .search-wrap input,body[data-theme="dark"] .filters select,body[data-theme="dark"] .compare-search-wrap input,body[data-theme="dark"] .compare-picker select{background:#0e1a2c;color:#e6edf7;border-color:#3a4b64}
+body[data-theme="dark"] .search-wrap input:focus,body[data-theme="dark"] .compare-search-wrap input:focus{background:#111f34}
+body[data-theme="dark"] .filters label,body[data-theme="dark"] .compare-picker .compare-name{color:#c6d2e2}
+body[data-theme="dark"] .course-code,body[data-theme="dark"] .compare-picker .compare-code,body[data-theme="dark"] .compare-search-result strong,body[data-theme="dark"] .option-card-head strong{color:#bcd3f5}
+body[data-theme="dark"] .section-tag{background:#203653;color:#c7dcfa}
+body[data-theme="dark"] .selected-chip{background:#1a2b43;border-color:#334863}
+body[data-theme="dark"] .chip-text{color:#d1def0}
+body[data-theme="dark"] .chip-remove,body[data-theme="dark"] .compare-remove{background:#2a3a51;color:#d0d9e6}
+body[data-theme="dark"] .btn{background:#1a2a42;border-color:#3a4b64;color:#e1eaf6}
+body[data-theme="dark"] .btn:hover{background:#253953;border-color:#5a7292}
+body[data-theme="dark"] .btn.primary{background:#285b9b;border-color:#3971b5;color:#fff}
+body[data-theme="dark"] .schedule-table th,body[data-theme="dark"] .option-table th{background:#20324b;color:#d1dceb}
+body[data-theme="dark"] .schedule-table td:not(.time-cell),body[data-theme="dark"] .option-table td{background:#111e31;border-color:#293b54}
+body[data-theme="dark"] .schedule-table td.time-cell,body[data-theme="dark"] .option-table td.time-cell{background:transparent;color:#d0dceb}
+body[data-theme="dark"] .schedule-table td.time-cell span,body[data-theme="dark"] .option-table td.time-cell small{color:#8fa2bb}
+body[data-theme="dark"] .compare-empty,body[data-theme="dark"] .empty-state{background:#111e31;border-color:#3a4b64;color:#b4c2d5}
+body[data-theme="dark"] .compare-empty strong,body[data-theme="dark"] .empty-state strong{color:#e1eaf6}
+body[data-theme="dark"] .compare-best{background:#183b32;border-color:#285d4e;color:#9de0c2}
+body[data-theme="dark"] .no-conflicts{background:#142e28;border-color:#285748;color:#a7dfc2}
+body[data-theme="dark"] .conflict-item{background:#351f27;border-color:#71404a;color:#ffc4c0}
+body[data-theme="dark"] .conflict-count{background:#183b32;color:#9de0c2}
+body[data-theme="dark"] .conflict-count.has,body[data-theme="dark"] .option-conflict-count.has{background:#48252b;color:#ffc4c0}
+body[data-theme="dark"] .option-conflict-count{background:#183b32;color:#9de0c2}
+body[data-theme="dark"] .status.ACTIVA{background:#27364b;color:#c4d0df}
+body[data-theme="dark"] .status.CERRADA{background:#48252b;color:#ffc4c0}
+body[data-theme="dark"] .status.NUEVA{background:#493b20;color:#f3d28c}
+body[data-theme="dark"] .footnote{background:#111e31;border-color:#2c405a;color:#9fb0c5}
+body[data-theme="dark"] .footnote strong{color:#dbe6f5}
+body[data-theme="dark"] .option-table td.conflict-cell,body[data-theme="dark"] .schedule-table td.conflict-cell{background:#48252b;border-color:#9b4b50}
+body[data-theme="dark"] .conflict-cell .class-block,body[data-theme="dark"] .conflict-cell .option-block{background:#572a31;color:#ffe4e1;border-left-color:#ed837b}
+@media print{.option-actions{display:none!important}}
