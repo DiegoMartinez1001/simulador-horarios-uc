@@ -1,0 +1,44 @@
+name: Actualizar horarios DAE
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_catalog.py"
+      - ".github/workflows/update-catalog.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dae-catalog-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar dependencias
+        run: pip install requests beautifulsoup4 pymupdf
+      - name: Consultar y validar horarios oficiales
+        run: python scripts/update_catalog.py
+      - name: Guardar catálogo si hubo cambios
+        run: |
+          if git diff --quiet -- data/courses.json.gz.b64 data/meta.json; then
+            echo "No hubo cambios en los horarios."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/courses.json.gz.b64 data/meta.json
+            git commit -m "Actualizar catálogo de horarios DAE"
+            git push
+          fi
