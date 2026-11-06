@@ -120,23 +120,49 @@ def main():
         raise SystemExit(f"Validación de seguridad: catálogo bajó de {old_count} a {len(courses)} secciones.")
 
     compact = json.dumps(courses, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
-    compressed = gzip.compress(compact, compresslevel=9, mtime=0)
-    CATALOG.write_text(base64.b64encode(compressed).decode("ascii") + "\n", encoding="ascii")
-    period_match = re.search(r"HORARIOS\s+PER[IÍ]ODO\s+([^\r\n]+)", text, re.I)
-    date_match = re.search(r"Actualizado\s+al\s+([^\r\n]+)", text, re.I)
+    digest = hashlib.sha256(compact).hexdigest()
+    period_match = re.search(r"HORARIOS\\s+PER[IÍ]ODO\\s+([^\\r\\n]+)", text, re.I)
+    date_match = re.search(r"Actualizado\\s+al\\s+([^\\r\\n]+)", text, re.I)
+    period = period_match.group(1).strip() if period_match else "No identificado"
+    updated_at = date_match.group(1).strip() if date_match else "No indicada por la DAE"
+
+    previous_meta = {}
+    if META.exists():
+        try:
+            previous_meta = json.loads(META.read_text(encoding="utf-8"))
+        except Exception:
+            previous_meta = {}
+
+    same_catalog = previous_meta.get("sha256") == digest
+    same_publication = (
+        previous_meta.get("period") == period
+        and previous_meta.get("updated_at") == updated_at
+        and previous_meta.get("sections") == len(courses)
+        and previous_meta.get("subjects") == len({c["code"] for c in courses})
+        and previous_meta.get("slots") == slot_count
+    )
+    if same_catalog and same_publication and CATALOG.exists():
+        print("La DAE no publicó cambios en los horarios. Se conserva la versión actual.")
+        return
+
+    # Solo reescribe el archivo de datos cuando el contenido realmente cambió.
+    if not same_catalog or not CATALOG.exists():
+        compressed = gzip.compress(compact, compresslevel=9, mtime=0)
+        CATALOG.write_text(base64.b64encode(compressed).decode("ascii") + "\\n", encoding="ascii")
+
     meta = {
-        "period": period_match.group(1).strip() if period_match else "No identificado",
-        "updated_at": date_match.group(1).strip() if date_match else "No indicada por la DAE",
+        "period": period,
+        "updated_at": updated_at,
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "sections": len(courses),
         "subjects": len({c["code"] for c in courses}),
         "slots": slot_count,
         "source_url": resolved_url,
         "source_page": SOURCE,
-        "sha256": hashlib.sha256(compact).hexdigest(),
+        "sha256": digest,
         "status": "ok"
     }
-    META.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    META.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
     print(json.dumps(meta, ensure_ascii=False, indent=2))
 
 if __name__ == "__main__":
