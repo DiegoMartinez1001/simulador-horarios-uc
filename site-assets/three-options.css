@@ -98,3 +98,6 @@ body[data-theme="dark"] .footnote strong{color:#dbe6f5}
 body[data-theme="dark"] .option-table td.conflict-cell,body[data-theme="dark"] .schedule-table td.conflict-cell{background:#48252b;border-color:#9b4b50}
 body[data-theme="dark"] .conflict-cell .class-block,body[data-theme="dark"] .conflict-cell .option-block{background:#572a31;color:#ffe4e1;border-left-color:#ed837b}
 @media print{.option-actions{display:none!important}}
+
+.chip-color-picker{width:25px;height:24px;flex:0 0 25px;padding:1px;border:1px solid #d5deea;border-radius:6px;background:#fff;cursor:pointer}
+body[data-theme="dark"] .chip-color-picker{background:#17263b;border-color:#425673}
