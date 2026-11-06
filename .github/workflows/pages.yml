@@ -31,8 +31,32 @@ jobs:
           python - <<'PY'
           import base64, gzip
           from pathlib import Path
-          encoded = Path("site-assets/index.html.gz.b64").read_text().strip()
-          Path("dist/index.html").write_bytes(gzip.decompress(base64.b64decode(encoded)))
+
+          page = gzip.decompress(base64.b64decode(Path("site-assets/index.html.gz.b64").read_text().strip())).decode("utf-8")
+          css = Path("site-assets/three-options.css").read_text(encoding="utf-8")
+          markup = Path("site-assets/three-options.html").read_text(encoding="utf-8")
+          js = gzip.decompress(base64.b64decode(Path("site-assets/three-options.js.gz.b64").read_text().strip())).decode("utf-8")
+
+          if "</style>" not in page or '  <div class="layout">' not in page:
+              raise SystemExit("No se encontraron los puntos de inserción del comparador.")
+          page = page.replace("</style>", css + "\\n</style>", 1)
+          page = page.replace('  <div class="layout">', markup + "\\n  <div class=" + '"layout">' + "", 1)
+          js_anchor = "$('search').addEventListener('input',renderResults);"
+          if js_anchor not in page:
+              raise SystemExit("No se encontró el punto de inserción del código JavaScript.")
+          page = page.replace(js_anchor, js + "\\n" + js_anchor, 1)
+
+          refresh_anchor = "  restore();\\n  renderAll();\\n  if(showMessage)"
+          if refresh_anchor not in page:
+              raise SystemExit("No se encontró la recarga del catálogo para el comparador.")
+          page = page.replace(refresh_anchor, "  restore();\\n  restoreCompare();\\n  renderAll();\\n  renderCompareAll();\\n  if(showMessage)", 1)
+
+          startup_anchor = "try{COURSES=await loadCatalog();await loadMeta();restore();renderAll();}"
+          if startup_anchor not in page:
+              raise SystemExit("No se encontró el inicio de carga del catálogo.")
+          page = page.replace(startup_anchor, "try{COURSES=await loadCatalog();await loadMeta();restore();restoreCompare();renderAll();renderCompareAll();}", 1)
+
+          Path("dist/index.html").write_text(page, encoding="utf-8")
           Path("dist/data/courses.json.gz.b64").write_bytes(Path("data/courses.json.gz.b64").read_bytes())
           Path("dist/data/meta.json").write_bytes(Path("data/meta.json").read_bytes())
           PY
