@@ -39,17 +39,17 @@ jobs:
 
           if "</style>" not in page or '  <div class="layout">' not in page:
               raise SystemExit("No se encontraron los puntos de inserción del comparador.")
-          page = page.replace("</style>", css + "\\n</style>", 1)
-          page = page.replace('  <div class="layout">', markup + "\\n  <div class=" + '"layout">' + "", 1)
+          page = page.replace("</style>", css + "\n</style>", 1)
+          page = page.replace('  <div class="layout">', markup + "\n  " + '<div class="layout">', 1)
           js_anchor = "$('search').addEventListener('input',renderResults);"
           if js_anchor not in page:
               raise SystemExit("No se encontró el punto de inserción del código JavaScript.")
-          page = page.replace(js_anchor, js + "\\n" + js_anchor, 1)
+          page = page.replace(js_anchor, js + "\n" + js_anchor, 1)
 
-          refresh_anchor = "  restore();\\n  renderAll();\\n  if(showMessage)"
+          refresh_anchor = "  restore();\n  renderAll();\n  if(showMessage)"
           if refresh_anchor not in page:
               raise SystemExit("No se encontró la recarga del catálogo para el comparador.")
-          page = page.replace(refresh_anchor, "  restore();\\n  restoreCompare();\\n  renderAll();\\n  renderCompareAll();\\n  if(showMessage)", 1)
+          page = page.replace(refresh_anchor, "  restore();\n  restoreCompare();\n  renderAll();\n  renderCompareAll();\n  if(showMessage)", 1)
 
           startup_anchor = "try{COURSES=await loadCatalog();await loadMeta();restore();renderAll();}"
           if startup_anchor not in page:
