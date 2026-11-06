@@ -1,7 +1,7 @@
 {
-  "period": "No identificado",
-  "updated_at": "No indicada por la DAE",
-  "generated_at": "2026-11-06T17:38:17+00:00",
+  "period": "1-2026 R",
+  "updated_at": "06/11/2026 12:01 pm",
+  "generated_at": "2026-11-06T17:39:35+00:00",
   "sections": 1029,
   "subjects": 344,
   "slots": 3575,
@@ -9,4 +9,4 @@
   "source_page": "https://dae.ing.uc.edu.ve/horarios/",
   "sha256": "c636812eec359abc835fc14a7a90af0d3a940b2d62b7084b3c3006dc6e93d9dd",
   "status": "ok"
-}\n
+}
