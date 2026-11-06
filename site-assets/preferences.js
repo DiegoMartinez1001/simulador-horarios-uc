@@ -59,9 +59,21 @@
   };
   renderSelected=function(){
     const items=Array.from(selected.values());
-    $('selectedList').innerHTML=items.length?items.map(c=>
-      '<div class="selected-chip"><input class="chip-color-picker" type="color" value="'+colorFor(c.code)+'" data-selected-course-color="'+esc(c.code)+'" aria-label="Color de '+esc(c.code)+'" title="Cambiar color de '+esc(c.code)+'"><span class="chip-text" title="'+esc(c.name)+'">'+esc(c.code)+' · '+esc(c.section)+'</span><button class="chip-remove" title="Quitar '+esc(c.code)+'" aria-label="Quitar '+esc(c.code)+'" data-remove="'+esc(c.id)+'">×</button></div>'
-    ).join(''):'<div class="no-selection">Todavía no has agregado materias. Busca un código a la izquierda para comenzar.</div>';
+    $('selectedList').innerHTML=items.length?items.map(c=>{
+      const rooms=[...new Set((c.slots||[]).map(slot=>(slot.room||'').trim()).filter(Boolean))];
+      const roomLabel=rooms.length?rooms.join(', '):'No indicado';
+      const professor=(c.professor||'').trim()||'No indicado';
+      return '<div class="selected-chip selected-chip-detailed">'
+        +'<input class="chip-color-picker" type="color" value="'+colorFor(c.code)+'" data-selected-course-color="'+esc(c.code)+'" aria-label="Color de '+esc(c.code)+'" title="Cambiar color de '+esc(c.code)+'">'
+        +'<span class="selected-chip-info">'
+          +'<strong class="selected-chip-code">'+esc(c.code)+' · Sección '+esc(c.section)+'</strong>'
+          +'<span class="selected-chip-name">'+esc(c.name||'Nombre no indicado')+'</span>'
+          +'<span class="selected-chip-meta"><b>Salón:</b> '+esc(roomLabel)+'</span>'
+          +'<span class="selected-chip-meta"><b>Profesor:</b> '+esc(professor)+'</span>'
+        +'</span>'
+        +'<button class="chip-remove" title="Quitar '+esc(c.code)+'" aria-label="Quitar '+esc(c.code)+'" data-remove="'+esc(c.id)+'">×</button>'
+        +'</div>';
+    }).join(''):'<div class="no-selection">Todavía no has agregado materias. Busca un código a la izquierda para comenzar.</div>';
   };
 
   renderCompareRows=function(){
