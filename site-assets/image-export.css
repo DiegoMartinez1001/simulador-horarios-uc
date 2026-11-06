@@ -1,17 +1,11 @@
-
-/* Herramientas para guardar los horarios como imagen */
+/* Controles de exportación PNG */
 .image-export-toolbar{display:inline-flex;align-items:center;gap:7px;flex-wrap:wrap}
-.image-export-format{min-height:34px;padding:7px 9px;border:1px solid #d2dcea;border-radius:8px;background:#fff;color:#233b5a;font-size:10px;font-weight:750;max-width:150px}
 .image-export-button{white-space:normal;text-align:center;font-size:10px;line-height:1.25}
 .image-export-button:disabled{opacity:.65;cursor:wait}
 .compare-search-actions .image-export-toolbar{flex-wrap:nowrap}
-.compare-search-actions .image-export-format{max-width:124px}
-body[data-theme="dark"] .image-export-format{background:#0e1a2c;border-color:#536b88;color:#f0f5fd}
 @media(max-width:700px){
  .image-export-toolbar{width:100%}
- .image-export-format{flex:0 0 auto}
  .image-export-button{flex:1}
  .compare-search-actions .image-export-toolbar{width:100%;flex-wrap:wrap}
- .compare-search-actions .image-export-format{max-width:none;flex:1}
 }
 @media print{.image-export-toolbar{display:none!important}}
