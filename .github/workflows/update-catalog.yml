@@ -12,6 +12,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: dae-catalog-update
@@ -20,6 +22,8 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.save.outputs.changed }}
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
@@ -32,9 +36,12 @@ jobs:
       - name: Consultar y validar horarios oficiales
         run: python scripts/update_catalog.py
       - name: Guardar catálogo si hubo cambios
+        id: save
+        shell: bash
         run: |
           if git diff --quiet -- data/courses.json.gz.b64 data/meta.json; then
             echo "No hubo cambios en los horarios."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -43,4 +50,38 @@ jobs:
             git fetch origin main
             git rebase origin/main
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Descargar última versión
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Preparar archivos del sitio
+        run: |
+          mkdir -p dist/data
+          python - <<'PY'
+          import base64, gzip
+          from pathlib import Path
+          encoded = Path("site-assets/index.html.gz.b64").read_text().strip()
+          Path("dist/index.html").write_bytes(gzip.decompress(base64.b64decode(encoded)))
+          Path("dist/data/courses.json.gz.b64").write_bytes(Path("data/courses.json.gz.b64").read_bytes())
+          Path("dist/data/meta.json").write_bytes(Path("data/meta.json").read_bytes())
+          PY
+      - name: Subir archivos del sitio
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4
