@@ -83,6 +83,33 @@ def parse_catalog(text):
             continue
         if upper.startswith("ACTUALIZADO AL") or "DAE SOLO MUESTRA" in upper:
             continue
+        # En el HTML de la DAE, el rótulo PROF. y el nombre del docente
+        # pueden aparecer en un nodo separado del encabezado de la sección.
+        if current and upper == "PROF.":
+            current["_awaiting_professor"] = True
+            continue
+        if current and upper.startswith("PROF."):
+            teacher_line = line[5:].strip()
+            status_match = re.search(r"\\s+\\((CERRADA|NUEVA)\\)$", teacher_line, re.I)
+            if status_match:
+                current["status"] = status_match.group(1).upper()
+                teacher_line = teacher_line[:status_match.start()].strip()
+            current["professor"] = teacher_line
+            current.pop("_awaiting_professor", None)
+            continue
+        if current and current.get("_awaiting_professor"):
+            teacher_line = line.strip()
+            status_match = re.search(r"\\s+\\((CERRADA|NUEVA)\\)$", teacher_line, re.I)
+            if status_match:
+                current["status"] = status_match.group(1).upper()
+                teacher_line = teacher_line[:status_match.start()].strip()
+            current["professor"] = teacher_line
+            current.pop("_awaiting_professor", None)
+            continue
+        if current and upper in ("(CERRADA)", "(NUEVA)"):
+            current["status"] = upper.strip("()")
+            continue
+
         item = parse_header(line, curriculum)
         if item:
             current = item
@@ -156,6 +183,7 @@ def main():
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "sections": len(courses),
         "subjects": len({c["code"] for c in courses}),
+        "sections_with_professor": sum(bool(c.get("professor")) for c in courses),
         "slots": slot_count,
         "source_url": resolved_url,
         "source_page": SOURCE,
