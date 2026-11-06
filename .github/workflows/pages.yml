@@ -31,10 +31,12 @@ jobs:
           page = gzip.decompress(base64.b64decode(Path("site-assets/index.html.gz.b64").read_text().strip())).decode("utf-8")
           compare = gzip.decompress(base64.b64decode(Path("site-assets/three-options.js.gz.b64").read_text().strip())).decode("utf-8")
           preferences = Path("site-assets/preferences.js").read_text(encoding="utf-8")
+          image_export = Path("site-assets/image-export.js").read_text(encoding="utf-8")
+          image_css = Path("site-assets/image-export.css").read_text(encoding="utf-8")
           anchor = "$('search').addEventListener('input',renderResults);"
           if anchor not in page:
               raise SystemExit("No se encontró el punto de integración.")
-          page = page.replace(anchor, compare + "\n" + preferences + "\n" + anchor, 1)
+          page = page.replace(anchor, compare + "\n" + preferences + "\n" + image_export + "\n" + anchor, 1)
           start = page.index("<script>") + len("<script>")
           end = page.index("</script>", start)
           Path("/tmp/simulador-completo.js").write_text(page[start:end], encoding="utf-8")
@@ -57,12 +59,12 @@ jobs:
 
           if "</style>" not in page or '  <div class="layout">' not in page:
               raise SystemExit("No se encontraron los puntos de inserción del comparador.")
-          page = page.replace("</style>", css + "\n</style>", 1)
+          page = page.replace("</style>", css + "\n" + image_css + "\n</style>", 1)
           page = page.replace('  <div class="layout">', markup + "\n  " + '<div class="layout">', 1)
           js_anchor = "$('search').addEventListener('input',renderResults);"
           if js_anchor not in page:
               raise SystemExit("No se encontró el punto de inserción del código JavaScript.")
-          page = page.replace(js_anchor, js + "\n" + preferences + "\n" + js_anchor, 1)
+          page = page.replace(js_anchor, js + "\n" + preferences + "\n" + image_export + "\n" + js_anchor, 1)
 
           refresh_anchor = "  restore();\n  renderAll();\n  if(showMessage)"
           if refresh_anchor not in page:
