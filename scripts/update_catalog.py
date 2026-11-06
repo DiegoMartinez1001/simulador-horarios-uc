@@ -121,8 +121,8 @@ def main():
 
     compact = json.dumps(courses, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
     digest = hashlib.sha256(compact).hexdigest()
-    period_match = re.search(r"HORARIOS\\s+PER[IÍ]ODO\\s+([^\\r\\n]+)", text, re.I)
-    date_match = re.search(r"Actualizado\\s+al\\s+([^\\r\\n]+)", text, re.I)
+    period_match = re.search(r"HORARIOS\s+PER[IÍ]ODO\s+([^\r\n]+)", text, re.I)
+    date_match = re.search(r"Actualizado\s+al\s+([^\r\n]+)", text, re.I)
     period = period_match.group(1).strip() if period_match else "No identificado"
     updated_at = date_match.group(1).strip() if date_match else "No indicada por la DAE"
 
@@ -148,7 +148,7 @@ def main():
     # Solo reescribe el archivo de datos cuando el contenido realmente cambió.
     if not same_catalog or not CATALOG.exists():
         compressed = gzip.compress(compact, compresslevel=9, mtime=0)
-        CATALOG.write_text(base64.b64encode(compressed).decode("ascii") + "\\n", encoding="ascii")
+        CATALOG.write_text(base64.b64encode(compressed).decode("ascii") + "\n", encoding="ascii")
 
     meta = {
         "period": period,
@@ -162,7 +162,7 @@ def main():
         "sha256": digest,
         "status": "ok"
     }
-    META.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    META.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(meta, ensure_ascii=False, indent=2))
 
 if __name__ == "__main__":
