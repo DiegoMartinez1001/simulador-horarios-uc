@@ -1,7 +1,9 @@
-// Exporta los horarios como imágenes de alta resolución.
+// Exporta el horario como PNG de alta resolución.
 (function(){
   const CDN='https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js';
   let libraryPromise=null;
+  const MIME='image/png';
+
   function byId(id){return document.getElementById(id);}
   function notify(message){
     if(typeof showToast==='function')showToast(message);
@@ -13,74 +15,87 @@
     libraryPromise=new Promise((resolve,reject)=>{
       const script=document.createElement('script');
       script.src=CDN;script.async=true;
-      script.onload=()=>window.htmlToImage?resolve(window.htmlToImage):reject(new Error('No se pudo inicializar el exportador de imágenes.'));
+      script.onload=()=>window.htmlToImage
+        ?resolve(window.htmlToImage)
+        :reject(new Error('No se pudo inicializar el exportador de imágenes.'));
       script.onerror=()=>reject(new Error('No se pudo cargar el exportador. Comprueba tu conexión a Internet e inténtalo de nuevo.'));
       document.head.appendChild(script);
     });
     return libraryPromise;
   }
-  function mimeSupported(mime){
-    try{
-      const canvas=document.createElement('canvas');
-      const uri=canvas.toDataURL(mime);
-      return uri.startsWith('data:'+mime+';');
-    }catch(e){return false;}
+
+  function getIndividualTarget(){
+    const tbody=byId('scheduleBody');
+    if(!tbody)return null;
+    const table=tbody.closest('table');
+    if(!table)return tbody;
+
+    // Busca el contenedor del panel que contiene tanto el título como la cuadrícula.
+    const panel=table.closest('.panel');
+    if(panel)return panel;
+
+    // Respaldo: localiza el ancestro que incluya el encabezado del horario y su tabla.
+    let node=table;
+    let best=table;
+    for(let depth=0;depth<8&&node&&node.parentElement;depth++){
+      node=node.parentElement;
+      if(node.querySelector&&node.querySelector('#scheduleBody')){
+        best=node;
+        if(node.querySelector('.panel-head'))return node;
+      }
+    }
+    return best;
   }
+
+  function getTarget(kind){
+    return kind==='individual'?getIndividualTarget():byId('comparePanel');
+  }
+
   function makeToolbar(kind){
     const wrap=document.createElement('div');
     wrap.className='image-export-toolbar';
     wrap.dataset.exportKind=kind;
-    const select=document.createElement('select');
-    select.className='image-export-format';
-    select.setAttribute('aria-label','Formato de imagen');
-    select.title='Formato de imagen';
-    const formats=[
-      {value:'image/png',label:'PNG · sin pérdida',ext:'png'},
-      {value:'image/webp',label:'WebP · ligero',ext:'webp'},
-      {value:'image/avif',label:'AVIF · compacto',ext:'avif'}
-    ];
-    formats.forEach(f=>{
-      const option=document.createElement('option');
-      option.value=f.value;option.textContent=f.label;
-      if(f.value==='image/avif'&&!mimeSupported(f.value))option.disabled=true;
-      select.appendChild(option);
-    });
-    try{
-      const saved=localStorage.getItem('ucImageFormatV1');
-      if(saved&&formats.some(f=>f.value===saved)&&mimeSupported(saved))select.value=saved;
-    }catch(e){}
-    select.addEventListener('change',()=>{
-      try{localStorage.setItem('ucImageFormatV1',select.value);}catch(e){}
-      document.querySelectorAll('.image-export-format').forEach(other=>{other.value=select.value;});
-    });
+
     const button=document.createElement('button');
-    button.type='button';button.className='btn primary image-export-button';
-    button.textContent=kind==='individual'?'Guardar horario como imagen':'Guardar las 3 opciones como imagen';
-    button.addEventListener('click',()=>exportImage(kind,select,button));
-    wrap.append(select,button);
+    button.type='button';
+    button.className='btn primary image-export-button';
+    button.textContent=kind==='individual'
+      ?'Guardar horario como PNG'
+      :'Guardar las 3 opciones como PNG';
+    button.addEventListener('click',()=>exportImage(kind,button));
+    wrap.appendChild(button);
     return wrap;
   }
-  function getTarget(kind){
-    return byId(kind==='individual'?'schedulePanel':'comparePanel');
-  }
-  function filename(kind,mime){
+
+  function filename(kind){
     const date=new Date();
-    const stamp=[date.getFullYear(),String(date.getMonth()+1).padStart(2,'0'),String(date.getDate()).padStart(2,'0')].join('-');
-    const ext=mime==='image/png'?'png':mime==='image/webp'?'webp':'avif';
-    return (kind==='individual'?'horario-individual':'tres-opciones-horario')+'-'+stamp+'.'+ext;
+    const stamp=[
+      date.getFullYear(),
+      String(date.getMonth()+1).padStart(2,'0'),
+      String(date.getDate()).padStart(2,'0')
+    ].join('-');
+    return (kind==='individual'?'horario-individual':'tres-opciones-horario')+'-'+stamp+'.png';
   }
-  async function exportImage(kind,select,button){
+
+  async function exportImage(kind,button){
     const target=getTarget(kind);
-    if(!target){notify('No se encontró el horario que deseas guardar.');return;}
-    const mime=select.value;
-    if(!mimeSupported(mime)){notify('Este navegador no admite ese formato. Selecciona PNG.');select.value='image/png';return;}
+    if(!target){
+      notify(kind==='individual'
+        ?'No se encontró la cuadrícula del horario individual. Recarga la página y vuelve a intentarlo.'
+        :'No se encontró la comparación de tres opciones. Recarga la página y vuelve a intentarlo.');
+      return;
+    }
+
     const oldText=button.textContent;
-    button.disabled=true;button.textContent='Generando imagen…';
+    button.disabled=true;
+    button.textContent='Generando PNG…';
+
     try{
       const htmlToImage=await getLibrary();
       const isDark=document.body.dataset.theme==='dark';
+      const pixelRatio=Math.min(3,Math.max(2,window.devicePixelRatio||2));
       const canvas=await htmlToImage.toCanvas(target,{
-        pixelRatio:3,
+        pixelRatio,
         backgroundColor:isDark?'#0c1626':'#ffffff',
         cacheBust:true,
         skipAutoScale:false,
@@ -93,36 +108,52 @@
         },
         style:{transform:'none',transformOrigin:'top left'}
       });
+
       const blob=await new Promise((resolve,reject)=>{
-        canvas.toBlob(result=>result?resolve(result):reject(new Error('El navegador no pudo generar la imagen.')),mime,0.96);
+        canvas.toBlob(result=>result
+          ?resolve(result)
+          :reject(new Error('El navegador no pudo generar el PNG.')),MIME);
       });
-      if(blob.type!==mime)throw new Error('El navegador no generó el formato solicitado. Selecciona PNG, que es compatible.');
+      if(blob.type!=='image/png')throw new Error('No se pudo generar el archivo PNG.');
+
       const url=URL.createObjectURL(blob);
       const link=document.createElement('a');
-      link.href=url;link.download=filename(kind,mime);
-      document.body.appendChild(link);link.click();link.remove();
+      link.href=url;
+      link.download=filename(kind);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
       setTimeout(()=>URL.revokeObjectURL(url),15000);
-      const kb=Math.round(blob.size/1024);
-      notify('Imagen guardada en '+mime.split('/')[1].toUpperCase()+' · '+kb+' KB.');
+
+      notify('PNG guardado correctamente · '+Math.round(blob.size/1024)+' KB.');
     }catch(error){
       console.error(error);
-      notify(error&&error.message?error.message:'No se pudo generar la imagen. Inténtalo de nuevo.');
+      notify(error&&error.message?error.message:'No se pudo generar el PNG. Inténtalo de nuevo.');
     }finally{
-      button.disabled=false;button.textContent=oldText;
+      button.disabled=false;
+      button.textContent=oldText;
     }
   }
+
   function install(){
-    const printButton=Array.from(document.querySelectorAll('button')).find(button=>/imprimir|guardar\s*(como\s*)?pdf/i.test(button.textContent||''));
+    const oldButton=Array.from(document.querySelectorAll('button'))
+      .find(button=>/imprimir|guardar\s*(como\s*)?pdf|guardar horario como imagen/i.test(button.textContent||''));
     const individual=makeToolbar('individual');
-    if(printButton)printButton.replaceWith(individual);
-    else{
-      const panel=byId('schedulePanel');
-      const head=panel&&panel.querySelector('.panel-head');
+
+    if(oldButton){
+      oldButton.replaceWith(individual);
+    }else{
+      const target=getIndividualTarget();
+      const head=target&&target.querySelector('.panel-head');
       if(head)head.appendChild(individual);
     }
+
     const actions=document.querySelector('#comparePanel .compare-search-actions');
     if(actions)actions.appendChild(makeToolbar('comparison'));
   }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});
-  else install();
+
+  if(document.readyState==='loading')
+    document.addEventListener('DOMContentLoaded',install,{once:true});
+  else
+    install();
 })();
