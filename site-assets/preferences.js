@@ -57,6 +57,13 @@
     }).join('');
     $('scheduleBody').innerHTML=body;
   };
+  renderSelected=function(){
+    const items=Array.from(selected.values());
+    $('selectedList').innerHTML=items.length?items.map(c=>
+      '<div class="selected-chip"><input class="chip-color-picker" type="color" value="'+colorFor(c.code)+'" data-selected-course-color="'+esc(c.code)+'" aria-label="Color de '+esc(c.code)+'" title="Cambiar color de '+esc(c.code)+'"><span class="chip-text" title="'+esc(c.name)+'">'+esc(c.code)+' · '+esc(c.section)+'</span><button class="chip-remove" title="Quitar '+esc(c.code)+'" aria-label="Quitar '+esc(c.code)+'" data-remove="'+esc(c.id)+'">×</button></div>'
+    ).join(''):'<div class="no-selection">Todavía no has agregado materias. Busca un código a la izquierda para comenzar.</div>';
+  };
+
   renderCompareRows=function(){
     const rows=Array.from(compareSubjects.values());
     $('compareRowsWrap').hidden=!rows.length;
@@ -115,6 +122,14 @@
     showToast('Opción '+(option+1)+' cargada en el horario individual ('+items.length+' materias).');
     $('schedulePanel').scrollIntoView({behavior:'smooth',block:'start'});
   }
+  $('selectedList').addEventListener('change',function(e){
+    const input=e.target.closest('[data-selected-course-color]');
+    if(!input||!/^#[0-9a-f]{6}$/i.test(input.value))return;
+    courseColors[input.dataset.selectedCourseColor]=input.value;
+    saveColors();
+    renderAll();
+    renderCompareAll();
+  });
   $('compareRows').addEventListener('change',function(e){
     const input=e.target.closest('[data-course-color]');
     if(!input)return;
