@@ -80,7 +80,7 @@ jobs:
           # La ejecución manual permanece disponible solo desde GitHub Actions
           # para cuentas que tengan permisos de escritura en el repositorio.
           update_link_pattern = re.compile(
-              r'<a\\b[^>]*>(?:(?!</?a\\b).)*?Actualizar\\s+ahora(?:(?!</?a\\b).)*?</a\\s*>',
+              r'<a\b[^>]*>(?:(?!</?a\b).)*?Actualizar\s+ahora(?:(?!</?a\b).)*?</a\s*>',
               re.IGNORECASE | re.DOTALL
           )
           page, removed_update_links = update_link_pattern.subn("", page)
