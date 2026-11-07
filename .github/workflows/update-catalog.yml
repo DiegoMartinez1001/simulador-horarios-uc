@@ -90,10 +90,13 @@ jobs:
           page = page.replace(old_note, new_note, 1)
           css = Path("site-assets/three-options.css").read_text(encoding="utf-8")
           image_css = Path("site-assets/image-export.css").read_text(encoding="utf-8")
+          smart_css = Path("site-assets/smart-generator.css").read_text(encoding="utf-8")
           markup = Path("site-assets/three-options.html").read_text(encoding="utf-8")
+          smart_markup = Path("site-assets/smart-generator.html").read_text(encoding="utf-8")
           js = gzip.decompress(base64.b64decode(Path("site-assets/three-options.js.gz.b64").read_text().strip())).decode("utf-8")
           preferences = Path("site-assets/preferences.js").read_text(encoding="utf-8")
           image_export = Path("site-assets/image-export.js").read_text(encoding="utf-8")
+          smart_generator = Path("site-assets/smart-generator.js").read_text(encoding="utf-8")
 
           if "</style>" not in page or '  <div class="layout">' not in page:
               raise SystemExit("No se encontraron los puntos de inserción del comparador.")
