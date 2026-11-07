@@ -11,10 +11,13 @@
     <div class="smart-preferences">
       <label for="smartStrategy">¿Cómo quieres organizar tu semana?</label>
       <select id="smartStrategy"><option value="compact">Horario compacto · más días libres</option><option value="balanced">Horario equilibrado · distribuir clases</option><option value="custom">Horario personalizado</option></select>
-      <label for="smartTime">Preferencia de horario</label>
-      <select id="smartTime"><option value="any">Cualquier hora disponible</option><option value="morning">Preferiblemente por la mañana</option><option value="afternoon">Preferiblemente por la tarde</option></select>
-      <div class="smart-pref-row"><div><label for="smartFreeDay">Día que prefiero libre</label><select id="smartFreeDay"><option value="">Sin preferencia</option><option value="LU">Lunes</option><option value="MA">Martes</option><option value="MI">Miércoles</option><option value="JU">Jueves</option><option value="VI">Viernes</option><option value="SA">Sábado</option></select></div><div><label for="smartMaxHours">Máximo de horas al día</label><select id="smartMaxHours"><option value="0">Sin límite</option><option value="4">4 horas</option><option value="5">5 horas</option><option value="6" selected>6 horas</option><option value="7">7 horas</option><option value="8">8 horas</option></select></div></div>
-      <label class="smart-check"><input id="smartAvoidGaps" type="checkbox" checked> Reducir espacios largos entre clases</label>
+      <div id="smartCustomOptions" class="smart-custom-options" aria-disabled="true">
+        <p id="smartCustomHint" class="smart-custom-hint">Estas preferencias se habilitan al seleccionar «Horario personalizado».</p>
+        <label for="smartTime">Preferencia de horario</label>
+        <select id="smartTime"><option value="any">Cualquier hora disponible</option><option value="morning">Preferiblemente por la mañana</option><option value="afternoon">Preferiblemente por la tarde</option></select>
+        <div class="smart-pref-row"><div><label for="smartFreeDay">Día que prefiero libre</label><select id="smartFreeDay"><option value="">Sin preferencia</option><option value="LU">Lunes</option><option value="MA">Martes</option><option value="MI">Miércoles</option><option value="JU">Jueves</option><option value="VI">Viernes</option><option value="SA">Sábado</option></select></div><div><label for="smartMaxHours">Máximo de horas al día</label><select id="smartMaxHours"><option value="0">Sin límite</option><option value="4">4 horas</option><option value="5">5 horas</option><option value="6" selected>6 horas</option><option value="7">7 horas</option><option value="8">8 horas</option></select></div></div>
+        <label class="smart-check"><input id="smartAvoidGaps" type="checkbox" checked> Reducir espacios largos entre clases</label>
+      </div>
       <button class="btn smart-generate-btn" id="smartGenerate" type="button">✦ Generar mis mejores horarios</button>
       <p class="smart-footnote">Los cruces se descartan siempre. Se analizan las secciones activas con horario publicado; esto no confirma disponibilidad de cupos de inscripción.</p>
     </div>
