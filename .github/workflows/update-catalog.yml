@@ -71,10 +71,25 @@ jobs:
         run: |
           mkdir -p dist/data
           python - <<'PY'
-          import base64, gzip
+          import base64, gzip, re
           from pathlib import Path
 
           page = gzip.decompress(base64.b64decode(Path("site-assets/index.html.gz.b64").read_text().strip())).decode("utf-8")
+
+          # Ocultar el disparador manual de actualización en la web pública.
+          # La ejecución manual permanece disponible solo desde GitHub Actions
+          # para cuentas que tengan permisos de escritura en el repositorio.
+          update_link_pattern = re.compile(
+              r'<a\\b[^>]*>(?:(?!</?a\\b).)*?Actualizar\\s+ahora(?:(?!</?a\\b).)*?</a\\s*>',
+              re.IGNORECASE | re.DOTALL
+          )
+          page, removed_update_links = update_link_pattern.subn("", page)
+          if removed_update_links != 1:
+              raise SystemExit(
+                  f"Se esperaba ocultar un único enlace 'Actualizar ahora'; se encontraron {removed_update_links}. "
+                  "Se cancela la publicación para evitar dejar visible una acción administrativa."
+              )
+
           css = Path("site-assets/three-options.css").read_text(encoding="utf-8")
           image_css = Path("site-assets/image-export.css").read_text(encoding="utf-8")
           markup = Path("site-assets/three-options.html").read_text(encoding="utf-8")
