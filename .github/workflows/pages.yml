@@ -33,11 +33,15 @@ jobs:
           # Ocultar el disparador manual de actualización en la web pública.
           # La ejecución manual permanece disponible solo desde GitHub Actions
           # para cuentas que tengan permisos de escritura en el repositorio.
-          hits = list(re.finditer(r"actualiz", page, re.IGNORECASE))
-          print("DIAGNÓSTICO: referencias a 'actualiz' en HTML:")
-          for hit in hits:
-              print(repr(page[max(0, hit.start()-260):min(len(page), hit.end()+360)]))
-          print("Total de coincidencias:", len(hits))
+          admin_link = '<a class="pill" href="https://github.com/DiegoMartinez1001/simulador-horarios-uc/actions/workflows/update-catalog.yml" target="_blank" rel="noopener">Actualizar ahora ↗</a>'
+          if page.count(admin_link) != 1:
+              raise SystemExit("No se encontró exactamente el enlace administrativo esperado; se cancela la publicación.")
+          page = page.replace(admin_link, "", 1)
+          old_note = 'La etiqueta “Actualizar ahora” abre el proceso manual de GitHub Actions; después de que termine, usa “Recargar datos” para descargar el catálogo actualizado.'
+          new_note = 'Los horarios se sincronizan automáticamente con la publicación de la DAE. Usa “Recargar datos” para volver a consultar la última versión disponible del catálogo.'
+          if old_note not in page:
+              raise SystemExit("No se encontró la nota informativa antigua del enlace administrativo.")
+          page = page.replace(old_note, new_note, 1)
 
           compare = gzip.decompress(base64.b64decode(Path("site-assets/three-options.js.gz.b64").read_text().strip())).decode("utf-8")
           preferences = Path("site-assets/preferences.js").read_text(encoding="utf-8")
@@ -62,6 +66,16 @@ jobs:
           from pathlib import Path
 
           page = gzip.decompress(base64.b64decode(Path("site-assets/index.html.gz.b64").read_text().strip())).decode("utf-8")
+          admin_link = '<a class="pill" href="https://github.com/DiegoMartinez1001/simulador-horarios-uc/actions/workflows/update-catalog.yml" target="_blank" rel="noopener">Actualizar ahora ↗</a>'
+          if page.count(admin_link) != 1:
+              raise SystemExit("No se encontró exactamente el enlace administrativo esperado; se cancela la publicación.")
+          page = page.replace(admin_link, "", 1)
+          old_note = 'La etiqueta “Actualizar ahora” abre el proceso manual de GitHub Actions; después de que termine, usa “Recargar datos” para descargar el catálogo actualizado.'
+          new_note = 'Los horarios se sincronizan automáticamente con la publicación de la DAE. Usa “Recargar datos” para volver a consultar la última versión disponible del catálogo.'
+          if old_note not in page:
+              raise SystemExit("No se encontró la nota informativa antigua del enlace administrativo.")
+          page = page.replace(old_note, new_note, 1)
+
           css = Path("site-assets/three-options.css").read_text(encoding="utf-8")
           image_css = Path("site-assets/image-export.css").read_text(encoding="utf-8")
           markup = Path("site-assets/three-options.html").read_text(encoding="utf-8")
