@@ -1,0 +1,24 @@
+<section class="panel smart-generator" id="smartGenerator">
+  <div class="smart-head"><div><div class="eyebrow">Planificación automática</div><h3>Generador inteligente de horarios UC</h3><p>Selecciona las materias que deseas cursar y encuentra hasta tres combinaciones sin cruces, ordenadas según tus preferencias.</p></div><span class="smart-tag">Nuevo</span></div>
+  <div class="smart-grid">
+    <div class="smart-subject-picker">
+      <label for="smartSearch">Agregar materias</label>
+      <input id="smartSearch" type="search" autocomplete="off" placeholder="Código o nombre de la materia">
+      <div id="smartSearchResults" class="smart-search-results" aria-live="polite"></div>
+      <div class="smart-selected-head">Materias seleccionadas <span id="smartSelectedCount">0</span></div>
+      <div id="smartSelected" class="smart-selected"><span class="smart-muted">Agrega las materias que planeas inscribir.</span></div>
+    </div>
+    <div class="smart-preferences">
+      <label for="smartStrategy">¿Cómo quieres organizar tu semana?</label>
+      <select id="smartStrategy"><option value="compact">Horario compacto · más días libres</option><option value="balanced">Horario equilibrado · distribuir clases</option><option value="custom">Horario personalizado</option></select>
+      <label for="smartTime">Preferencia de horario</label>
+      <select id="smartTime"><option value="any">Cualquier hora disponible</option><option value="morning">Preferiblemente por la mañana</option><option value="afternoon">Preferiblemente por la tarde</option></select>
+      <div class="smart-pref-row"><div><label for="smartFreeDay">Día que prefiero libre</label><select id="smartFreeDay"><option value="">Sin preferencia</option><option value="LU">Lunes</option><option value="MA">Martes</option><option value="MI">Miércoles</option><option value="JU">Jueves</option><option value="VI">Viernes</option><option value="SA">Sábado</option></select></div><div><label for="smartMaxHours">Máximo de horas al día</label><select id="smartMaxHours"><option value="0">Sin límite</option><option value="4">4 horas</option><option value="5">5 horas</option><option value="6" selected>6 horas</option><option value="7">7 horas</option><option value="8">8 horas</option></select></div></div>
+      <label class="smart-check"><input id="smartAvoidGaps" type="checkbox" checked> Reducir espacios largos entre clases</label>
+      <button class="btn smart-generate-btn" id="smartGenerate" type="button">✦ Generar mis mejores horarios</button>
+      <p class="smart-footnote">Los cruces se descartan siempre. Se analizan las secciones activas con horario publicado; esto no confirma disponibilidad de cupos de inscripción.</p>
+    </div>
+  </div>
+  <div id="smartStatus" class="smart-status" aria-live="polite"></div>
+  <div id="smartResults" class="smart-results" hidden></div>
+</section>
