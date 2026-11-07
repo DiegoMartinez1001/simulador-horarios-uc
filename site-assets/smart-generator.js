@@ -6,6 +6,16 @@
   const $s=id=>document.getElementById(id);
   const chosen=new Map();
   let generated=[];
+  function updateCustomPreferences(){
+    const active=$s('smartStrategy').value==='custom';
+    const panel=$s('smartCustomOptions');
+    panel.classList.toggle('is-disabled',!active);
+    panel.setAttribute('aria-disabled',String(!active));
+    ['smartTime','smartFreeDay','smartMaxHours','smartAvoidGaps'].forEach(id=>{$s(id).disabled=!active;});
+    $s('smartCustomHint').textContent=active
+      ?'Estas preferencias se aplicarán al ordenar las combinaciones. Los cruces siempre se descartan.'
+      :'Estas preferencias se habilitan al seleccionar «Horario personalizado».';
+  }
   function coursesFor(code){return COURSES.filter(c=>c.code===code);}
   function availableSections(code){return coursesFor(code).filter(c=>c.status!=='CERRADA'&&(c.slots||[]).length>0);}
   function addSubject(code){
@@ -53,9 +63,9 @@
     for(const c of items)for(const s of c.slots||[]){const m=toMinutes(s.start);if(prefs.time==='morning'&&m>=720)latePenalty++;if(prefs.time==='afternoon'&&m<720)earlyPenalty++;}
     const gapsPenalty=prefs.avoidGaps?totalGaps:0;
     let score;
-    if(prefs.strategy==='balanced')score=variance*12+gapsPenalty/45+maxOver*8+earlyPenalty+latePenalty;
+    if(prefs.strategy==='balanced')score=variance*12;
     else if(prefs.strategy==='custom')score=(prefs.freeDay?(free?0:35):0)+maxOver*10+gapsPenalty/50+earlyPenalty*1.5+latePenalty*1.5+active*0.15;
-    else score=active*100+gapsPenalty/55+maxOver*8+earlyPenalty+latePenalty;
+    else score=active*100;
     return {active,freeDays:6-active,gaps:Math.round(totalGaps/60*10)/10,maxDaily:Math.round(maxDaily/60*10)/10,score,freeDay:free};
   }
   function makeTable(items){
@@ -82,7 +92,9 @@
   function generate(){
     const codes=[...chosen.keys()];
     if(!codes.length){$s('smartStatus').textContent='Primero agrega al menos una materia.';$s('smartResults').hidden=true;return;}
-    const prefs={strategy:$s('smartStrategy').value,time:$s('smartTime').value,freeDay:$s('smartFreeDay').value,maxHours:Number($s('smartMaxHours').value),avoidGaps:$s('smartAvoidGaps').checked};
+    const strategy=$s('smartStrategy').value;
+    const custom=strategy==='custom';
+    const prefs={strategy,time:custom?$s('smartTime').value:'any',freeDay:custom?$s('smartFreeDay').value:'',maxHours:custom?Number($s('smartMaxHours').value):0,avoidGaps:custom&&$s('smartAvoidGaps').checked};
     const groups=codes.map(code=>({code,sections:availableSections(code)}));
     const unavailable=groups.filter(g=>!g.sections.length);
     if(unavailable.length){$s('smartStatus').textContent='No se puede generar un horario completo: '+unavailable.map(g=>g.code).join(', ')+' no tiene secciones activas con bloques horarios publicados.';$s('smartResults').hidden=true;return;}
@@ -130,6 +142,8 @@
     showToast('Horario generado aplicado: '+result.items.length+' materias sin cruces.');
     $('schedulePanel').scrollIntoView({behavior:'smooth',block:'start'});
   }
+  $s('smartStrategy').addEventListener('change',updateCustomPreferences);
+  updateCustomPreferences();
   $s('smartSearch').addEventListener('input',e=>searchSubjects(e.target.value));
   $s('smartSearchResults').addEventListener('click',e=>{const b=e.target.closest('[data-smart-add]');if(b)addSubject(b.dataset.smartAdd);});
   $s('smartSelected').addEventListener('click',e=>{const b=e.target.closest('[data-smart-remove]');if(b){chosen.delete(b.dataset.smartRemove);renderChosen();}});
