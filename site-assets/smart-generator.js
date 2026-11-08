@@ -176,4 +176,9 @@
     if(use){applyResult(Number(use.dataset.smartUse));return;}
     if(e.target.closest('[data-smart-compare]'))importToCompare();
   });
+  document.addEventListener('uc-catalog-updated',()=>{
+    generated=[];
+    $s('smartResults').hidden=true;
+    $s('smartStatus').textContent='El catálogo se actualizó. Genera nuevamente las combinaciones para utilizar los horarios más recientes.';
+  });
 })();
