@@ -107,7 +107,7 @@
   function appendField(parent,label,before,after,field){
     const row=el('div','dae-history-field');
     row.appendChild(el('strong','',label));
-    row.appendChild(el('span','',before+' → '+after));
+    row.appendChild(el('span','',before===''?after:before+' → '+after));
     parent.appendChild(row);
   }
   function changeNode(change){
@@ -139,8 +139,9 @@
       return;
     }
     const context=selectedContext();
-    for(let index=0;index<entries.length;index++){
-      const entry=entries[index];
+    const newestFirst=[...entries].reverse();
+    for(let index=0;index<newestFirst.length;index++){
+      const entry=newestFirst[index];
       const summary=entry.summary||{};
       const changes=Array.isArray(entry.changes)?entry.changes:[];
       const relevant=changes.filter(change=>isRelevant(change,context));
