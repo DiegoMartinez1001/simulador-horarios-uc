@@ -47,11 +47,12 @@ jobs:
           preferences = Path("site-assets/preferences.js").read_text(encoding="utf-8")
           image_export = Path("site-assets/image-export.js").read_text(encoding="utf-8")
           smart_generator = Path("site-assets/smart-generator.js").read_text(encoding="utf-8")
+          update_notice = Path("site-assets/update-notice.js").read_text(encoding="utf-8")
           image_css = Path("site-assets/image-export.css").read_text(encoding="utf-8")
           anchor = "$('search').addEventListener('input',renderResults);"
           if anchor not in page:
               raise SystemExit("No se encontró el punto de integración.")
-          page = page.replace(anchor, compare + "\n" + preferences + "\n" + image_export + "\n" + smart_generator + "\n" + anchor, 1)
+          page = page.replace(anchor, compare + "\n" + preferences + "\n" + image_export + "\n" + smart_generator + "\n" + update_notice + "\n" + anchor, 1)
           start = page.index("<script>") + len("<script>")
           end = page.index("</script>", start)
           Path("/tmp/simulador-completo.js").write_text(page[start:end], encoding="utf-8")
@@ -86,6 +87,7 @@ jobs:
           preferences = Path("site-assets/preferences.js").read_text(encoding="utf-8")
           image_export = Path("site-assets/image-export.js").read_text(encoding="utf-8")
           smart_generator = Path("site-assets/smart-generator.js").read_text(encoding="utf-8")
+          update_notice = Path("site-assets/update-notice.js").read_text(encoding="utf-8")
 
           if "</style>" not in page or '  <div class="layout">' not in page:
               raise SystemExit("No se encontraron los puntos de inserción del comparador.")
@@ -94,7 +96,7 @@ jobs:
           js_anchor = "$('search').addEventListener('input',renderResults);"
           if js_anchor not in page:
               raise SystemExit("No se encontró el punto de inserción del código JavaScript.")
-          page = page.replace(js_anchor, js + "\n" + preferences + "\n" + image_export + "\n" + smart_generator + "\n" + js_anchor, 1)
+          page = page.replace(js_anchor, js + "\n" + preferences + "\n" + image_export + "\n" + smart_generator + "\n" + update_notice + "\n" + js_anchor, 1)
 
           refresh_anchor = "  restore();\n  renderAll();\n  if(showMessage)"
           if refresh_anchor not in page:
