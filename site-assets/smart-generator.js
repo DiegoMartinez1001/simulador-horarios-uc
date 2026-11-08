@@ -87,7 +87,30 @@
       const days=DAY_ORDER.filter(d=>r.metrics.activeDays.includes(d));
       const free=DAY_ORDER.filter(d=>!days.includes(d)).map(d=>DAY_NAMES[d]).join(', ')||'Ninguno';
       return '<article class="smart-result-card"><div class="smart-result-head"><strong>Opción '+(i+1)+' · '+title+'</strong><small>'+r.items.length+' de '+chosen.size+' materias · '+r.metrics.active+' días con clases</small></div><div class="smart-result-stats"><span><b>'+r.metrics.freeDays+'</b>Días libres</span><span><b>0</b>Cruces</span><span><b>'+r.metrics.gaps+' h</b>Espacios</span></div><div class="smart-result-stats"><span>Días libres: <b style="font-size:11px">'+free+'</b></span><span>Jornada máx.: <b style="font-size:11px">'+r.metrics.maxDaily+' h</b></span></div>'+makeTable(r.items)+'<button type="button" class="btn smart-use" data-smart-use="'+i+'">Usar este horario</button></article>';
-    }).join('');
+    }).join('')+'<div class="smart-results-footer"><div><strong>¿Quieres comparar estas alternativas?</strong><small>Envía las combinaciones al comparador para revisar los tres calendarios lado a lado.</small></div><button type="button" class="btn smart-compare-btn" data-smart-compare>⇄ Comparar las tres opciones</button></div>';
+  }
+  function importToCompare(){
+    if(!generated.length)return;
+    if(compareSubjects.size&&!window.confirm('Esto reemplazará las materias y secciones que ya tienes en el comparador de tres opciones. ¿Deseas continuar?'))return;
+    const codes=[...chosen.keys()];
+    const incomplete=codes.filter(code=>generated.some(result=>!result.items.some(item=>item.code===code)));
+    if(incomplete.length){$s('smartStatus').textContent='No se pudieron transferir todas las materias: '+incomplete.join(', ')+'. Genera nuevamente las opciones.';return;}
+    compareSubjects.clear();
+    for(const code of codes){
+      const sections=generated.map(result=>result.items.find(item=>item.code===code));
+      const choices=[0,1,2].map(index=>sections[Math.min(index,sections.length-1)].id);
+      compareSubjects.set(code,{code,name:chosen.get(code).name,choices});
+    }
+    persistCompare();
+    renderCompareAll();
+    renderCompareSearch();
+    if(generated.length<3){
+      $('compareBest').textContent='Se encontraron '+generated.length+' combinación(es) distinta(s). Las columnas restantes repiten la última combinación disponible.';
+    }else{
+      $('compareBest').textContent='Las tres alternativas fueron generadas automáticamente y no presentan cruces en los horarios publicados.';
+    }
+    showToast(codes.length+' materias enviadas al comparador.');
+    $('comparePanel').scrollIntoView({behavior:'smooth',block:'start'});
   }
   function generate(){
     const codes=[...chosen.keys()];
@@ -148,5 +171,9 @@
   $s('smartSearchResults').addEventListener('click',e=>{const b=e.target.closest('[data-smart-add]');if(b)addSubject(b.dataset.smartAdd);});
   $s('smartSelected').addEventListener('click',e=>{const b=e.target.closest('[data-smart-remove]');if(b){chosen.delete(b.dataset.smartRemove);renderChosen();}});
   $s('smartGenerate').addEventListener('click',generate);
-  $s('smartResults').addEventListener('click',e=>{const b=e.target.closest('[data-smart-use]');if(b)applyResult(Number(b.dataset.smartUse));});
+  $s('smartResults').addEventListener('click',e=>{
+    const use=e.target.closest('[data-smart-use]');
+    if(use){applyResult(Number(use.dataset.smartUse));return;}
+    if(e.target.closest('[data-smart-compare]'))importToCompare();
+  });
 })();
