@@ -99,23 +99,24 @@
       return !current||previous.choices.some((id,index)=>id!==current.choices[index]);
     });
   }
-  async function reloadCatalogFromNotice(){
-    if(refreshing||!noticeMeta)return;
-    refreshing=true;
-    reloadButton.disabled=true;
-    reloadButton.textContent='Actualizando…';
-    const targetMeta=noticeMeta;
-    const targetVersion=versionOf(targetMeta);
-    const previousSelected=[...selected.keys()];
-    const previousCompare=[...compareSubjects.values()].map(item=>({code:item.code,choices:[...item.choices]}));
-    try{
-      await refreshCatalog(false);
+  // Intercepta cualquier recarga del catálogo, incluida la del botón original,
+  // para sincronizar la versión conocida y refrescar los resultados calculados.
+  const originalRefreshCatalog=window.refreshCatalog;
+  if(typeof originalRefreshCatalog==='function'){
+    window.refreshCatalog=async function(showMessage=true){
+      const metaAtStart=await readLatestMeta().catch(()=>null);
+      const baselineAtStart=versionOf(metaAtStart)||versionOf(noticeMeta)||loadedVersion;
+      const previousSelected=[...selected.keys()];
+      const previousCompare=[...compareSubjects.values()].map(item=>({code:item.code,choices:[...item.choices]}));
+
+      const result=await originalRefreshCatalog(showMessage);
       if(typeof persist==='function')persist();
       if(typeof persistCompare==='function')persistCompare();
-      loadedVersion=targetVersion;
-      notice.hidden=true;
+
+      loadedVersion=baselineAtStart;
       noticeMeta=null;
       dismissedVersion='';
+      notice.hidden=true;
       document.dispatchEvent(new Event('uc-catalog-updated'));
 
       const removed=previousSelected.filter(id=>!COURSES.some(course=>course.id===id)).length;
@@ -125,10 +126,11 @@
         const course=COURSES.find(candidate=>candidate.id===id);
         return !course||course.status==='CERRADA'||!(course.slots||[]).length;
       }));
+      const warning=removed||adjustedCompare||unavailableSelected||unavailableCompare;
 
-      if(removed||adjustedCompare||unavailableSelected||unavailableCompare){
+      if(warning){
         showToast('Catálogo actualizado. Algunas secciones cambiaron o dejaron de publicarse; revisa tu horario y las alternativas.');
-      }else{
+      }else if(!showMessage){
         showToast('Catálogo actualizado en pantalla. Se conservaron tus selecciones.');
       }
 
@@ -136,6 +138,17 @@
         const latest=await readLatestMeta();
         if(versionOf(latest)!==loadedVersion)showNotice(latest);
       }catch(error){}
+      return result;
+    };
+  }
+
+  async function reloadCatalogFromNotice(){
+    if(refreshing||!noticeMeta)return;
+    refreshing=true;
+    reloadButton.disabled=true;
+    reloadButton.textContent='Actualizando…';
+    try{
+      await refreshCatalog(false);
     }catch(error){
       showToast(error&&error.message?error.message:'No fue posible recargar el catálogo. Inténtalo nuevamente.');
     }finally{
