@@ -89,6 +89,7 @@ jobs:
           image_export = Path("site-assets/image-export.js").read_text(encoding="utf-8")
           smart_generator = Path("site-assets/smart-generator.js").read_text(encoding="utf-8")
           update_notice = Path("site-assets/update-notice.js").read_text(encoding="utf-8")
+          change_history = Path("site-assets/change-history.js").read_text(encoding="utf-8")
 
           if "</style>" not in page or '  <div class="layout">' not in page:
               raise SystemExit("No se encontraron los puntos de inserción del comparador.")
