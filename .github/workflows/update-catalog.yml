@@ -39,13 +39,13 @@ jobs:
         id: save
         shell: bash
         run: |
-          if git diff --quiet -- data/courses.json.gz.b64 data/meta.json; then
+          if git diff --quiet -- data/courses.json.gz.b64 data/meta.json data/changes.json; then
             echo "No hubo cambios en los horarios."
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/courses.json.gz.b64 data/meta.json
+            git add data/courses.json.gz.b64 data/meta.json data/changes.json
             git commit -m "Actualizar catálogo de horarios DAE"
             git fetch origin main
             git rebase origin/main
@@ -121,6 +121,7 @@ jobs:
           Path("dist/index.html").write_text(page, encoding="utf-8")
           Path("dist/data/courses.json.gz.b64").write_bytes(Path("data/courses.json.gz.b64").read_bytes())
           Path("dist/data/meta.json").write_bytes(Path("data/meta.json").read_bytes())
+          Path("dist/data/changes.json").write_bytes(Path("data/changes.json").read_bytes())
           PY
       - name: Subir archivos del sitio
         uses: actions/upload-pages-artifact@v3
