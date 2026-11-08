@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 CATALOG = DATA / "courses.json.gz.b64"
 META = DATA / "meta.json"
+CHANGELOG = DATA / "changes.json"
 SLOT = re.compile(r"\b(LU|MA|MI|JU|VI|SA|DO)(0800|0850|0940|1030|1120|1210|1300|1350|1440|1530|1620|1710|1800|1850|1940)\s+([A-Z0-9]+)\b")
 HEADER = re.compile(r"^([A-Z][A-Z0-9]{3,7})\s+(.+?)\s+(\d{2})(?:\s+PROF\.\s*(.*?))?(?:\s+\((CERRADA|NUEVA)\))?$", re.I)
 
@@ -128,6 +129,93 @@ def parse_catalog(text):
         item["slots"].sort(key=lambda slot: (order[slot["day"]], slot["start"], slot["room"]))
     return courses
 
+
+def version_reference(meta):
+    return {
+        "period": meta.get("period"),
+        "updated_at": meta.get("updated_at"),
+        "generated_at": meta.get("generated_at"),
+        "sections": meta.get("sections"),
+        "sha256": meta.get("sha256")
+    }
+
+def course_details(course):
+    return {
+        "name": course.get("name", ""),
+        "professor": course.get("professor", ""),
+        "status": course.get("status", "ACTIVA"),
+        "curriculum": course.get("curriculum", ""),
+        "slots": course.get("slots", [])
+    }
+
+def build_change_entry(old_courses, new_courses, old_meta, new_meta):
+    old_map = {course["id"]: course for course in old_courses}
+    new_map = {course["id"]: course for course in new_courses}
+    changes = []
+
+    for section_id in sorted(set(old_map) | set(new_map)):
+        before = old_map.get(section_id)
+        after = new_map.get(section_id)
+        if before is None:
+            changes.append({
+                "type": "added", "id": section_id, "code": after.get("code", ""),
+                "name": after.get("name", ""), "section": after.get("section", ""),
+                "after": course_details(after)
+            })
+            continue
+        if after is None:
+            changes.append({
+                "type": "removed", "id": section_id, "code": before.get("code", ""),
+                "name": before.get("name", ""), "section": before.get("section", ""),
+                "before": course_details(before)
+            })
+            continue
+
+        fields = {}
+        for field in ("name", "professor", "status", "curriculum", "slots"):
+            old_value = before.get(field, [] if field == "slots" else "")
+            new_value = after.get(field, [] if field == "slots" else "")
+            if old_value != new_value:
+                fields[field] = {"before": old_value, "after": new_value}
+        if fields:
+            changes.append({
+                "type": "modified", "id": section_id, "code": after.get("code", ""),
+                "name": after.get("name", ""), "section": after.get("section", ""),
+                "fields": fields
+            })
+
+    summary = {
+        "added": sum(change["type"] == "added" for change in changes),
+        "removed": sum(change["type"] == "removed" for change in changes),
+        "modified": sum(change["type"] == "modified" for change in changes),
+        "schedule_changes": sum("slots" in change.get("fields", {}) for change in changes),
+        "professor_changes": sum("professor" in change.get("fields", {}) for change in changes),
+        "status_changes": sum("status" in change.get("fields", {}) for change in changes)
+    }
+    return {
+        "generated_at": new_meta.get("generated_at"),
+        "updated_at": new_meta.get("updated_at"),
+        "period": new_meta.get("period"),
+        "from": version_reference(old_meta),
+        "to": version_reference(new_meta),
+        "summary": summary,
+        "changes": changes
+    }
+
+def load_change_history():
+    if CHANGELOG.exists():
+        try:
+            value = json.loads(CHANGELOG.read_text(encoding="utf-8"))
+            if isinstance(value, dict) and isinstance(value.get("history"), list):
+                return value
+        except Exception:
+            pass
+    return {"schema_version": 1, "history": []}
+
+def save_change_history(history):
+    history["history"] = history.get("history", [])[-15:]
+    CHANGELOG.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
 def main():
     DATA.mkdir(exist_ok=True)
     text, resolved_url = fetch_text()
@@ -136,13 +224,15 @@ def main():
     if len(courses) < 50 or slot_count < 100:
         raise SystemExit(f"Validación fallida: {len(courses)} secciones y {slot_count} bloques; no se reemplazó el catálogo.")
 
+    old_courses = []
     old_count = 0
     if CATALOG.exists():
         try:
             old = gzip.decompress(base64.b64decode(CATALOG.read_text().strip()))
-            old_count = len(json.loads(old.decode("utf-8")))
-        except Exception:
-            pass
+            old_courses = json.loads(old.decode("utf-8"))
+            old_count = len(old_courses)
+        except Exception as exc:
+            raise SystemExit(f"No se pudo leer el catálogo anterior; se cancela la comparación para evitar un historial incorrecto: {exc}")
     if old_count and len(courses) < old_count * 0.70:
         raise SystemExit(f"Validación de seguridad: catálogo bajó de {old_count} a {len(courses)} secciones.")
 
@@ -169,7 +259,24 @@ def main():
         and previous_meta.get("slots") == slot_count
     )
     if same_catalog and same_publication and CATALOG.exists():
-        print("La DAE no publicó cambios en los horarios. Se conserva la versión actual.")
+        if not CHANGELOG.exists():
+            baseline = {
+                "generated_at": previous_meta.get("generated_at"),
+                "updated_at": previous_meta.get("updated_at"),
+                "period": previous_meta.get("period"),
+                "from": None,
+                "to": version_reference(previous_meta),
+                "baseline": True,
+                "summary": {
+                    "added": 0, "removed": 0, "modified": 0,
+                    "schedule_changes": 0, "professor_changes": 0, "status_changes": 0
+                },
+                "changes": []
+            }
+            save_change_history({"schema_version": 1, "history": [baseline]})
+            print("Se creó el punto inicial del historial de cambios DAE.")
+        else:
+            print("La DAE no publicó cambios en los horarios. Se conserva la versión actual.")
         return
 
     # Solo reescribe el archivo de datos cuando el contenido realmente cambió.
@@ -191,7 +298,29 @@ def main():
         "status": "ok"
     }
     META.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    history = load_change_history()
+    if not history["history"] and previous_meta:
+        history["history"].append({
+            "generated_at": previous_meta.get("generated_at"),
+            "updated_at": previous_meta.get("updated_at"),
+            "period": previous_meta.get("period"),
+            "from": None,
+            "to": version_reference(previous_meta),
+            "baseline": True,
+            "summary": {
+                "added": 0, "removed": 0, "modified": 0,
+                "schedule_changes": 0, "professor_changes": 0, "status_changes": 0
+            },
+            "changes": []
+        })
+
+    entry = build_change_entry(old_courses, courses, previous_meta, meta)
+    history["history"].append(entry)
+    save_change_history(history)
+
     print(json.dumps(meta, ensure_ascii=False, indent=2))
+    print(json.dumps(entry["summary"], ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
