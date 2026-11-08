@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "history": [
+    {
+      "generated_at": "2026-11-06T18:55:15+00:00",
+      "updated_at": "06/11/2026 02:44 pm",
+      "period": "1-2026 R",
+      "from": null,
+      "to": {
+        "period": "1-2026 R",
+        "updated_at": "06/11/2026 02:44 pm",
+        "generated_at": "2026-11-06T18:55:15+00:00",
+        "sections": 1029,
+        "sha256": "782f3d2ccba820dc2ab13bb62c50ffd14b5d773e70180154eefd6cfc3c37bcba"
+      },
+      "baseline": true,
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 0,
+        "schedule_changes": 0,
+        "professor_changes": 0,
+        "status_changes": 0
+      },
+      "changes": []
+    }
+  ]
+}
