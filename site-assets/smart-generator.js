@@ -166,6 +166,13 @@
     showToast('Horario generado aplicado: '+result.items.length+' materias sin cruces.');
     $('schedulePanel').scrollIntoView({behavior:'smooth',block:'start'});
   }
+  window.UCSmartGenerator=Object.freeze({
+    has:code=>chosen.has(code),
+    setMetadata:(code,metadata)=>{
+      const current=chosen.get(code);
+      if(current)chosen.set(code,{...current,...metadata});
+    }
+  });
   $s('smartStrategy').addEventListener('change',updateCustomPreferences);
   updateCustomPreferences();
   $s('smartSearch').addEventListener('input',e=>searchSubjects(e.target.value));
