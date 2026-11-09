@@ -367,6 +367,8 @@
     observer.observe(tbody,{childList:true,subtree:true,characterData:true});
     return true;
   }
+  window.UCScheduleAnalyzer=Object.freeze({analyze,formatHours});
+
   function initialize(){
     const ready=build()&&buildCompare();
     if(ready)return;
