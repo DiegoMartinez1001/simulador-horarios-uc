@@ -118,6 +118,9 @@
     '@media(max-width:520px){.pensum-bulk-actions{align-items:flex-start;flex-direction:column}.pensum-bulk-buttons{width:100%}.pensum-bulk-buttons button{flex:1}}'
   ].join('\n');
   document.head.appendChild(css);
+  const mobileAccordionStyle=document.createElement('style');
+  mobileAccordionStyle.textContent="\n.pensum-filter-accordion{margin:0 0 9px}\n.pensum-filter-accordion>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 11px;border:1px solid #dbe4ef;border-radius:9px;background:#f6f9fd;color:#38516f;font-size:10px;font-weight:850;cursor:pointer;list-style:none}\n.pensum-filter-accordion>summary::-webkit-details-marker{display:none}\n.pensum-filter-accordion>summary::after{content:\"＋\";font-size:15px;line-height:1}\n.pensum-filter-accordion[open]>summary::after{content:\"−\"}\n.pensum-filter-accordion[open]>summary{border-radius:9px 9px 0 0}\n.pensum-filter-accordion .pensum-filter-panel{margin:0;border-top:0;border-radius:0 0 9px 9px}\nbody[data-theme=\"dark\"] .pensum-filter-accordion>summary{background:#17283f;border-color:#3a4d66;color:#d5e2f2}\n@media(min-width:761px){.pensum-filter-accordion>summary{display:none}.pensum-filter-accordion .pensum-filter-panel{border-radius:10px}}\n";
+  document.head.appendChild(mobileAccordionStyle);
 
   function makeSelect(id,label,options){
     const wrapper=document.createElement('div');
@@ -173,7 +176,13 @@
     panel.appendChild(note);
 
     const label=scope.querySelector('label[for="'+input.id+'"]');
-    if(label)label.insertAdjacentElement('afterend',panel);
+    const accordion=document.createElement('details');
+    accordion.className='pensum-filter-accordion';
+    accordion.open=!(window.matchMedia&&window.matchMedia('(max-width: 760px)').matches);
+    const summary=document.createElement('summary');
+    summary.textContent='Filtros por pensum y semestre';
+    accordion.append(summary,panel);
+    if(label)label.insertAdjacentElement('afterend',accordion);
     else input.insertAdjacentElement('beforebegin',panel);
 
     const controls={plan:plan.select,school:school.select,semester:semester.select,track:track.select,trackWrap:track.wrapper,panel,note};
