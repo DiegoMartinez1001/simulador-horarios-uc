@@ -14,6 +14,7 @@
   const DAY_MAP=new Map(DAYS.map(day=>[day.id,day]));
   const byId=id=>document.getElementById(id);
   let observer=null;
+  let compareObserver=null;
   let scheduled=false;
 
   const style=document.createElement('style');
@@ -54,7 +55,22 @@
     'body[data-theme="dark"] .schedule-analysis-track{background:#2a3e57}',
     'body[data-theme="dark"] .schedule-analysis-score{border-color:#354961}',
     '@media(max-width:760px){.schedule-analysis-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.schedule-analysis-columns{grid-template-columns:1fr}}',
-    '@media(max-width:430px){.schedule-analysis{padding:12px}.schedule-analysis-day{grid-template-columns:34px minmax(35px,1fr) 37px minmax(76px,1.15fr);gap:5px}.schedule-analysis-day-range{font-size:8px}}'
+    '@media(max-width:430px){.schedule-analysis{padding:12px}.schedule-analysis-day{grid-template-columns:34px minmax(35px,1fr) 37px minmax(76px,1.15fr);gap:5px}.schedule-analysis-day-range{font-size:8px}}',
+    '.schedule-compare-analysis{margin:0 0 20px;padding:15px 16px;border:1px solid #dbe3ed;border-radius:12px;background:#f8fafd;color:#26364c}',
+    '.schedule-compare-analysis h4{margin:0;color:#263f61;font-size:13px;font-weight:900}',
+    '.schedule-compare-analysis-intro{margin:4px 0 12px;color:#718096;font-size:10px;line-height:1.5}',
+    '.schedule-compare-analysis-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}',
+    '.schedule-compare-analysis-card{min-width:0;padding:11px;border:1px solid #e2e8f0;border-radius:10px;background:#fff}',
+    '.schedule-compare-analysis-card.best{border-color:#6ca58a;box-shadow:inset 0 0 0 1px #6ca58a}',
+    '.schedule-compare-analysis-card strong{display:block;color:#29486f;font-size:10px}',
+    '.schedule-compare-analysis-score{margin:6px 0;color:#29486f;font-size:23px;font-weight:900;font-variant-numeric:tabular-nums}',
+    '.schedule-compare-analysis-card p{margin:3px 0;color:#718096;font-size:9px;line-height:1.45}',
+    '.schedule-compare-analysis-note{margin:10px 0 0;color:#8996a8;font-size:9px;line-height:1.5}',
+    'body[data-theme="dark"] .schedule-compare-analysis{background:#111f32;border-color:#34465e;color:#e6edf6}',
+    'body[data-theme="dark"] .schedule-compare-analysis h4,body[data-theme="dark"] .schedule-compare-analysis-card strong,body[data-theme="dark"] .schedule-compare-analysis-score{color:#e6efff}',
+    'body[data-theme="dark"] .schedule-compare-analysis-intro,body[data-theme="dark"] .schedule-compare-analysis-card p,body[data-theme="dark"] .schedule-compare-analysis-note{color:#9cadc2}',
+    'body[data-theme="dark"] .schedule-compare-analysis-card{background:#18283d;border-color:#3a4d66}',
+    '@media(max-width:760px){.schedule-compare-analysis-grid{grid-template-columns:1fr}}'
   ].join('\n');
   document.head.appendChild(style);
 
@@ -264,10 +280,74 @@
     root.appendChild(node('p','schedule-analysis-foot','Estimación basada en los bloques publicados y la duración configurada por el simulador. Los espacios menores de 15 minutos no se contabilizan como espera. Este índice es orientativo y no sustituye la revisión del horario oficial.'));
   }
 
+  function comparisonCourses(optionIndex){
+    try{
+      if(typeof compareSubjects==='undefined'||!compareSubjects||typeof compareSubjects.values!=='function'||typeof COURSES==='undefined')return [];
+      return Array.from(compareSubjects.values()).map(entry=>{
+        const id=entry?.choices?.[optionIndex];
+        return COURSES.find(course=>String(course.id)===String(id));
+      }).filter(Boolean);
+    }catch(error){return [];}
+  }
+  function renderCompare(){
+    const root=byId('scheduleCompareAnalysis');
+    if(!root)return;
+    let size=0;
+    try{size=typeof compareSubjects!=='undefined'&&compareSubjects?compareSubjects.size:0;}catch(error){}
+    if(!size){root.hidden=true;root.replaceChildren();return;}
+    root.hidden=false;
+    root.replaceChildren();
+    root.append(node('h4','','Análisis de las tres alternativas'));
+    root.append(node('p','schedule-compare-analysis-intro','Compara la carga semanal, los espacios entre materias y los cruces de cada opción. El índice es orientativo, no una recomendación académica oficial.'));
+    const results=[0,1,2].map(index=>{
+      const courses=comparisonCourses(index);
+      return {index,courses,metrics:analyze(courses)};
+    });
+    const comparable=results.filter(result=>result.courses.length);
+    const maxScore=comparable.length?Math.max(...comparable.map(result=>result.metrics.score)):-1;
+    const grid=node('div','schedule-compare-analysis-grid');
+    results.forEach(result=>{
+      const m=result.metrics;
+      const card=node('article','schedule-compare-analysis-card'+(result.courses.length&&m.score===maxScore?' best':''));
+      card.appendChild(node('strong','','Opción '+(result.index+1)));
+      card.appendChild(node('div','schedule-compare-analysis-score',result.courses.length?m.score+'/100':'—'));
+      if(!result.courses.length){
+        card.appendChild(node('p','','Agrega materias y selecciona secciones para analizar esta opción.'));
+      }else{
+        card.appendChild(node('p','',formatHours(m.totalOccupied)+' ocupadas · '+m.freeDays.length+' días libres'));
+        card.appendChild(node('p','',formatHours(m.totalGaps)+' de espera · '+m.conflicts+' cruces'));
+        card.appendChild(node('p','',m.label));
+        const busiest=m.daily.filter(day=>day.minutes===m.maxDaily&&day.blocks);
+        if(busiest.length)card.appendChild(node('p','', 'Día de mayor carga: '+busiest.map(day=>day.short).join(', ')+' ('+formatHours(m.maxDaily)+')'));
+      }
+      grid.appendChild(card);
+    });
+    root.appendChild(grid);
+    root.appendChild(node('p','schedule-compare-analysis-note','El índice descuenta puntos por cruces, esperas de 15 minutos o más y jornadas que superan las 6 horas. Toda la evaluación se realiza en este dispositivo.'));
+  }
+  function buildCompare(){
+    if(byId('scheduleCompareAnalysis'))return true;
+    const panel=byId('comparePanel');
+    const schedules=byId('optionSchedules');
+    if(!panel||!schedules)return false;
+    const root=node('section','schedule-compare-analysis');
+    root.id='scheduleCompareAnalysis';
+    root.hidden=true;
+    root.setAttribute('aria-label','Análisis de las tres alternativas');
+    schedules.insertAdjacentElement('afterend',root);
+    renderCompare();
+    compareObserver=new MutationObserver(scheduleRender);
+    ['optionBody1','optionBody2','optionBody3','compareRows'].forEach(id=>{
+      const target=byId(id);
+      if(target)compareObserver.observe(target,{childList:true,subtree:true,characterData:true});
+    });
+    return true;
+  }
+
   function scheduleRender(){
     if(scheduled)return;
     scheduled=true;
-    window.setTimeout(()=>{scheduled=false;render();},40);
+    window.setTimeout(()=>{scheduled=false;render();renderCompare();},40);
   }
   function build(){
     if(byId('scheduleAnalysis'))return true;
@@ -288,8 +368,9 @@
     return true;
   }
   function initialize(){
-    if(build())return;
-    const wait=new MutationObserver(()=>{if(build())wait.disconnect();});
+    const ready=build()&&buildCompare();
+    if(ready)return;
+    const wait=new MutationObserver(()=>{if(build()&&buildCompare())wait.disconnect();});
     wait.observe(document.body,{childList:true,subtree:true});
     window.setTimeout(()=>wait.disconnect(),20000);
   }
