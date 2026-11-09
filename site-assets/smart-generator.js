@@ -17,7 +17,7 @@
       :'Estas preferencias se habilitan al seleccionar «Horario personalizado».';
   }
   function coursesFor(code){return COURSES.filter(c=>c.code===code);}
-  function availableSections(code){return coursesFor(code).filter(c=>c.status!=='CERRADA'&&(c.slots||[]).length>0);}
+  function availableSections(code){const preference=chosen.get(code)||{};return coursesFor(code).filter(c=>c.status!=='CERRADA'&&(c.slots||[]).length>0&&(!preference.curriculum||!c.curriculum||c.curriculum===preference.curriculum));}
   function addSubject(code){
     if(chosen.has(code))return;
     const item=coursesFor(code)[0];if(!item)return;
