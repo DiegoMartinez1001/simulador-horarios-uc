@@ -76,7 +76,7 @@ jobs:
         run: |
           mkdir -p dist/data
           python - <<'PY'
-          import base64, gzip, re
+          import base64, gzip, re, subprocess, sys
           from pathlib import Path
 
           page = gzip.decompress(base64.b64decode(Path("site-assets/index.html.gz.b64").read_text().strip())).decode("utf-8")
