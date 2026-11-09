@@ -243,7 +243,7 @@
       button.type='button';
       if(smart){
         button.dataset.smartAdd=group.code;
-        button.dataset.pensumCurriculum=group.curriculum||'';
+        button.dataset.pensumCurriculum=state.plan||'';
         button.dataset.pensumSchool=state.school||'';
         button.dataset.pensumTrack=state.track||'';
         button.textContent=selectedSmart(group.code)?'Agregada':'Agregar';
@@ -313,6 +313,9 @@
     });
     // Re-render compare results when the old listener changes the list.
     byId('compareSearchResults').addEventListener('click',()=>render('compare'));
+    byId('smartSelected')?.addEventListener('click',()=>render('smart'));
+    render('smart');
+    render('compare');
     return true;
   }
 
