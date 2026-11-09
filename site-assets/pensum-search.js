@@ -482,6 +482,7 @@
   }
   function reconcileComparePairs(){
     if(typeof compareSubjects==='undefined'||!compareSubjects)return;
+    upgradeExistingComparePairs();
     let changed=false;
     for(const [code,entry] of [...compareSubjects.entries()]){
       if(entry?.pairRole==='laboratorio'&&entry.linkedTo&&!compareSubjects.has(entry.linkedTo)){
