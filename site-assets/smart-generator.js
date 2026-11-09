@@ -147,7 +147,15 @@
     for(const code of codes){
       const sections=generated.map(result=>result.items.find(item=>item.code===code));
       const choices=[0,1,2].map(index=>sections[Math.min(index,sections.length-1)].id);
-      compareSubjects.set(code,{code,name:chosen.get(code).name,choices});
+      const metadata=chosen.get(code)||{};
+      compareSubjects.set(code,{
+        code,name:metadata.name||code,choices,
+        curriculum:metadata.curriculum||'',
+        school:metadata.school||'',
+        track:metadata.track||'',
+        ...(metadata.linkedLab?{linkedLab:metadata.linkedLab}:{}),
+        ...(metadata.linkedTo?{linkedTo:metadata.linkedTo,pairRole:'laboratorio'}:{})
+      });
     }
     persistCompare();
     renderCompareAll();
