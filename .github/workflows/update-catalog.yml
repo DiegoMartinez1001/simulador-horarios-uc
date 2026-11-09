@@ -106,6 +106,7 @@ jobs:
           update_notice = Path("site-assets/update-notice.js").read_text(encoding="utf-8")
           change_history = Path("site-assets/change-history.js").read_text(encoding="utf-8")
           schedule_tools = Path("site-assets/schedule-tools.js").read_text(encoding="utf-8")
+          disclaimer = Path("site-assets/disclaimer.js").read_text(encoding="utf-8")
 
           if "</style>" not in page or '  <div class="layout">' not in page:
               raise SystemExit("No se encontraron los puntos de inserción del comparador.")
@@ -114,7 +115,7 @@ jobs:
           js_anchor = "$('search').addEventListener('input',renderResults);"
           if js_anchor not in page:
               raise SystemExit("No se encontró el punto de inserción del código JavaScript.")
-          page = page.replace(js_anchor, js + "\n" + preferences + "\n" + image_export + "\n" + smart_generator + "\n" + update_notice + "\n" + change_history + "\n" + schedule_tools + "\n" + js_anchor, 1)
+          page = page.replace(js_anchor, js + "\n" + preferences + "\n" + image_export + "\n" + smart_generator + "\n" + update_notice + "\n" + change_history + "\n" + schedule_tools + "\n" + disclaimer + "\n" + js_anchor, 1)
 
           refresh_anchor = "  restore();\n  renderAll();\n  if(showMessage)"
           if refresh_anchor not in page:
