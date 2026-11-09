@@ -13,7 +13,6 @@ body {
 img, video, canvas, svg { max-width: 100%; }
 button, input, select, textarea { touch-action: manipulation; }
 
-.mobile-day-nav { display: none; }
 
 @media (max-width: 760px) {
   body { font-size: 14px; }
@@ -98,23 +97,6 @@ button, input, select, textarea { touch-action: manipulation; }
     max-width: 100% !important;
     table-layout: fixed !important;
   }
-  .schedule-table th:first-child,
-  .schedule-table td:first-child,
-  .option-table th:first-child,
-  .option-table td:first-child,
-  .smart-result-table th:first-child,
-  .smart-result-table td:first-child {
-    width: 58px !important;
-  }
-  .schedule-table th, .option-table th, .smart-result-table th {
-    font-size: 9px !important;
-    padding: 6px 2px !important;
-    overflow-wrap: anywhere;
-  }
-  .schedule-table td, .option-table td, .smart-result-table td {
-    padding: 2px !important;
-    overflow-wrap: anywhere;
-  }
   .class-block, .option-block, .smart-class {
     min-width: 0;
     padding: 3px 2px !important;
@@ -130,84 +112,83 @@ button, input, select, textarea { touch-action: manipulation; }
     white-space: normal !important;
     overflow-wrap: anywhere;
   }
-  .mobile-day-nav {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 0 7px;
-    padding: 2px 0 5px;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scrollbar-width: thin;
-    -webkit-overflow-scrolling: touch;
-  }
-  .mobile-day-nav button {
-    flex: 0 0 auto;
-    min-width: 43px;
-    min-height: 40px;
-    padding: 8px 12px;
-    border: 1px solid #d5deea;
-    border-radius: 9px;
-    background: #f1f5fa;
-    color: #425875;
-    font-size: 12px;
-    font-weight: 800;
-    cursor: pointer;
-  }
-  .mobile-day-nav button[aria-pressed="true"] {
-    background: #315f9d;
-    border-color: #315f9d;
-    color: #fff;
-  }
 
-  /* En teléfono se ve un día a la vez, sin encoger toda la semana. */
-  table.mobile-day-col-2 thead th:not(:first-child),
-  table.mobile-day-col-2 tbody td:not(:first-child),
-  table.mobile-day-col-2 tbody th:not(:first-child),
-  table.mobile-day-col-3 thead th:not(:first-child),
-  table.mobile-day-col-3 tbody td:not(:first-child),
-  table.mobile-day-col-3 tbody th:not(:first-child),
-  table.mobile-day-col-4 thead th:not(:first-child),
-  table.mobile-day-col-4 tbody td:not(:first-child),
-  table.mobile-day-col-4 tbody th:not(:first-child),
-  table.mobile-day-col-5 thead th:not(:first-child),
-  table.mobile-day-col-5 tbody td:not(:first-child),
-  table.mobile-day-col-5 tbody th:not(:first-child),
-  table.mobile-day-col-6 thead th:not(:first-child),
-  table.mobile-day-col-6 tbody td:not(:first-child),
-  table.mobile-day-col-6 tbody th:not(:first-child),
-  table.mobile-day-col-7 thead th:not(:first-child),
-  table.mobile-day-col-7 tbody td:not(:first-child),
-  table.mobile-day-col-7 tbody th:not(:first-child),
-  table.mobile-day-col-8 thead th:not(:first-child),
-  table.mobile-day-col-8 tbody td:not(:first-child),
-  table.mobile-day-col-8 tbody th:not(:first-child) {
-    display: none !important;
+  /* Semana completa: todas las columnas permanecen visibles en el teléfono. */
+  .schedule-table,
+  .option-table,
+  .smart-result-table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed !important;
   }
-  table.mobile-day-col-2 thead th:nth-child(2),
-  table.mobile-day-col-2 tbody td:nth-child(2),
-  table.mobile-day-col-2 tbody th:nth-child(2),
-  table.mobile-day-col-3 thead th:nth-child(3),
-  table.mobile-day-col-3 tbody td:nth-child(3),
-  table.mobile-day-col-3 tbody th:nth-child(3),
-  table.mobile-day-col-4 thead th:nth-child(4),
-  table.mobile-day-col-4 tbody td:nth-child(4),
-  table.mobile-day-col-4 tbody th:nth-child(4),
-  table.mobile-day-col-5 thead th:nth-child(5),
-  table.mobile-day-col-5 tbody td:nth-child(5),
-  table.mobile-day-col-5 tbody th:nth-child(5),
-  table.mobile-day-col-6 thead th:nth-child(6),
-  table.mobile-day-col-6 tbody td:nth-child(6),
-  table.mobile-day-col-6 tbody th:nth-child(6),
-  table.mobile-day-col-7 thead th:nth-child(7),
-  table.mobile-day-col-7 tbody td:nth-child(7),
-  table.mobile-day-col-7 tbody th:nth-child(7),
-  table.mobile-day-col-8 thead th:nth-child(8),
-  table.mobile-day-col-8 tbody td:nth-child(8),
-  table.mobile-day-col-8 tbody th:nth-child(8) {
-    display: table-cell !important;
+  .schedule-table th:first-child,
+  .schedule-table td:first-child,
+  .option-table th:first-child,
+  .option-table td:first-child,
+  .smart-result-table th:first-child,
+  .smart-result-table td:first-child {
+    width: 42px !important;
+  }
+  .schedule-table th:not(:first-child),
+  .option-table th:not(:first-child),
+  .smart-result-table th:not(:first-child) {
+    width: auto !important;
+  }
+  .schedule-table th,
+  .option-table th,
+  .smart-result-table th {
+    font-size: 8px !important;
+    line-height: 1.1;
+    padding: 5px 1px !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: anywhere;
+  }
+  .schedule-table td,
+  .option-table td,
+  .smart-result-table td {
+    padding: 1px !important;
+    overflow-wrap: anywhere;
+  }
+  .schedule-table td.time-cell,
+  .option-table td.time-cell {
+    font-size: 7px !important;
+    line-height: 1.05;
+    padding: 2px 0 !important;
+  }
+  .schedule-table td.time-cell span,
+  .option-table td.time-cell small {
+    font-size: 6px !important;
+    line-height: 1.05;
+  }
+  .class-block,
+  .option-block,
+  .smart-class {
+    min-width: 0;
+    margin: 0 !important;
+    padding: 2px 1px !important;
+    border-left-width: 2px !important;
+    border-radius: 2px !important;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .class-block strong,
+  .option-block strong,
+  .smart-class b {
+    font-size: 7px !important;
+    line-height: 1.05;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .class-block small,
+  .option-block small,
+  .smart-class small {
+    font-size: 6px !important;
+    line-height: 1.05;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .option-schedules { grid-template-columns: minmax(0, 1fr) !important; }
@@ -280,16 +261,6 @@ button, input, select, textarea { touch-action: manipulation; }
   .selected-chip-detailed { min-width: 0; flex-basis: 100%; }
 }
 
-body[data-theme="dark"] .mobile-day-nav button {
-  background: #1a2a42;
-  border-color: #3a4b64;
-  color: #d4e0ef;
-}
-body[data-theme="dark"] .mobile-day-nav button[aria-pressed="true"] {
-  background: #326aa8;
-  border-color: #5087c8;
-  color: #fff;
-}
 body[data-theme="dark"] .compare-picker tr {
   background: #162338;
   border-color: #3a4b64;
@@ -297,7 +268,6 @@ body[data-theme="dark"] .compare-picker tr {
 body[data-theme="dark"] .compare-picker td:nth-child(n+5)::before {
   color: #b9c9dc;
 }
-body.uc-export-full-week .mobile-day-nav { display: none !important; }
 body.uc-export-full-week .schedule-table,
 body.uc-export-full-week .option-table,
 body.uc-export-full-week .smart-result-table {
@@ -311,7 +281,6 @@ body.uc-export-full-week .schedule-table-scroll {
 }
 
 @media print {
-  .mobile-day-nav { display: none !important; }
   table.mobile-day-col-2 thead th:not(:first-child),
   table.mobile-day-col-2 tbody td:not(:first-child),
   table.mobile-day-col-3 thead th:not(:first-child),
