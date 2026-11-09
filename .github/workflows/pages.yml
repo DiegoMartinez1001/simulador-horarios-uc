@@ -76,7 +76,6 @@ jobs:
           node --check site-assets/disclaimer.js
           node --check site-assets/schedule-analyzer.js
           node --check site-assets/pensum-search.js
-          node --check site-assets/mobile-ui.js
           node --check site-assets/image-export.js
           node --check site-assets/pwa.js
           node --check site-assets/sw.js
@@ -124,7 +123,6 @@ jobs:
           disclaimer = Path("site-assets/disclaimer.js").read_text(encoding="utf-8")
           schedule_analyzer = Path("site-assets/schedule-analyzer.js").read_text(encoding="utf-8")
           pensum_search = Path("site-assets/pensum-search.js").read_text(encoding="utf-8")
-          mobile_ui = Path("site-assets/mobile-ui.js").read_text(encoding="utf-8")
 
           if "</style>" not in page or '  <div class="layout">' not in page:
               raise SystemExit("No se encontraron los puntos de inserción del comparador.")
