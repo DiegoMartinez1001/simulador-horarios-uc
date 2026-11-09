@@ -280,21 +280,3 @@ body.uc-export-full-week .schedule-table-scroll {
   overflow: visible !important;
 }
 
-@media print {
-  table.mobile-day-col-2 thead th:not(:first-child),
-  table.mobile-day-col-2 tbody td:not(:first-child),
-  table.mobile-day-col-3 thead th:not(:first-child),
-  table.mobile-day-col-3 tbody td:not(:first-child),
-  table.mobile-day-col-4 thead th:not(:first-child),
-  table.mobile-day-col-4 tbody td:not(:first-child),
-  table.mobile-day-col-5 thead th:not(:first-child),
-  table.mobile-day-col-5 tbody td:not(:first-child),
-  table.mobile-day-col-6 thead th:not(:first-child),
-  table.mobile-day-col-6 tbody td:not(:first-child),
-  table.mobile-day-col-7 thead th:not(:first-child),
-  table.mobile-day-col-7 tbody td:not(:first-child),
-  table.mobile-day-col-8 thead th:not(:first-child),
-  table.mobile-day-col-8 tbody td:not(:first-child) {
-    display: table-cell !important;
-  }
-}
