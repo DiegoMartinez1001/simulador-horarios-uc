@@ -18,21 +18,68 @@
   }
   function coursesFor(code){return COURSES.filter(c=>c.code===code);}
   function availableSections(code){const preference=chosen.get(code)||{};return coursesFor(code).filter(c=>c.status!=='CERRADA'&&(c.slots||[]).length>0&&(!preference.curriculum||!c.curriculum||c.curriculum===preference.curriculum));}
-  function addSubject(code){
+  function subjectKey(value){return norm(value||'').replace(/[^a-z0-9]/g,'');}
+  function linkedLabFor(item,metadata={}){
+    if(!item||String(item.code).endsWith('L'))return null;
+    const code=String(item.code)+'L';
+    const name=subjectKey(item.name);
+    const curriculum=metadata.curriculum||item.curriculum||'';
+    return COURSES.find(candidate=>
+      candidate.code===code&&
+      subjectKey(candidate.name)===name&&
+      (!curriculum||!candidate.curriculum||candidate.curriculum===curriculum)
+    )||null;
+  }
+  function addSubject(code,metadata={}){
     if(chosen.has(code))return;
-    const item=coursesFor(code)[0];if(!item)return;
-    chosen.set(code,{code,name:item.name||code});renderChosen();$s('smartSearch').value='';$s('smartSearchResults').innerHTML='';
+    const matching=coursesFor(code);
+    const item=matching.find(course=>!metadata.curriculum||!course.curriculum||course.curriculum===metadata.curriculum)||matching[0];
+    if(!item)return;
+    const details={
+      curriculum:metadata.curriculum||item.curriculum||'',
+      school:metadata.school||'',
+      track:metadata.track||''
+    };
+    const lab=linkedLabFor(item,details);
+    chosen.set(code,{code,name:item.name||code,...details,linkedLab:lab?.code||''});
+    if(lab&&!chosen.has(lab.code)){
+      chosen.set(lab.code,{
+        code:lab.code,name:lab.name||lab.code,...details,
+        linkedTo:code,pairRole:'laboratorio'
+      });
+    }
+    renderChosen();
+    $s('smartSearch').value='';
+    $s('smartSearchResults').innerHTML='';
+  }
+  function removeSubject(code){
+    const item=chosen.get(code);
+    if(!item)return;
+    if(item.linkedTo){
+      chosen.delete(item.linkedTo);
+      chosen.delete(code);
+    }else{
+      chosen.delete(code);
+      for(const [linkedCode,linked] of chosen){
+        if(linked.linkedTo===code)chosen.delete(linkedCode);
+      }
+    }
+    renderChosen();
   }
   function renderChosen(){
     $s('smartSelectedCount').textContent=chosen.size;
-    $s('smartSelected').innerHTML=chosen.size?[...chosen.values()].map(x=>'<span class="smart-chip">'+esc(x.code)+'<button type="button" data-smart-remove="'+esc(x.code)+'" aria-label="Quitar '+esc(x.code)+'">×</button></span>').join(''):'<span class="smart-muted">Agrega las materias que planeas inscribir.</span>';
+    $s('smartSelected').innerHTML=chosen.size?[...chosen.values()].map(item=>{
+      const label=item.pairRole==='laboratorio'?' · Lab.':'';
+      const related=item.pairRole==='laboratorio'?' (incluido automáticamente)':'';
+      return '<span class="smart-chip" title="'+esc((item.name||item.code)+related)+'">'+esc(item.code)+esc(label)+'<button type="button" data-smart-remove="'+esc(item.code)+'" aria-label="Quitar '+esc(item.code)+(item.pairRole==='laboratorio'?' y su materia asociada':' y su laboratorio asociado')+'">×</button></span>';
+    }).join(''):'<span class="smart-muted">Agrega las materias que planeas inscribir.</span>';
   }
   function searchSubjects(value){
     const q=norm(value||'');
     if(!q){$s('smartSearchResults').innerHTML='';return;}
     const groups=new Map();
     for(const c of COURSES){if(!groups.has(c.code))groups.set(c.code,c);}
-    const found=[...groups.values()].filter(c=>!chosen.has(c.code)&&(norm(c.code).includes(q)||norm(c.name).includes(q))).slice(0,8);
+    const found=[...groups.values()].filter(c=>!String(c.code).endsWith('L')&&!chosen.has(c.code)&&(norm(c.code).includes(q)||norm(c.name).includes(q))).slice(0,8);
     $s('smartSearchResults').innerHTML=found.map(c=>'<div class="smart-search-item"><span><b>'+esc(c.code)+'</b><small>'+esc(c.name||'Nombre no indicado')+'</small></span><button type="button" data-smart-add="'+esc(c.code)+'">Agregar</button></div>').join('');
   }
   function slotInterval(slot){const start=toMinutes(slot.start);return {day:slot.day,start,end:start+DUR};}
@@ -168,16 +215,27 @@
   }
   window.UCSmartGenerator=Object.freeze({
     has:code=>chosen.has(code),
+    add:(code,metadata={})=>addSubject(code,metadata),
+    remove:code=>removeSubject(code),
     setMetadata:(code,metadata)=>{
       const current=chosen.get(code);
-      if(current)chosen.set(code,{...current,...metadata});
+      if(!current)return;
+      chosen.set(code,{...current,...metadata});
+      const labCode=current.linkedLab;
+      if(labCode&&chosen.has(labCode)){
+        chosen.set(labCode,{...chosen.get(labCode),...metadata});
+      }
+    },
+    linkedLabFor:(code,metadata={})=>{
+      const course=coursesFor(code).find(item=>!metadata.curriculum||!item.curriculum||item.curriculum===metadata.curriculum)||coursesFor(code)[0];
+      return linkedLabFor(course,metadata)?.code||null;
     }
   });
   $s('smartStrategy').addEventListener('change',updateCustomPreferences);
   updateCustomPreferences();
   $s('smartSearch').addEventListener('input',e=>searchSubjects(e.target.value));
   $s('smartSearchResults').addEventListener('click',e=>{const b=e.target.closest('[data-smart-add]');if(b)addSubject(b.dataset.smartAdd);});
-  $s('smartSelected').addEventListener('click',e=>{const b=e.target.closest('[data-smart-remove]');if(b){chosen.delete(b.dataset.smartRemove);renderChosen();}});
+  $s('smartSelected').addEventListener('click',e=>{const b=e.target.closest('[data-smart-remove]');if(b)removeSubject(b.dataset.smartRemove);});
   $s('smartGenerate').addEventListener('click',generate);
   $s('smartResults').addEventListener('click',e=>{
     const use=e.target.closest('[data-smart-use]');
