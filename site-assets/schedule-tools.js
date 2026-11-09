@@ -105,10 +105,14 @@
   document.head.appendChild(style);
 
   function buildInterface(){
-    const panel=byId('schedulePanel');
-    if(!panel||byId('scheduleLibrary'))return;
-    const head=panel.querySelector('.panel-head');
-    if(!head)return;
+    if(byId('scheduleLibrary'))return true;
+
+    // Localiza el bloque real del horario. Se usa la tabla como punto de anclaje
+    // para no depender de una clase concreta en la cabecera del panel.
+    const scheduleBody=byId('scheduleBody');
+    const table=scheduleBody?.closest('table')||null;
+    const panel=byId('schedulePanel')||table?.closest('.panel')||table?.parentElement;
+    if(!panel||!scheduleBody)return false;
 
     const root=document.createElement('section');
     root.id='scheduleLibrary';
@@ -126,7 +130,10 @@
       '</form>'+
       '<div class="schedule-library-list" id="scheduleLibraryList"></div>'+
       '<p class="schedule-library-footnote">Los horarios guardados permanecen en este navegador y dispositivo. Los eventos exportados se repiten semanalmente en la zona horaria de Venezuela y no incluyen una fecha de fin automática.</p>';
-    head.insertAdjacentElement('afterend',root);
+    const head=panel.querySelector('.panel-head,.panel-header,.schedule-panel-head');
+    if(head)head.insertAdjacentElement('afterend',root);
+    else if(table)table.insertAdjacentElement('beforebegin',root);
+    else panel.prepend(root);
 
     byId('scheduleLibraryForm').addEventListener('submit',saveCurrentSchedule);
     byId('scheduleLibraryExportCurrent').addEventListener('click',()=>exportCalendar({
@@ -135,6 +142,7 @@
       courses:currentCourses()
     }));
     renderSaved();
+    return true;
   }
 
   function renderSaved(){
@@ -403,8 +411,13 @@
   }
 
   function initialize(){
-    buildInterface();
-    renderSaved();
+    if(buildInterface())return;
+    // Si el panel se monta después, observa el DOM y vuelve a intentarlo.
+    const observer=new MutationObserver(()=>{
+      if(buildInterface())observer.disconnect();
+    });
+    observer.observe(document.body,{childList:true,subtree:true});
+    window.setTimeout(()=>observer.disconnect(),15000);
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initialize,{once:true});
   else initialize();
