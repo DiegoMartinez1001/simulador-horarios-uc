@@ -43,6 +43,8 @@ jobs:
               raise SystemExit("No se encontró la nota informativa antigua del enlace administrativo.")
           page = page.replace(old_note, new_note, 1)
           pwa_head = '\n<link rel="manifest" href="./manifest.webmanifest">\n<meta name="theme-color" content="#173f68">\n<meta name="description" content="Consulta materias y organiza tu horario de Ingeniería UC.">\n<meta name="mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-title" content="Horarios UC">\n<link rel="apple-touch-icon" sizes="192x192" href="./icons/app-192.png">\n'
+          if 'name="viewport"' not in page and "name='viewport'" not in page:
+              pwa_head = '\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' + pwa_head
           pwa_script = '<script src="./pwa.js" defer></script>'
           if "</head>" not in page or "</body>" not in page:
               raise SystemExit("No se encontraron las etiquetas de inserción para instalar la PWA.")
@@ -59,13 +61,14 @@ jobs:
           disclaimer = Path("site-assets/disclaimer.js").read_text(encoding="utf-8")
           schedule_analyzer = Path("site-assets/schedule-analyzer.js").read_text(encoding="utf-8")
           pensum_search = Path("site-assets/pensum-search.js").read_text(encoding="utf-8")
+          mobile_ui = Path("site-assets/mobile-ui.js").read_text(encoding="utf-8")
           pwa_js = Path("site-assets/pwa.js").read_text(encoding="utf-8")
           sw_js = Path("site-assets/sw.js").read_text(encoding="utf-8")
           image_css = Path("site-assets/image-export.css").read_text(encoding="utf-8")
           anchor = "$('search').addEventListener('input',renderResults);"
           if anchor not in page:
               raise SystemExit("No se encontró el punto de integración.")
-          page = page.replace(anchor, compare + "\n" + preferences + "\n" + image_export + "\n" + smart_generator + "\n" + update_notice + "\n" + change_history + "\n" + schedule_tools + "\n" + disclaimer + "\n" + schedule_analyzer + "\n" + pensum_search + "\n" + anchor, 1)
+          page = page.replace(anchor, compare + "\n" + preferences + "\n" + image_export + "\n" + smart_generator + "\n" + update_notice + "\n" + change_history + "\n" + schedule_tools + "\n" + disclaimer + "\n" + schedule_analyzer + "\n" + pensum_search + "\n" + mobile_ui + "\n" + anchor, 1)
           start = page.index("<script>") + len("<script>")
           end = page.index("</script>", start)
           Path("/tmp/simulador-completo.js").write_text(page[start:end], encoding="utf-8")
@@ -74,6 +77,8 @@ jobs:
           node --check site-assets/disclaimer.js
           node --check site-assets/schedule-analyzer.js
           node --check site-assets/pensum-search.js
+          node --check site-assets/mobile-ui.js
+          node --check site-assets/image-export.js
           node --check site-assets/pwa.js
           node --check site-assets/sw.js
       - name: Configurar GitHub Pages
@@ -96,6 +101,8 @@ jobs:
               raise SystemExit("No se encontró la nota informativa antigua del enlace administrativo.")
           page = page.replace(old_note, new_note, 1)
           pwa_head = '\n<link rel="manifest" href="./manifest.webmanifest">\n<meta name="theme-color" content="#173f68">\n<meta name="description" content="Consulta materias y organiza tu horario de Ingeniería UC.">\n<meta name="mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-title" content="Horarios UC">\n<link rel="apple-touch-icon" sizes="192x192" href="./icons/app-192.png">\n'
+          if 'name="viewport"' not in page and "name='viewport'" not in page:
+              pwa_head = '\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' + pwa_head
           pwa_script = '<script src="./pwa.js" defer></script>'
           if "</head>" not in page or "</body>" not in page:
               raise SystemExit("No se encontraron las etiquetas de inserción para instalar la PWA.")
@@ -105,6 +112,7 @@ jobs:
           css = Path("site-assets/three-options.css").read_text(encoding="utf-8")
           image_css = Path("site-assets/image-export.css").read_text(encoding="utf-8")
           smart_css = Path("site-assets/smart-generator.css").read_text(encoding="utf-8")
+          responsive_css = Path("site-assets/responsive.css").read_text(encoding="utf-8")
           markup = Path("site-assets/three-options.html").read_text(encoding="utf-8")
           smart_markup = Path("site-assets/smart-generator.html").read_text(encoding="utf-8")
           js = gzip.decompress(base64.b64decode(Path("site-assets/three-options.js.gz.b64").read_text().strip())).decode("utf-8")
@@ -117,15 +125,16 @@ jobs:
           disclaimer = Path("site-assets/disclaimer.js").read_text(encoding="utf-8")
           schedule_analyzer = Path("site-assets/schedule-analyzer.js").read_text(encoding="utf-8")
           pensum_search = Path("site-assets/pensum-search.js").read_text(encoding="utf-8")
+          mobile_ui = Path("site-assets/mobile-ui.js").read_text(encoding="utf-8")
 
           if "</style>" not in page or '  <div class="layout">' not in page:
               raise SystemExit("No se encontraron los puntos de inserción del comparador.")
-          page = page.replace("</style>", css + "\n" + image_css + "\n" + smart_css + "\n</style>", 1)
+          page = page.replace("</style>", css + "\n" + image_css + "\n" + smart_css + "\n" + responsive_css + "\n</style>", 1)
           page = page.replace('  <div class="layout">', smart_markup + "\n" + markup + "\n  " + '<div class="layout">', 1)
           js_anchor = "$('search').addEventListener('input',renderResults);"
           if js_anchor not in page:
               raise SystemExit("No se encontró el punto de inserción del código JavaScript.")
-          page = page.replace(js_anchor, js + "\n" + preferences + "\n" + image_export + "\n" + smart_generator + "\n" + update_notice + "\n" + change_history + "\n" + schedule_tools + "\n" + disclaimer + "\n" + schedule_analyzer + "\n" + pensum_search + "\n" + js_anchor, 1)
+          page = page.replace(js_anchor, js + "\n" + preferences + "\n" + image_export + "\n" + smart_generator + "\n" + update_notice + "\n" + change_history + "\n" + schedule_tools + "\n" + disclaimer + "\n" + schedule_analyzer + "\n" + pensum_search + "\n" + mobile_ui + "\n" + js_anchor, 1)
 
           refresh_anchor = "  restore();\n  renderAll();\n  if(showMessage)"
           if refresh_anchor not in page:
