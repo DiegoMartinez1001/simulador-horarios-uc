@@ -48,12 +48,6 @@ jobs:
               raise SystemExit("No se encontraron las etiquetas de inserción para instalar la PWA.")
           page = page.replace("</head>", pwa_head + "</head>", 1)
           page = page.replace("</body>", pwa_script + "</body>", 1)
-          pwa_head = '\n<link rel="manifest" href="./manifest.webmanifest">\n<meta name="theme-color" content="#173f68">\n<meta name="description" content="Consulta materias y organiza tu horario de Ingeniería UC.">\n<meta name="mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-title" content="Horarios UC">\n<link rel="apple-touch-icon" sizes="192x192" href="./icons/app-192.png">\n'
-          pwa_script = '<script src="./pwa.js" defer></script>'
-          if "</head>" not in page or "</body>" not in page:
-              raise SystemExit("No se encontraron las etiquetas de inserción para instalar la PWA.")
-          page = page.replace("</head>", pwa_head + "</head>", 1)
-          page = page.replace("</body>", pwa_script + "</body>", 1)
 
           compare = gzip.decompress(base64.b64decode(Path("site-assets/three-options.js.gz.b64").read_text().strip())).decode("utf-8")
           preferences = Path("site-assets/preferences.js").read_text(encoding="utf-8")
@@ -95,6 +89,12 @@ jobs:
           if old_note not in page:
               raise SystemExit("No se encontró la nota informativa antigua del enlace administrativo.")
           page = page.replace(old_note, new_note, 1)
+          pwa_head = '\n<link rel="manifest" href="./manifest.webmanifest">\n<meta name="theme-color" content="#173f68">\n<meta name="description" content="Consulta materias y organiza tu horario de Ingeniería UC.">\n<meta name="mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-title" content="Horarios UC">\n<link rel="apple-touch-icon" sizes="192x192" href="./icons/app-192.png">\n'
+          pwa_script = '<script src="./pwa.js" defer></script>'
+          if "</head>" not in page or "</body>" not in page:
+              raise SystemExit("No se encontraron las etiquetas de inserción para instalar la PWA.")
+          page = page.replace("</head>", pwa_head + "</head>", 1)
+          page = page.replace("</body>", pwa_script + "</body>", 1)
 
           css = Path("site-assets/three-options.css").read_text(encoding="utf-8")
           image_css = Path("site-assets/image-export.css").read_text(encoding="utf-8")
