@@ -389,9 +389,10 @@
       const info=document.createElement('span');
       const code=document.createElement('strong');
       code.textContent=group.code;
+      const lab=linkedLab(group.sections[0]);
       const type=document.createElement('i');
       type.className='pensum-result-type';
-      type.textContent='Teoría / materia';
+      type.textContent=lab?'Teoría / Laboratorio':'Materia';
       code.appendChild(type);
       const name=document.createElement('small');
       name.textContent=group.name;
@@ -399,7 +400,6 @@
       meta.className='pensum-result-meta';
       meta.textContent=entryDescription(group,state);
       info.append(code,name,meta);
-      const lab=linkedLab(group.sections[0]);
       if(lab){
         const pair=document.createElement('small');
         pair.className='pensum-result-pair';
