@@ -273,7 +273,7 @@
       chemistry.disabled=c.plan.value==='nuevo';
       chemistry.textContent=c.plan.value==='nuevo'?'Ingeniería Química · no disponible en Pensum Nuevo':'Ingeniería Química · solo Pensum Actual';
     }
-    const electrical=c.school.value==='electrica'&&c.plan.value!=='viejo';
+    const electrical=c.school.value==='electrica'&&c.plan.value==='nuevo';
     c.trackWrap.hidden=!electrical;
     if(!electrical)c.track.value='';
     if(c.track.value){
