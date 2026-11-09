@@ -140,8 +140,11 @@
   }
 
   function selectedSmart(code){
-    try{return typeof chosen!=='undefined'&&chosen&&chosen.has(code);}
-    catch(error){return false;}
+    try{
+      if(window.UCSmartGenerator)return window.UCSmartGenerator.has(code);
+    }catch(error){}
+    const root=byId('smartSelected');
+    return !!root&&Array.from(root.querySelectorAll('[data-smart-remove]')).some(item=>item.getAttribute('data-smart-remove')===code);
   }
   function selectedCompare(code){
     try{return typeof compareSubjects!=='undefined'&&compareSubjects&&compareSubjects.has(code);}
@@ -297,11 +300,11 @@
       if(!button)return;
       const code=button.dataset.smartAdd;
       try{
-        if(typeof chosen!=='undefined'&&chosen.has(code)){
-          const existing=chosen.get(code)||{};
-          const curriculum=button.dataset.pensumCurriculum||existing.curriculum||'';
-          chosen.set(code,{...existing,curriculum,school:button.dataset.pensumSchool||existing.school||'',track:button.dataset.pensumTrack||existing.track||''});
-        }
+        window.UCSmartGenerator?.setMetadata(code,{
+          curriculum:button.dataset.pensumCurriculum||'',
+          school:button.dataset.pensumSchool||'',
+          track:button.dataset.pensumTrack||''
+        });
       }catch(error){}
       render('smart');
     });
@@ -323,9 +326,6 @@
     try{
       await loadIndex();
       if(!attach())return;
-      if(typeof chosen!=='undefined'&&chosen instanceof Map){
-        // Leave manually selected courses intact; only new filtered additions carry plan metadata.
-      }
     }catch(error){
       console.warn('[Pensum Search]',error);
       ['smartSearchResults','compareSearchResults'].forEach(id=>{
