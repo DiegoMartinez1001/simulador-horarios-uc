@@ -71,7 +71,7 @@ jobs:
         run: |
           mkdir -p dist/data
           python - <<'PY'
-          import base64, gzip, re
+          import base64, gzip, re, subprocess, sys
           from pathlib import Path
 
           page = gzip.decompress(base64.b64decode(Path("site-assets/index.html.gz.b64").read_text().strip())).decode("utf-8")
@@ -88,6 +88,12 @@ jobs:
           if old_note not in page:
               raise SystemExit("No se encontró la nota informativa antigua del enlace administrativo.")
           page = page.replace(old_note, new_note, 1)
+          pwa_head = '\n<link rel="manifest" href="./manifest.webmanifest">\n<meta name="theme-color" content="#173f68">\n<meta name="description" content="Consulta materias y organiza tu horario de Ingeniería UC.">\n<meta name="mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-title" content="Horarios UC">\n<link rel="apple-touch-icon" sizes="192x192" href="./icons/app-192.png">\n'
+          pwa_script = '<script src="./pwa.js" defer></script>'
+          if "</head>" not in page or "</body>" not in page:
+              raise SystemExit("No se encontraron las etiquetas de inserción para instalar la PWA.")
+          page = page.replace("</head>", pwa_head + "</head>", 1)
+          page = page.replace("</body>", pwa_script + "</body>", 1)
           css = Path("site-assets/three-options.css").read_text(encoding="utf-8")
           image_css = Path("site-assets/image-export.css").read_text(encoding="utf-8")
           smart_css = Path("site-assets/smart-generator.css").read_text(encoding="utf-8")
@@ -124,6 +130,10 @@ jobs:
           Path("dist/data/courses.json.gz.b64").write_bytes(Path("data/courses.json.gz.b64").read_bytes())
           Path("dist/data/meta.json").write_bytes(Path("data/meta.json").read_bytes())
           Path("dist/data/changes.json").write_bytes(Path("data/changes.json").read_bytes())
+          Path("dist/manifest.webmanifest").write_bytes(Path("site-assets/manifest.webmanifest").read_bytes())
+          Path("dist/pwa.js").write_bytes(Path("site-assets/pwa.js").read_bytes())
+          Path("dist/sw.js").write_bytes(Path("site-assets/sw.js").read_bytes())
+          subprocess.run([sys.executable, "scripts/generate_pwa_icons.py", "dist/icons"], check=True)
           PY
       - name: Subir archivos del sitio
         uses: actions/upload-pages-artifact@v3
