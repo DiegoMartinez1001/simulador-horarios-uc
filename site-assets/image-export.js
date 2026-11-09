@@ -87,6 +87,13 @@
     }
 
     const oldText=button.textContent;
+    const mobileTableState=Array.from(target.querySelectorAll('table[data-mobile-day-enhanced="true"]')).map(table=>({
+      table,
+      classes:Array.from(table.classList).filter(name=>/^mobile-day-col-\\d+$/.test(name))
+    }));
+    const hadFullWeekClass=document.body.classList.contains('uc-export-full-week');
+    document.body.classList.add('uc-export-full-week');
+    mobileTableState.forEach(state=>state.classes.forEach(name=>state.table.classList.remove(name)));
     button.disabled=true;
     button.textContent='Generando PNG…';
 
@@ -130,6 +137,8 @@
       console.error(error);
       notify(error&&error.message?error.message:'No se pudo generar el PNG. Inténtalo de nuevo.');
     }finally{
+      mobileTableState.forEach(state=>state.classes.forEach(name=>state.table.classList.add(name)));
+      if(!hadFullWeekClass)document.body.classList.remove('uc-export-full-week');
       button.disabled=false;
       button.textContent=oldText;
     }
