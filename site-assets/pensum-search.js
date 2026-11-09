@@ -105,7 +105,7 @@
     panel.append(plan.wrapper,school.wrapper,semester.wrapper,track.wrapper);
     const note=document.createElement('p');
     note.className='pensum-filter-note';
-    note.textContent='Puedes combinar los filtros con la búsqueda por código o nombre. Solo se muestran materias con secciones publicadas en el catálogo actual de la DAE.';
+    note.textContent='Combina los filtros con la búsqueda por código o nombre. Solo aparecen materias con secciones publicadas en el catálogo actual de la DAE. El semestre indica su ubicación en el pensum; no garantiza que la materia se oferte en el período vigente.';
     panel.appendChild(note);
 
     const label=scope.querySelector('label[for="'+input.id+'"]');
