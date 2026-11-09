@@ -5,7 +5,53 @@
   const byId=id=>document.getElementById(id);
   let index=null;
   const resultCache={smart:new Map(),compare:new Map()};
+  const pending={smart:new Set(),compare:new Set()};
+  let comparePairObserver=null;
   const normal=value=>String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+  const subjectKey=value=>normal(value).replace(/[^a-z0-9]/g,'');
+  function allCourses(){return typeof COURSES!=='undefined'&&Array.isArray(COURSES)?COURSES:[];}
+  function curriculumOf(course){const value=String(course?.curriculum||'').toLowerCase();return value==='viejo'||value==='nuevo'?value:'';}
+  function linkedLab(course){
+    if(!course||String(course.code).endsWith('L'))return null;
+    const labCode=String(course.code)+'L';
+    const name=subjectKey(course.name);
+    const curriculum=curriculumOf(course);
+    return allCourses().find(candidate=>
+      candidate.code===labCode&&subjectKey(candidate.name)===name&&
+      (!curriculum||!candidate.curriculum||curriculumOf(candidate)===curriculum)
+    )||null;
+  }
+  function linkedTheory(course){
+    if(!course||!String(course.code).endsWith('L'))return null;
+    const theoryCode=String(course.code).slice(0,-1);
+    const name=subjectKey(course.name);
+    const curriculum=curriculumOf(course);
+    return allCourses().find(candidate=>
+      candidate.code===theoryCode&&subjectKey(candidate.name)===name&&
+      (!curriculum||!candidate.curriculum||curriculumOf(candidate)===curriculum)
+    )||null;
+  }
+  function courseSections(code,curriculum=''){
+    const rows=allCourses().filter(course=>course.code===code&&
+      (!curriculum||!course.curriculum||curriculumOf(course)===curriculum)&&
+      Array.isArray(course.slots)&&course.slots.length);
+    const available=rows.filter(course=>course.status!=='CERRADA');
+    return available.length?available:rows;
+  }
+  function intervalsOverlap(a,b){
+    const duration=typeof DUR!=='undefined'&&Number(DUR)>0?Number(DUR):50;
+    const toMinutes=value=>{
+      const raw=String(value??'');
+      if(/^\\d{1,2}:\\d{2}$/.test(raw)){const [h,m]=raw.split(':').map(Number);return h*60+m;}
+      if(/^\\d{3,4}$/.test(raw)){const t=raw.padStart(4,'0');return Number(t.slice(0,2))*60+Number(t.slice(2));}
+      return NaN;
+    };
+    return (a?.slots||[]).some(left=>(b?.slots||[]).some(right=>{
+      if(left.day!==right.day)return false;
+      const x=toMinutes(left.start),y=toMinutes(right.start);
+      return Number.isFinite(x)&&Number.isFinite(y)&&Math.max(x,y)<Math.min(x+duration,y+duration);
+    }));
+  }
   const schoolLabel=id=>index?.schools?.find(item=>item.id===id)?.label||id;
   const curriculumLabel=id=>index?.curricula?.find(item=>item.id===id)?.label||id;
   const trackLabel=id=>index?.electrical_tracks?.find(item=>item.id===id)?.label||id;
@@ -51,7 +97,25 @@
     'body[data-theme="dark"] .pensum-search-result button{background:#203b5e;color:#d7e7ff}',
     'body[data-theme="dark"] .pensum-search-result button:disabled{background:#27384d;color:#9cadc2}',
     'body[data-theme="dark"] .pensum-search-empty{background:#18283d;border-color:#3a4d66;color:#b8c7da}',
-    '@media(max-width:520px){.pensum-filter-panel{grid-template-columns:1fr;padding:9px}.pensum-filter-note{grid-column:auto}}'
+    '@media(max-width:520px){.pensum-filter-panel{grid-template-columns:1fr;padding:9px}.pensum-filter-note{grid-column:auto}}',
+    '.pensum-result-select{display:flex;align-items:flex-start;gap:9px;min-width:0;flex:1;cursor:pointer}',
+    '.pensum-result-select input{flex:0 0 auto;width:16px;height:16px;margin:2px 0 0;accent-color:#315f9d;cursor:pointer}',
+    '.pensum-result-select span{min-width:0;display:grid;gap:2px}',
+    '.pensum-result-type{display:inline-block;margin-left:5px;padding:2px 5px;border-radius:5px;background:#eaf2ff;color:#245b9b;font-size:8px;font-weight:850;vertical-align:middle}',
+    '.pensum-result-pair{display:block;margin-top:4px;color:#47704f;font-size:8px;line-height:1.35}',
+    '.pensum-bulk-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px;padding:9px;border:1px solid #d9e4f0;border-radius:9px;background:#f4f8fd}',
+    '.pensum-bulk-actions[hidden]{display:none!important}',
+    '.pensum-bulk-count{color:#52627a;font-size:9px;font-weight:800}',
+    '.pensum-bulk-buttons{display:flex;gap:6px;flex-wrap:wrap}',
+    '.pensum-bulk-buttons button{padding:7px 10px;border:1px solid #315f9d;border-radius:7px;background:#315f9d;color:#fff;font-size:9px;font-weight:850;cursor:pointer}',
+    '.pensum-bulk-buttons button.secondary{background:#fff;color:#315f9d}',
+    '.pensum-bulk-buttons button:disabled{opacity:.45;cursor:default}',
+    'body[data-theme="dark"] .pensum-result-type{background:#203b5e;color:#d7e7ff}',
+    'body[data-theme="dark"] .pensum-result-pair{color:#9fcbad}',
+    'body[data-theme="dark"] .pensum-bulk-actions{background:#111f32;border-color:#34465e}',
+    'body[data-theme="dark"] .pensum-bulk-count{color:#b8c7da}',
+    'body[data-theme="dark"] .pensum-bulk-buttons button.secondary{background:#18283d;color:#d7e7ff;border-color:#506782}',
+    '@media(max-width:520px){.pensum-bulk-actions{align-items:flex-start;flex-direction:column}.pensum-bulk-buttons{width:100%}.pensum-bulk-buttons button{flex:1}}'
   ].join('\n');
   document.head.appendChild(css);
 
@@ -120,6 +184,85 @@
     return controls;
   }
 
+  function ensureBulkActions(mode,root){
+    const id='pensumBulkActions-'+mode;
+    let panel=byId(id);
+    if(panel)return panel;
+    panel=document.createElement('div');
+    panel.className='pensum-bulk-actions';
+    panel.id=id;
+    panel.hidden=true;
+    const count=document.createElement('span');
+    count.className='pensum-bulk-count';
+    count.dataset.pensumBulkCount=mode;
+    const buttons=document.createElement('div');
+    buttons.className='pensum-bulk-buttons';
+    const selectAll=document.createElement('button');
+    selectAll.type='button';
+    selectAll.className='secondary';
+    selectAll.dataset.pensumSelectAll=mode;
+    selectAll.textContent='Seleccionar visibles';
+    const clear=document.createElement('button');
+    clear.type='button';
+    clear.className='secondary';
+    clear.dataset.pensumClear=mode;
+    clear.textContent='Limpiar';
+    const add=document.createElement('button');
+    add.type='button';
+    add.dataset.pensumAddAll=mode;
+    add.textContent='Agregar seleccionadas';
+    buttons.append(selectAll,clear,add);
+    panel.append(count,buttons);
+    root.insertAdjacentElement('afterend',panel);
+    return panel;
+  }
+  function renderBulkActions(mode,groups){
+    const root=byId(mode==='smart'?'smartSearchResults':'compareSearchResults');
+    if(!root)return;
+    const panel=ensureBulkActions(mode,root);
+    const count=byId(panel.id).querySelector('[data-pensumBulkCount]');
+    const add=panel.querySelector('[data-pensumAddAll]');
+    const selected=[...pending[mode]];
+    panel.hidden=selected.length===0&&groups.length===0;
+    count.textContent=selected.length+' materia(s) seleccionada(s)';
+    add.disabled=!selected.length;
+    add.textContent='Agregar '+selected.length+' seleccionada(s)';
+  }
+  function getGroupForCode(code,state={}){
+    const sections=activeCourses().filter(course=>course.code===code&&
+      (!state.plan||!curriculumOf(course)||curriculumOf(course)===state.plan));
+    if(!sections.length)return null;
+    const course=sections[0];
+    const rows=(entryMap.get(code)||[]).filter(row=>
+      (!state.plan||row[1]===state.plan)&&(!state.school||row[2]===state.school)&&
+      (!state.semester||Number(row[3])===Number(state.semester))&&
+      (!state.track||row[4]===state.track)
+    );
+    return {code,name:course.name||code,sections,entries:rows,curriculum:state.plan||curriculumOf(course)};
+  }
+  function groupMetadata(group,state){
+    const entry=group.entries?.[0];
+    return {
+      curriculum:state.plan||group.curriculum||'',
+      school:state.school||(entry?entry[2]:''),
+      track:state.track||(entry?entry[4]:'')
+    };
+  }
+  function addSmart(code,state){
+    const group=resultCache.smart.get(code)||getGroupForCode(code,state);
+    if(!group||!window.UCSmartGenerator)return false;
+    window.UCSmartGenerator.add(code,groupMetadata(group,state));
+    return true;
+  }
+  function compareLabChoices(theoryChoices,labSections){
+    if(!labSections.length)return [];
+    return theoryChoices.map((theory,index)=>{
+      const compatible=labSections.filter(lab=>!intervalsOverlap(theory,lab));
+      const pool=compatible.length?compatible:labSections;
+      return pool[index%pool.length];
+    });
+  }
+
   const controls={};
   function refreshFilterState(c){
     if(c.plan.value==='nuevo'&&c.school.value==='quimica'){
@@ -150,10 +293,6 @@
     try{return typeof compareSubjects!=='undefined'&&compareSubjects&&compareSubjects.has(code);}
     catch(error){return false;}
   }
-  function curriculumOf(course){
-    const value=String(course.curriculum||'').toLowerCase();
-    return value==='viejo'||value==='nuevo'?value:'';
-  }
   function filterEntries(course,state){
     const rows=entryMap.get(String(course.code))||[];
     return rows.filter(row=>{
@@ -178,17 +317,20 @@
     const hasFilters=Boolean(state.plan||state.school||state.semester||state.track);
     const groups=new Map();
     for(const course of activeCourses()){
+      if(linkedTheory(course))continue;
       const code=String(course.code);
       const searchable=normal(code+' '+(course.name||''));
       if(query&&!searchable.includes(query))continue;
       const matches=hasFilters?filterEntries(course,state):[];
       if(hasFilters&&!matches.length)continue;
-      if(!groups.has(code))groups.set(code,{code,name:course.name||code,sections:[],entries:matches,curriculum:curriculumOf(course)});
+      const sectionMatches=hasFilters?activeCourses().filter(section=>
+        section.code===code&&(!state.plan||!curriculumOf(section)||curriculumOf(section)===state.plan)
+      ):activeCourses().filter(section=>section.code===code);
+      if(!groups.has(code))groups.set(code,{
+        code,name:course.name||code,sections:sectionMatches,entries:matches,curriculum:curriculumOf(course)
+      });
       const group=groups.get(code);
-      if(!group.sections.some(item=>String(item.id)===String(course.id)))group.sections.push(course);
-      if(matches.length){
-        matches.forEach(row=>{if(!group.entries.some(existing=>existing.join('|')===row.join('|')))group.entries.push(row);});
-      }
+      matches.forEach(row=>{if(!group.entries.some(existing=>existing.join('|')===row.join('|')))group.entries.push(row);});
       if(!group.curriculum)group.curriculum=curriculumOf(course);
     }
     return [...groups.values()].sort((a,b)=>a.code.localeCompare(b.code,'es'));
@@ -221,42 +363,54 @@
     if(!query&&!hasFilters){
       resultCache[mode].clear();
       root.replaceChildren();
+      renderBulkActions(mode,[]);
       return;
     }
     const groups=buildGroups(query,state);
     resultCache[mode]=new Map(groups.map(group=>[group.code,group]));
     if(!groups.length){
       renderEmpty(root,hasFilters?'No se encontraron materias con secciones publicadas que coincidan con esos filtros. Prueba otro semestre, escuela o pensum.':'No se encontraron materias con secciones publicadas que coincidan con la búsqueda.');
+      renderBulkActions(mode,[]);
       return;
     }
     const fragment=document.createDocumentFragment();
     groups.slice(0,30).forEach(group=>{
       const row=document.createElement('div');
       row.className=smart?'smart-search-item pensum-search-result':'compare-search-result pensum-search-result';
+      const label=document.createElement('label');
+      label.className='pensum-result-select';
+      const checkbox=document.createElement('input');
+      checkbox.type='checkbox';
+      checkbox.dataset.pensumSelect=mode;
+      checkbox.value=group.code;
+      const already=smart?selectedSmart(group.code):selectedCompare(group.code);
+      checkbox.checked=pending[mode].has(group.code);
+      checkbox.disabled=already;
       const info=document.createElement('span');
       const code=document.createElement('strong');
       code.textContent=group.code;
+      const type=document.createElement('i');
+      type.className='pensum-result-type';
+      type.textContent='Teoría / materia';
+      code.appendChild(type);
       const name=document.createElement('small');
       name.textContent=group.name;
       const meta=document.createElement('small');
       meta.className='pensum-result-meta';
       meta.textContent=entryDescription(group,state);
       info.append(code,name,meta);
-      const button=document.createElement('button');
-      button.type='button';
-      if(smart){
-        button.dataset.smartAdd=group.code;
-        button.dataset.pensumCurriculum=state.plan||'';
-        button.dataset.pensumSchool=state.school||'';
-        button.dataset.pensumTrack=state.track||'';
-        button.textContent=selectedSmart(group.code)?'Agregada':'Agregar';
-        button.disabled=selectedSmart(group.code);
-      }else{
-        button.dataset.pensumCompareAdd=group.code;
-        button.textContent=selectedCompare(group.code)?'Agregada':'Agregar';
-        button.disabled=selectedCompare(group.code);
+      const lab=linkedLab(group.sections[0]);
+      if(lab){
+        const pair=document.createElement('small');
+        pair.className='pensum-result-pair';
+        pair.textContent='Incluye automáticamente laboratorio '+lab.code+' al agregar';
+        info.appendChild(pair);
       }
-      row.append(info,button);
+      label.append(checkbox,info);
+      const status=document.createElement('small');
+      status.className='pensum-result-meta';
+      status.textContent=already?'Ya agregada':'';
+      row.append(label,status);
       fragment.appendChild(row);
     });
     root.replaceChildren(fragment);
@@ -266,27 +420,110 @@
       more.textContent='Se muestran 30 de '+groups.length+' resultados. Escribe parte del código o nombre para precisar la búsqueda.';
       root.appendChild(more);
     }
+    renderBulkActions(mode,groups);
   }
 
-  function addCompare(code){
+  function addCompareSingle(code,group,state){
     if(selectedCompare(code))return;
-    const group=resultCache.compare.get(code);
     if(!group||!group.sections.length)return;
-    const sections=group.sections.slice(0,3);
-    const last=sections[sections.length-1];
-    const choices=[0,1,2].map(i=>String((sections[i]||last).id));
-    try{
-      compareSubjects.set(code,{code,name:group.name,choices});
-      if(typeof persistCompare==='function')persistCompare();
-      if(typeof renderCompareAll==='function')renderCompareAll();
-      if(typeof renderCompareSearch==='function')renderCompareSearch();
-      render('compare');
-      if(typeof showToast==='function')showToast(group.code+' agregado a la comparación.');
-    }catch(error){
-      if(typeof showToast==='function')showToast('No se pudo agregar la materia a la comparación.');
+    const metadata=groupMetadata(group,state);
+    const sections=group.sections.filter(item=>
+      !metadata.curriculum||!item.curriculum||curriculumOf(item)===metadata.curriculum
+    );
+    const pool=sections.length?sections:group.sections;
+    const theoryChoices=[0,1,2].map(index=>pool[Math.min(index,pool.length-1)]);
+    const choices=theoryChoices.map(item=>String(item.id));
+    const entry={
+      code,name:group.name,choices,
+      curriculum:metadata.curriculum,
+      school:metadata.school,
+      track:metadata.track
+    };
+    const lab=linkedLab(pool[0]);
+    if(lab){
+      const labSections=courseSections(lab.code,metadata.curriculum);
+      const labChoices=compareLabChoices(theoryChoices,labSections);
+      entry.linkedLab=lab.code;
+      compareSubjects.set(code,entry);
+      if(labSections.length&&!compareSubjects.has(lab.code)){
+        compareSubjects.set(lab.code,{
+          code:lab.code,name:lab.name||lab.code,
+          choices:labChoices.map(item=>String(item.id)),
+          curriculum:metadata.curriculum,
+          school:metadata.school,
+          track:metadata.track,
+          linkedTo:code,
+          pairRole:'laboratorio'
+        });
+      }
+    }else{
+      compareSubjects.set(code,entry);
     }
   }
 
+  function addSelected(mode){
+    const codes=[...pending[mode]];
+    if(!codes.length)return;
+    const state=getState(controls[mode]);
+    if(mode==='smart'){
+      codes.forEach(code=>addSmart(code,state));
+    }else{
+      codes.forEach(code=>{
+        const group=resultCache.compare.get(code)||getGroupForCode(code,state);
+        addCompareSingle(code,group,state);
+      });
+      if(typeof persistCompare==='function')persistCompare();
+      if(typeof renderCompareAll==='function')renderCompareAll();
+      if(typeof renderCompareSearch==='function')renderCompareSearch();
+      if(typeof showToast==='function')showToast(codes.length+' materia(s) agregada(s) a la comparación, con sus laboratorios vinculados cuando existen.');
+    }
+    pending[mode].clear();
+    render(mode);
+  }
+  function reconcileComparePairs(){
+    if(typeof compareSubjects==='undefined'||!compareSubjects)return;
+    let changed=false;
+    for(const [code,entry] of [...compareSubjects.entries()]){
+      if(entry?.pairRole==='laboratorio'&&entry.linkedTo&&!compareSubjects.has(entry.linkedTo)){
+        compareSubjects.delete(code);changed=true;continue;
+      }
+      if(entry?.linkedLab&&!compareSubjects.has(entry.linkedLab)){
+        compareSubjects.delete(code);changed=true;
+      }
+    }
+    if(changed){
+      if(typeof persistCompare==='function')persistCompare();
+      if(typeof renderCompareAll==='function')renderCompareAll();
+    }
+  }
+  function upgradeExistingComparePairs(){
+    if(typeof compareSubjects==='undefined'||!compareSubjects)return;
+    let changed=false;
+    for(const [code,entry] of [...compareSubjects.entries()]){
+      if(!entry||entry.pairRole==='laboratorio'||entry.linkedLab)continue;
+      const section=courseSections(code,entry.curriculum||'')[0];
+      const lab=linkedLab(section);
+      if(!lab)continue;
+      const labs=courseSections(lab.code,entry.curriculum||'');
+      if(!labs.length)continue;
+      const theories=(entry.choices||[]).map(id=>allCourses().find(item=>String(item.id)===String(id))).filter(Boolean);
+      const labChoices=compareLabChoices(theories,labs);
+      compareSubjects.set(code,{...entry,linkedLab:lab.code});
+      if(!compareSubjects.has(lab.code)){
+        compareSubjects.set(lab.code,{
+          code:lab.code,name:lab.name||lab.code,
+          choices:labChoices.map(item=>String(item.id)),
+          curriculum:entry.curriculum||'',
+          school:entry.school||'',
+          track:entry.track||'',
+          linkedTo:code,pairRole:'laboratorio'
+        });
+      }
+      changed=true;
+    }
+    if(changed&&typeof persistCompare==='function')persistCompare();
+    if(changed&&typeof renderCompareAll==='function')renderCompareAll();
+  }
   function attach(){
     controls.smart=installFilterPanel('smart');
     controls.compare=installFilterPanel('compare');
@@ -294,29 +531,48 @@
     refreshFilterState(controls.smart);
     refreshFilterState(controls.compare);
 
-    byId('smartSearch').addEventListener('input',()=>render('smart'));
-    byId('smartSearchResults').addEventListener('click',event=>{
-      const button=event.target.closest('[data-smart-add]');
-      if(!button)return;
-      const code=button.dataset.smartAdd;
-      try{
-        window.UCSmartGenerator?.setMetadata(code,{
-          curriculum:button.dataset.pensumCurriculum||'',
-          school:button.dataset.pensumSchool||'',
-          track:button.dataset.pensumTrack||''
-        });
-      }catch(error){}
-      render('smart');
+    ensureBulkActions('smart',byId('smartSearchResults'));
+    ensureBulkActions('compare',byId('compareSearchResults'));
+
+    ['smart','compare'].forEach(mode=>{
+      const root=byId(mode==='smart'?'smartSearchResults':'compareSearchResults');
+      root.addEventListener('change',event=>{
+        const checkbox=event.target.closest('[data-pensum-select]');
+        if(!checkbox)return;
+        const code=checkbox.value;
+        if(checkbox.checked)pending[mode].add(code);
+        else pending[mode].delete(code);
+        render(mode);
+      });
+      const actions=byId('pensumBulkActions-'+mode);
+      actions.addEventListener('click',event=>{
+        const add=event.target.closest('[data-pensum-add-all]');
+        if(add){addSelected(mode);return;}
+        const clear=event.target.closest('[data-pensum-clear]');
+        if(clear){pending[mode].clear();render(mode);return;}
+        const selectAll=event.target.closest('[data-pensum-select-all]');
+        if(selectAll){
+          const state=getState(controls[mode]);
+          buildGroups(normal(byId(mode==='smart'?'smartSearch':'compareSearch').value),state)
+            .slice(0,30).forEach(group=>{
+              const already=mode==='smart'?selectedSmart(group.code):selectedCompare(group.code);
+              if(!already)pending[mode].add(group.code);
+            });
+          render(mode);
+        }
+      });
+      byId(mode==='smart'?'smartSearch':'compareSearch').addEventListener('input',()=>render(mode));
     });
-    byId('compareSearch').addEventListener('input',()=>render('compare'));
-    byId('compareSearchResults').addEventListener('click',event=>{
-      const button=event.target.closest('[data-pensum-compare-add]');
-      if(!button)return;
-      addCompare(button.dataset.pensumCompareAdd);
-    });
-    // Re-render compare results when the old listener changes the list.
+
     byId('compareSearchResults').addEventListener('click',()=>render('compare'));
     byId('smartSelected')?.addEventListener('click',()=>render('smart'));
+
+    upgradeExistingComparePairs();
+    const compareRoot=byId('comparePanel')||byId('optionSchedules');
+    if(compareRoot&&!comparePairObserver){
+      comparePairObserver=new MutationObserver(()=>reconcileComparePairs());
+      comparePairObserver.observe(compareRoot,{childList:true,subtree:true});
+    }
     render('smart');
     render('compare');
     return true;
@@ -334,6 +590,11 @@
       });
     }
   }
+  document.addEventListener('uc-catalog-updated',()=>{
+    pending.smart.clear();pending.compare.clear();
+    resultCache.smart.clear();resultCache.compare.clear();
+    render('smart');render('compare');
+  });
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initialize,{once:true});
   else initialize();
 })();
