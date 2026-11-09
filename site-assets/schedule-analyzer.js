@@ -101,7 +101,27 @@
     'body[data-theme="dark"] .conflict-alternative-main small{color:#b6c6da}',
     'body[data-theme="dark"] .conflict-no-alternative{background:#38272e;border-color:#69404a;color:#e8bdbb}',
     'body[data-theme="dark"] .conflict-recommendations-ok{background:#19372b;border-color:#315b48;color:#b9e8cd}',
-    '@media(max-width:520px){.conflict-recommendations{padding:10px}.conflict-alternative{align-items:flex-start;flex-direction:column}.conflict-fix-btn{width:100%}}'
+    '@media(max-width:520px){.conflict-recommendations{padding:10px}.conflict-alternative{align-items:flex-start;flex-direction:column}.conflict-fix-btn{width:100%}}',
+    '.option-conflict-recommendations{margin:0 10px 10px;padding:10px;border:1px solid #edc6c2;border-radius:9px;background:#fffafa;color:#6f2b26}',
+    '.option-conflict-recommendations[hidden]{display:none!important}',
+    '.option-conflict-title{display:flex;align-items:center;gap:6px;margin:0 0 7px;color:#8e2f28;font-size:10px;font-weight:900}',
+    '.option-conflict-item{padding:8px 0;border-top:1px solid #f0d2ce}',
+    '.option-conflict-item:first-of-type{border-top:0}',
+    '.option-conflict-summary{margin:0 0 6px;color:#7c3934;font-size:9px;line-height:1.45}',
+    '.option-conflict-alternative{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:5px;padding:7px;border:1px solid #eadbd9;border-radius:7px;background:#fff}',
+    '.option-conflict-alternative strong{display:block;color:#304a6b;font-size:9px}',
+    '.option-conflict-alternative small{display:block;margin-top:2px;color:#718096;font-size:8px;line-height:1.4}',
+    '.option-conflict-empty{padding:7px;border:1px dashed #dfb9b5;border-radius:7px;color:#88504b;font-size:9px;line-height:1.45;background:#fff}',
+    '.option-conflict-apply{flex:0 0 auto;padding:6px 8px;border:1px solid #315f9d;border-radius:7px;background:#315f9d;color:#fff;font-size:8px;font-weight:850;cursor:pointer}',
+    'body[data-theme="dark"] .option-conflict-recommendations{background:#311e25;border-color:#69404a;color:#f5d6d5}',
+    'body[data-theme="dark"] .option-conflict-title{color:#ffd0cd}',
+    'body[data-theme="dark"] .option-conflict-item{border-color:#69404a}',
+    'body[data-theme="dark"] .option-conflict-summary{color:#d7b6b5}',
+    'body[data-theme="dark"] .option-conflict-alternative{background:#1a2c43;border-color:#435772}',
+    'body[data-theme="dark"] .option-conflict-alternative strong{color:#e4edf9}',
+    'body[data-theme="dark"] .option-conflict-alternative small{color:#b6c6da}',
+    'body[data-theme="dark"] .option-conflict-empty{background:#38272e;border-color:#69404a;color:#e8bdbb}',
+    '@media(max-width:520px){.option-conflict-alternative{align-items:flex-start;flex-direction:column}.option-conflict-apply{width:100%}}'
   ].join('\n');
   document.head.appendChild(style);
 
@@ -235,9 +255,31 @@
     root.append(head,node('div','schedule-analysis-empty','Agrega materias al horario individual para ver las horas de clase, los días libres, los espacios entre bloques y la distribución de tu semana.'));
     root.appendChild(node('p','schedule-analysis-foot','El análisis se realiza en este dispositivo. No solicita ni transmite datos personales.'));
   }
+  function detectConflicts(courses){
+    const conflicts=[];
+    const duration=classDuration();
+    for(let i=0;i<courses.length;i++){
+      const a=courses[i];
+      for(let j=i+1;j<courses.length;j++){
+        const b=courses[j];
+        for(const left of a.slots||[]){
+          const leftStart=parseStart(left.start);
+          if(!Number.isFinite(leftStart))continue;
+          for(const right of b.slots||[]){
+            if(left.day!==right.day)continue;
+            const rightStart=parseStart(right.start);
+            if(!Number.isFinite(rightStart))continue;
+            const start=Math.max(leftStart,rightStart);
+            const end=Math.min(leftStart+duration,rightStart+duration);
+            if(start<end)conflicts.push({a,b,day:left.day,start,end});
+          }
+        }
+      }
+    }
+    return conflicts;
+  }
   function currentConflicts(){
-    try{return typeof getConflicts==='function'?getConflicts():[];}
-    catch(error){return [];}
+    return detectConflicts(selectedCourses());
   }
   function slotOverlaps(a,b){
     for(const left of a.slots||[]){
@@ -259,12 +301,11 @@
       block.classList.remove('schedule-conflict-block');
       block.removeAttribute('aria-label');
       block.removeAttribute('data-conflict');
+      block.removeAttribute('title');
     });
     if(!conflicts.length)return;
-    const weekdays=typeof DAYS!=='undefined'?DAYS:DAYS.map(day=>day.id);
-    const timeRows=typeof TIMES!=='undefined'?TIMES:[];
     const rows=Array.from(tbody.querySelectorAll('tr'));
-    const marked=new Set();
+    const timeRows=typeof TIMES!=='undefined'&&Array.isArray(TIMES)?TIMES:[];
     for(const conflict of conflicts){
       for(const course of [conflict.a,conflict.b]){
         for(const slot of course.slots||[]){
@@ -272,7 +313,7 @@
           const start=parseStart(slot.start);
           if(!Number.isFinite(start)||Math.max(start,conflict.start)>=Math.min(start+classDuration(),conflict.end))continue;
           const rowIndex=timeRows.findIndex(value=>parseStart(value)===start);
-          const colIndex=weekdays.indexOf(slot.day)+1;
+          const colIndex=DAYS.findIndex(day=>day.id===slot.day)+1;
           const cell=rows[rowIndex]?.children[colIndex];
           if(!cell)continue;
           const block=Array.from(cell.querySelectorAll('.class-block')).find(node=>{
@@ -281,12 +322,11 @@
             return code===String(course.code||'')&&section.includes('Sec. '+String(course.section||''));
           });
           if(!block)continue;
-          const other=course.id===conflict.a.id?conflict.b:conflict.a;
+          const other=String(course.id)===String(conflict.a.id)?conflict.b:conflict.a;
           block.classList.add('schedule-conflict-block');
           block.dataset.conflict='true';
           block.setAttribute('aria-label','Cruce: '+course.code+' sección '+course.section+' coincide con '+other.code+' sección '+other.section+' el '+(DAY_MAP.get(conflict.day)?.name||conflict.day)+' de '+clock(conflict.start)+' a '+clock(conflict.end)+'.');
           block.title='⚠ Cruce con '+other.code+' sección '+other.section+' · '+(DAY_MAP.get(conflict.day)?.name||conflict.day)+' '+clock(conflict.start)+'–'+clock(conflict.end);
-          marked.add(block);
         }
       }
     }
@@ -343,10 +383,16 @@
           const button=node('button','conflict-fix-btn','Cambiar a esta sección');
           button.type='button';
           button.addEventListener('click',()=>{
-            if(typeof addCourse==='function'){
-              addCourse(candidate.id);
+            if(!window.confirm('Se reemplazará '+course.code+' sección '+course.section+' por la sección '+candidate.section+'. ¿Deseas continuar?'))return;
+            try{
+              selected.delete(course.id);
+              selected.set(candidate.id,candidate);
+              persist();
+              renderAll();
               const panel=byId('schedulePanel');
               if(panel)panel.scrollIntoView({behavior:'smooth',block:'start'});
+            }catch(error){
+              window.alert('No fue posible aplicar el cambio. Inténtalo nuevamente.');
             }
           });
           option.append(info,button);
@@ -463,7 +509,81 @@
       }).filter(Boolean);
     }catch(error){return [];}
   }
+  function applyComparisonAlternative(course,candidate,optionIndex){
+    if(typeof compareSubjects==='undefined'||!compareSubjects)return;
+    const entry=compareSubjects.get(course.code);
+    if(!entry||!Array.isArray(entry.choices))return;
+    const updated={...entry,choices:entry.choices.slice()};
+    updated.choices[optionIndex]=candidate.id;
+    compareSubjects.set(course.code,updated);
+    if(typeof persistCompare==='function')persistCompare();
+    if(typeof renderCompareAll==='function')renderCompareAll();
+    if(typeof renderCompareSearch==='function')renderCompareSearch();
+    renderCompare();
+    scheduleRender();
+  }
+  function renderOptionConflicts(optionIndex){
+    const root=byId('optionConflictRecommendations'+(optionIndex+1));
+    if(!root)return;
+    const courses=comparisonCourses(optionIndex);
+    const conflicts=detectConflicts(courses);
+    root.replaceChildren();
+    root.hidden=!conflicts.length;
+    if(!conflicts.length)return;
+    root.appendChild(node('h5','option-conflict-title','⚠ '+conflicts.length+' cruce(s) · Recomendaciones para esta opción'));
+    const pairs=new Map();
+    conflicts.forEach(conflict=>{
+      const key=[String(conflict.a.id),String(conflict.b.id),conflict.day,conflict.start,conflict.end].join('|');
+      pairs.set(key,conflict);
+    });
+    [...pairs.values()].forEach(conflict=>{
+      const item=node('article','option-conflict-item');
+      item.appendChild(node('p','option-conflict-summary',
+        (DAY_MAP.get(conflict.day)?.name||conflict.day)+' · '+clock(conflict.start)+'–'+clock(conflict.end)+': '+
+        conflict.a.code+' Sec. '+conflict.a.section+' coincide con '+conflict.b.code+' Sec. '+conflict.b.section+'.'));
+      [conflict.a,conflict.b].forEach(course=>{
+        const alternatives=replacementCandidates(course,courses);
+        if(!alternatives.length)return;
+        const best=alternatives[0];
+        const alternative=node('div','option-conflict-alternative');
+        const details=node('div','');
+        details.appendChild(node('strong','',course.code+' · cambiar a sección '+best.candidate.section));
+        details.appendChild(node('small','',candidateSummary(best.candidate)+' · '+(best.candidate.professor||'Profesor no indicado')));
+        const button=node('button','option-conflict-apply','Cambiar en opción '+(optionIndex+1));
+        button.type='button';
+        button.addEventListener('click',()=>{
+          if(!window.confirm('Se cambiará '+course.code+' sección '+course.section+' por la sección '+best.candidate.section+' únicamente en la opción '+(optionIndex+1)+'. ¿Continuar?'))return;
+          applyComparisonAlternative(course,best.candidate,optionIndex);
+        });
+        alternative.append(details,button);
+        item.appendChild(alternative);
+      });
+      if(!item.querySelector('.option-conflict-alternative')){
+        item.appendChild(node('div','option-conflict-empty','No hay otra sección activa que encaje con las demás materias de esta opción. Prueba cambiar la sección de la otra asignatura involucrada.'));
+      }
+      root.appendChild(item);
+    });
+    root.appendChild(node('p','option-conflict-summary','Las alternativas se calculan contra las demás materias de esta opción y solo modifican esta columna del comparador.'));
+  }
+  function buildOptionConflictPanels(){
+    [1,2,3].forEach(number=>{
+      if(byId('optionConflictRecommendations'+number))return;
+      const card=byId('optionCard'+number);
+      const status=byId('optionStatus'+number);
+      if(!card||!status)return;
+      const root=node('section','option-conflict-recommendations');
+      root.id='optionConflictRecommendations'+number;
+      root.hidden=true;
+      root.setAttribute('aria-label','Recomendaciones para resolver cruces de opción '+number);
+      status.insertAdjacentElement('afterend',root);
+    });
+  }
+  function renderAllOptionConflicts(){
+    buildOptionConflictPanels();
+    [0,1,2].forEach(renderOptionConflicts);
+  }
   function renderCompare(){
+    renderAllOptionConflicts();
     const root=byId('scheduleCompareAnalysis');
     if(!root)return;
     let size=0;
@@ -500,6 +620,7 @@
     root.appendChild(node('p','schedule-compare-analysis-note','El índice descuenta puntos por cruces, esperas de 15 minutos o más y jornadas que superan las 6 horas. Toda la evaluación se realiza en este dispositivo.'));
   }
   function buildCompare(){
+    buildOptionConflictPanels();
     if(byId('scheduleCompareAnalysis'))return true;
     const panel=byId('comparePanel');
     const schedules=byId('optionSchedules');
