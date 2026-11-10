@@ -40486,6 +40486,581 @@
           }
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-10T19:49:43+00:00",
+      "updated_at": "10/11/2026 03:48 pm",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "10/11/2026 02:57 pm",
+        "generated_at": "2026-11-10T19:15:53+00:00",
+        "sections": 1010,
+        "sha256": "cdafd01de726e907571b3fd661851e0094961f4bd2f63586679886972eebb2a8"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "10/11/2026 03:48 pm",
+        "generated_at": "2026-11-10T19:49:43+00:00",
+        "sections": 1010,
+        "sha256": "84c34b089899f34eb841c281a3f0edc95f049e0351e68202bc0d7a676206a321"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 42,
+        "schedule_changes": 0,
+        "professor_changes": 42,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "EC7E06|71",
+          "code": "EC7E06",
+          "name": "INSTRUMENTACION ELECTRONICA I",
+          "section": "71",
+          "fields": {
+            "professor": {
+              "before": "HERRERA M GERARDO R (NUEVA)",
+              "after": "HERRERA M GERARDO R"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "EC9E12L|02",
+          "code": "EC9E12L",
+          "name": "ELECTRONICA IV",
+          "section": "02",
+          "fields": {
+            "professor": {
+              "before": "PERAZA M CESAR A (NUEVA)",
+              "after": "PERAZA M CESAR A"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "EC9E12|44",
+          "code": "EC9E12",
+          "name": "ELECTRONICA IV",
+          "section": "44",
+          "fields": {
+            "professor": {
+              "before": "PERAZA M CESAR A (NUEVA)",
+              "after": "PERAZA M CESAR A"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "EC9E15L|01",
+          "code": "EC9E15L",
+          "name": "ANTENAS",
+          "section": "01",
+          "fields": {
+            "professor": {
+              "before": "RUIZ P CESAR C (NUEVA)",
+              "after": "RUIZ P CESAR C"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU1073|02",
+          "code": "HU1073",
+          "name": "DESARROLLO DE HABILIDADES DEL PENSAMIENTO",
+          "section": "02",
+          "fields": {
+            "professor": {
+              "before": "SILVA R SULMA B (NUEVA)",
+              "after": "SILVA R SULMA B"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID3023|09",
+          "code": "ID3023",
+          "name": "INGLÉS INSTRUMENTAL",
+          "section": "09",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO (NUEVA)",
+              "after": "NO ASIGNADO"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID3023|10",
+          "code": "ID3023",
+          "name": "INGLÉS INSTRUMENTAL",
+          "section": "10",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO (NUEVA)",
+              "after": "NO ASIGNADO"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID3023|11",
+          "code": "ID3023",
+          "name": "INGLÉS INSTRUMENTAL",
+          "section": "11",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO (NUEVA)",
+              "after": "NO ASIGNADO"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IE4223|81",
+          "code": "IE4223",
+          "name": "RESISTENCIA DE MATERIALES FUNDAMENTAL",
+          "section": "81",
+          "fields": {
+            "professor": {
+              "before": "SOSA R ANTONELLA D (NUEVA)",
+              "after": "SOSA R ANTONELLA D"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|22",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "22",
+          "fields": {
+            "professor": {
+              "before": "JAUREGUI R EDY Z (NUEVA)",
+              "after": "JAUREGUI R EDY Z"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|30",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "30",
+          "fields": {
+            "professor": {
+              "before": "MARCANO O JOSSEILIN J (NUEVA)",
+              "after": "MARCANO O JOSSEILIN J"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|31",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "31",
+          "fields": {
+            "professor": {
+              "before": "ELLEBORO JULIO C (NUEVA)",
+              "after": "ELLEBORO JULIO C"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|06",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "06",
+          "fields": {
+            "professor": {
+              "before": "GUERRA H AMALIA J (NUEVA)",
+              "after": "GUERRA H AMALIA J"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|08",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "08",
+          "fields": {
+            "professor": {
+              "before": "REA A CRISTOBAL R (NUEVA)",
+              "after": "REA A CRISTOBAL R"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|09",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "09",
+          "fields": {
+            "professor": {
+              "before": "REA A CRISTOBAL R (NUEVA)",
+              "after": "REA A CRISTOBAL R"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|18",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "18",
+          "fields": {
+            "professor": {
+              "before": "YUSTI R FRANKLIN J (NUEVA)",
+              "after": "YUSTI R FRANKLIN J"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|22",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "22",
+          "fields": {
+            "professor": {
+              "before": "FUENTES G LISBETH J (NUEVA)",
+              "after": "FUENTES G LISBETH J"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|23",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "23",
+          "fields": {
+            "professor": {
+              "before": "FUENTES G LISBETH J (NUEVA)",
+              "after": "FUENTES G LISBETH J"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|24",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "24",
+          "fields": {
+            "professor": {
+              "before": "MORENO G MARIA A (NUEVA)",
+              "after": "MORENO G MARIA A"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|25",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "25",
+          "fields": {
+            "professor": {
+              "before": "MORENO G MARIA A (NUEVA)",
+              "after": "MORENO G MARIA A"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|27",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "27",
+          "fields": {
+            "professor": {
+              "before": "RONDON F NELSON F (NUEVA)",
+              "after": "RONDON F NELSON F"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|28",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "28",
+          "fields": {
+            "professor": {
+              "before": "RONDON F NELSON F (NUEVA)",
+              "after": "RONDON F NELSON F"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|29",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "29",
+          "fields": {
+            "professor": {
+              "before": "JIMENEZ J JUAN C (NUEVA)",
+              "after": "JIMENEZ J JUAN C"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA2043|01",
+          "code": "MA2043",
+          "name": "ÁLGEBRA LINEAL",
+          "section": "01",
+          "fields": {
+            "professor": {
+              "before": "YUSTI R FRANKLIN J (NUEVA)",
+              "after": "YUSTI R FRANKLIN J"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA2043|02",
+          "code": "MA2043",
+          "name": "ÁLGEBRA LINEAL",
+          "section": "02",
+          "fields": {
+            "professor": {
+              "before": "TELLEZ J IVONNE E (NUEVA)",
+              "after": "TELLEZ J IVONNE E"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA2043|04",
+          "code": "MA2043",
+          "name": "ÁLGEBRA LINEAL",
+          "section": "04",
+          "fields": {
+            "professor": {
+              "before": "TELLEZ J IVONNE E (NUEVA)",
+              "after": "TELLEZ J IVONNE E"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA2043|06",
+          "code": "MA2043",
+          "name": "ÁLGEBRA LINEAL",
+          "section": "06",
+          "fields": {
+            "professor": {
+              "before": "ACOSTA Q JEANNETTE Z (NUEVA)",
+              "after": "ACOSTA Q JEANNETTE Z"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA2043|07",
+          "code": "MA2043",
+          "name": "ÁLGEBRA LINEAL",
+          "section": "07",
+          "fields": {
+            "professor": {
+              "before": "ACOSTA Q JEANNETTE Z (NUEVA)",
+              "after": "ACOSTA Q JEANNETTE Z"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA3053|01",
+          "code": "MA3053",
+          "name": "FUNCIONES VECTORIALES",
+          "section": "01",
+          "fields": {
+            "professor": {
+              "before": "PAEZ R JESUS A (NUEVA)",
+              "after": "PAEZ R JESUS A"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA3063|01",
+          "code": "MA3063",
+          "name": "ECUACIONES DIFERENCIALES",
+          "section": "01",
+          "fields": {
+            "professor": {
+              "before": "ROMAN R YANITZA CH (NUEVA)",
+              "after": "ROMAN R YANITZA CH"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA4B07|01",
+          "code": "MA4B07",
+          "name": "MATEMATICAS APLICADAS",
+          "section": "01",
+          "fields": {
+            "professor": {
+              "before": "NUÑEZ B AMABILES R (NUEVA)",
+              "after": "NUÑEZ B AMABILES R"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW4E01|41",
+          "code": "PW4E01",
+          "name": "TERMODINAMICA Y FLUIDOS",
+          "section": "41",
+          "fields": {
+            "professor": {
+              "before": "BRICEÑO G LUIS J (NUEVA)",
+              "after": "BRICEÑO G LUIS J"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "QM2013|20",
+          "code": "QM2013",
+          "name": "FUNDAMENTOS DE QUÍMICA GENERAL",
+          "section": "20",
+          "fields": {
+            "professor": {
+              "before": "ARAQUE O EMMARY M (NUEVA)",
+              "after": "ARAQUE O EMMARY M"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "QM3023|02",
+          "code": "QM3023",
+          "name": "CINÉTICA Y EQUILIBRIO QUÍMICO",
+          "section": "02",
+          "fields": {
+            "professor": {
+              "before": "VILLANUEVA S IVAN J (NUEVA)",
+              "after": "VILLANUEVA S IVAN J"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "SA6E01L|08",
+          "code": "SA6E01L",
+          "name": "LOGICA DIGITAL",
+          "section": "08",
+          "fields": {
+            "professor": {
+              "before": "BARRIOS ORIANA (NUEVA)",
+              "after": "BARRIOS ORIANA"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "SA6T01L|08",
+          "code": "SA6T01L",
+          "name": "LOGICA DIGITAL",
+          "section": "08",
+          "fields": {
+            "professor": {
+              "before": "BARRIOS ORIANA (NUEVA)",
+              "after": "BARRIOS ORIANA"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "SA7E04L|02",
+          "code": "SA7E04L",
+          "name": "MICROPROCESADORES",
+          "section": "02",
+          "fields": {
+            "professor": {
+              "before": "COLMENARES L MARIELA C (NUEVA)",
+              "after": "COLMENARES L MARIELA C"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "SA9E15|41",
+          "code": "SA9E15",
+          "name": "INSTRUMENTACION PROCESOS II",
+          "section": "41",
+          "fields": {
+            "professor": {
+              "before": "LANZA S GERARDO R (NUEVA)",
+              "after": "LANZA S GERARDO R"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "SS7T03|71",
+          "code": "SS7T03",
+          "name": "INSTRUMENTACION ELECTRONICA",
+          "section": "71",
+          "fields": {
+            "professor": {
+              "before": "HERRERA M GERARDO R (NUEVA)",
+              "after": "HERRERA M GERARDO R"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "TG9C01|04",
+          "code": "TG9C01",
+          "name": "TRABAJO ESPECIAL DE GRADO I",
+          "section": "04",
+          "fields": {
+            "professor": {
+              "before": "FARIAS I BETTYS E (NUEVA)",
+              "after": "FARIAS I BETTYS E"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "VI6C04|82",
+          "code": "VI6C04",
+          "name": "TOPOGRAFIA",
+          "section": "82",
+          "fields": {
+            "professor": {
+              "before": "MONSALVE H CARMIN I (NUEVA)",
+              "after": "MONSALVE H CARMIN I"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "VI8C05|83",
+          "code": "VI8C05",
+          "name": "VIAS DE COMUNICACION I",
+          "section": "83",
+          "fields": {
+            "professor": {
+              "before": "MONSALVE H CARMIN I (NUEVA)",
+              "after": "MONSALVE H CARMIN I"
+            }
+          }
+        }
+      ]
     }
   ]
 }
