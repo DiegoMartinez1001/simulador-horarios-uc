@@ -1,7 +1,7 @@
 /* Service worker: interfaz y último catálogo disponible sin conexión. */
 'use strict';
 
-const CACHE_NAME = 'uc-horarios-pwa-v9';
+const CACHE_NAME = 'uc-horarios-pwa-v10';
 const APP_ROOT = new URL('./', self.registration.scope);
 const CORE_FILES = [
   './',
