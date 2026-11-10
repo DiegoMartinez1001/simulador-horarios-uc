@@ -595,7 +595,8 @@
       byId(mode==='smart'?'smartSearch':'compareSearch').addEventListener('input',()=>render(mode));
     });
 
-    byId('compareSearchResults').addEventListener('click',()=>render('compare'));
+    // No renderizar al hacer clic: se elimina el checkbox antes de que el navegador emita change.
+    // El listener de change anterior ya actualiza la selección y vuelve a dibujar la lista.
     byId('smartSelected')?.addEventListener('click',()=>render('smart'));
 
     upgradeExistingComparePairs();
