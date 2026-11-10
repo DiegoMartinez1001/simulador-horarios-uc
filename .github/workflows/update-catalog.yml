@@ -3,7 +3,7 @@ name: Actualizar horarios DAE
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "*/5 * * * *"
   push:
     branches: [main]
     paths:
