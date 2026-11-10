@@ -1,7 +1,7 @@
 /* Service worker: interfaz y último catálogo disponible sin conexión. */
 'use strict';
 
-const CACHE_NAME = 'uc-horarios-pwa-v8';
+const CACHE_NAME = 'uc-horarios-pwa-v9';
 const APP_ROOT = new URL('./', self.registration.scope);
 const CORE_FILES = [
   './',
@@ -34,7 +34,7 @@ async function fetchWithTimeout(request, milliseconds) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), milliseconds);
   try {
-    return await fetch(new Request(request, { signal: controller.signal }));
+    return await fetch(new Request(request, { cache: 'no-store', signal: controller.signal }));
   } finally {
     clearTimeout(timer);
   }
