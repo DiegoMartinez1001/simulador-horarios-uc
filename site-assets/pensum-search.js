@@ -98,6 +98,8 @@
     '.pensum-filter-field label{font-size:9px;font-weight:850;letter-spacing:.025em;color:#52627a}',
     '.pensum-filter-field select{width:100%;min-width:0;padding:8px 9px;border:1px solid #ccd6e3;border-radius:8px;background:#fff;color:#29415f;font-size:10px;outline:none}',
     '.pensum-filter-field select:focus{border-color:#4a78c5;box-shadow:0 0 0 2px rgba(39,93,173,.1)}',
+    '.pensum-filter-field.is-disabled{opacity:.48}',
+    '.pensum-filter-field.is-disabled select{cursor:not-allowed}',
     '.pensum-filter-note{grid-column:1/-1;margin:0;color:#8290a3;font-size:9px;line-height:1.4}',
     '.pensum-filter-error{margin:5px 0;color:#9b3434;font-size:9px;line-height:1.4}',
     '.pensum-result-meta{display:block;margin-top:3px;color:#718096;font-size:9px;line-height:1.35}',
@@ -184,7 +186,9 @@
       {value:'',label:'Todos los énfasis'},
       ...index.electrical_tracks.map(item=>({value:item.id,label:item.label}))
     ]);
-    track.wrapper.hidden=true;
+    track.wrapper.classList.add('is-disabled');
+    track.wrapper.setAttribute('aria-disabled','true');
+    track.select.disabled=true;
     panel.append(plan.wrapper,school.wrapper,semester.wrapper,track.wrapper);
     const note=document.createElement('p');
     note.className='pensum-filter-note';
@@ -296,7 +300,9 @@
       chemistry.textContent='Ingeniería Química';
     }
     const electrical=c.school.value==='electrica'&&c.plan.value==='nuevo';
-    c.trackWrap.hidden=!electrical;
+    c.track.disabled=!electrical;
+    c.trackWrap.classList.toggle('is-disabled',!electrical);
+    c.trackWrap.setAttribute('aria-disabled',String(!electrical));
     if(!electrical)c.track.value='';
     if(c.track.value){
       c.plan.value='nuevo';
