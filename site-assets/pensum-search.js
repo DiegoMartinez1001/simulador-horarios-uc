@@ -68,6 +68,22 @@
     const stream=new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
     index=JSON.parse(await new Response(stream).text());
     if(!index||!Array.isArray(index.entries))throw new Error('El índice de pensums tiene un formato no válido.');
+
+    // Se integra por separado el Pensum Nuevo de Ingeniería Química para mantener
+    // el índice base compacto y conservar ambas versiones del plan.
+    const chemistryResponse=await fetch('./data/pensum-quimica-nuevo.json',{cache:'no-cache'});
+    if(!chemistryResponse.ok)throw new Error('No se pudo cargar el Pensum Nuevo de Ingeniería Química.');
+    const chemistryIndex=await chemistryResponse.json();
+    if(!chemistryIndex||!Array.isArray(chemistryIndex.entries))throw new Error('El índice de Ingeniería Química tiene un formato no válido.');
+    const signatures=new Set(index.entries.map(row=>row.join('|')));
+    for(const row of chemistryIndex.entries){
+      const signature=row.join('|');
+      if(!signatures.has(signature)){
+        index.entries.push(row);
+        signatures.add(signature);
+      }
+    }
+
     for(const row of index.entries){
       const [code]=row;
       if(!entryMap.has(code))entryMap.set(code,[]);
@@ -158,7 +174,7 @@
     ]);
     const school=makeSelect(idPrefix+'School','Escuela',[
       {value:'',label:'Todas las escuelas'},
-      ...index.schools.map(item=>({value:item.id,label:item.id==='quimica'?item.label+' · solo Pensum Actual':item.label}))
+      ...index.schools.map(item=>({value:item.id,label:item.label}))
     ]);
     const semester=makeSelect(idPrefix+'Semester','Semestre',[
       {value:'',label:'Todos los semestres'},
@@ -274,13 +290,10 @@
 
   const controls={};
   function refreshFilterState(c){
-    if(c.plan.value==='nuevo'&&c.school.value==='quimica'){
-      c.school.value='';
-    }
     const chemistry=Array.from(c.school.options).find(option=>option.value==='quimica');
     if(chemistry){
-      chemistry.disabled=c.plan.value==='nuevo';
-      chemistry.textContent=c.plan.value==='nuevo'?'Ingeniería Química · no disponible en Pensum Nuevo':'Ingeniería Química · solo Pensum Actual';
+      chemistry.disabled=false;
+      chemistry.textContent='Ingeniería Química';
     }
     const electrical=c.school.value==='electrica'&&c.plan.value==='nuevo';
     c.trackWrap.hidden=!electrical;
