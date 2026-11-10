@@ -265,7 +265,7 @@
     const rows=(entryMap.get(code)||[]).filter(row=>
       (!state.plan||row[1]===state.plan)&&(!state.school||row[2]===state.school)&&
       (!state.semester||Number(row[3])===Number(state.semester))&&
-      (!state.track||row[4]===state.track)
+      (!state.track||!row[4]||row[4]===state.track)
     );
     return {code,name:course.name||code,sections,entries:rows,curriculum:state.plan||curriculumOf(course)};
   }
@@ -330,7 +330,9 @@
       if(state.plan&&state.plan!==curriculum)return false;
       if(state.school&&state.school!==school)return false;
       if(state.semester&&Number(state.semester)!==Number(semester))return false;
-      if(state.track&&state.track!==track)return false;
+      // Las filas sin énfasis corresponden a materias comunes a todas las ramas.
+      // Al elegir una rama, se conservan esas materias y se excluyen las de otras ramas.
+      if(state.track&&track&&state.track!==track)return false;
       return true;
     });
   }
