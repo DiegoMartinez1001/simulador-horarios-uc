@@ -138,6 +138,7 @@ jobs:
           Path("dist/data/meta.json").write_bytes(Path("data/meta.json").read_bytes())
           Path("dist/data/changes.json").write_bytes(Path("data/changes.json").read_bytes())
           Path("dist/data/pensum-index.json.gz.b64").write_bytes(Path("data/pensum-index.json.gz.b64").read_bytes())
+          Path("dist/data/pensum-quimica-nuevo.json").write_bytes(Path("data/pensum-quimica-nuevo.json").read_bytes())
           Path("dist/manifest.webmanifest").write_bytes(Path("site-assets/manifest.webmanifest").read_bytes())
           Path("dist/pwa.js").write_bytes(Path("site-assets/pwa.js").read_bytes())
           Path("dist/sw.js").write_bytes(Path("site-assets/sw.js").read_bytes())
