@@ -1,7 +1,7 @@
 /* Service worker: interfaz y último catálogo disponible sin conexión. */
 'use strict';
 
-const CACHE_NAME = 'uc-horarios-pwa-v5';
+const CACHE_NAME = 'uc-horarios-pwa-v6';
 const APP_ROOT = new URL('./', self.registration.scope);
 const CORE_FILES = [
   './',
@@ -13,7 +13,8 @@ const CORE_FILES = [
   './data/courses.json.gz.b64',
   './data/meta.json',
   './data/changes.json',
-  './data/pensum-index.json.gz.b64'
+  './data/pensum-index.json.gz.b64',
+  './data/pensum-quimica-nuevo.json'
 ];
 
 const scopedUrl = path => new URL(path, APP_ROOT).href;
