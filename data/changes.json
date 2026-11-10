@@ -41061,6 +41061,1076 @@
           }
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-10T22:48:07+00:00",
+      "updated_at": "10/11/2026 06:31 pm",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "10/11/2026 03:48 pm",
+        "generated_at": "2026-11-10T19:49:43+00:00",
+        "sections": 1010,
+        "sha256": "84c34b089899f34eb841c281a3f0edc95f049e0351e68202bc0d7a676206a321"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "10/11/2026 06:31 pm",
+        "generated_at": "2026-11-10T22:48:07+00:00",
+        "sections": 983,
+        "sha256": "9fd7b133252f40cc7e380376c4f1659677a0e9c2687a622a64ad06b3c91a1569"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 27,
+        "modified": 8,
+        "schedule_changes": 1,
+        "professor_changes": 7,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "removed",
+          "id": "DI2B01|01",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "01",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "SEVERIAN G NEYDA M",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "LU",
+                "start": "0800",
+                "room": "SD1"
+              },
+              {
+                "day": "LU",
+                "start": "0850",
+                "room": "SD1"
+              },
+              {
+                "day": "MI",
+                "start": "0800",
+                "room": "SD1"
+              },
+              {
+                "day": "MI",
+                "start": "0850",
+                "room": "SD1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|02",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "02",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "SEVERIAN G NEYDA M",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "LU",
+                "start": "0940",
+                "room": "SD1"
+              },
+              {
+                "day": "LU",
+                "start": "1030",
+                "room": "SD1"
+              },
+              {
+                "day": "MI",
+                "start": "0940",
+                "room": "SD1"
+              },
+              {
+                "day": "MI",
+                "start": "1030",
+                "room": "SD1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|03",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "03",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "SEVERIAN G NEYDA M",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "LU",
+                "start": "1120",
+                "room": "SD1"
+              },
+              {
+                "day": "LU",
+                "start": "1210",
+                "room": "SD1"
+              },
+              {
+                "day": "MI",
+                "start": "1120",
+                "room": "SD1"
+              },
+              {
+                "day": "MI",
+                "start": "1210",
+                "room": "SD1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|04",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "04",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "MIRANDA G RICARDO A",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "LU",
+                "start": "0800",
+                "room": "SD2"
+              },
+              {
+                "day": "LU",
+                "start": "0850",
+                "room": "SD2"
+              },
+              {
+                "day": "MI",
+                "start": "0800",
+                "room": "SD2"
+              },
+              {
+                "day": "MI",
+                "start": "0850",
+                "room": "SD2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|05",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "05",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "MIRANDA G RICARDO A",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "LU",
+                "start": "0940",
+                "room": "SD2"
+              },
+              {
+                "day": "LU",
+                "start": "1030",
+                "room": "SD2"
+              },
+              {
+                "day": "MI",
+                "start": "0940",
+                "room": "SD2"
+              },
+              {
+                "day": "MI",
+                "start": "1030",
+                "room": "SD2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|06",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "06",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "MIRANDA G RICARDO A",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "LU",
+                "start": "1120",
+                "room": "SD2"
+              },
+              {
+                "day": "LU",
+                "start": "1210",
+                "room": "SD2"
+              },
+              {
+                "day": "MI",
+                "start": "1120",
+                "room": "SD2"
+              },
+              {
+                "day": "MI",
+                "start": "1210",
+                "room": "SD2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|07",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "07",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "CAMPOS Z CESAR A",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0800",
+                "room": "MA0850"
+              },
+              {
+                "day": "JU",
+                "start": "0800",
+                "room": "JU0850"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|08",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "08",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "CAMPOS Z CESAR A",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0940",
+                "room": "MA1030"
+              },
+              {
+                "day": "JU",
+                "start": "0940",
+                "room": "JU1030"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|09",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "09",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "CAMPOS Z CESAR A",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1120",
+                "room": "MA1210"
+              },
+              {
+                "day": "JU",
+                "start": "1120",
+                "room": "JU1210"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|10",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "10",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "ZAMORA R VICTOR L",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0800",
+                "room": "SD3"
+              },
+              {
+                "day": "MA",
+                "start": "0850",
+                "room": "SD3"
+              },
+              {
+                "day": "JU",
+                "start": "0800",
+                "room": "SD3"
+              },
+              {
+                "day": "JU",
+                "start": "0850",
+                "room": "SD3"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|11",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "11",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "ZAMORA R VICTOR L",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0940",
+                "room": "SD3"
+              },
+              {
+                "day": "MA",
+                "start": "1030",
+                "room": "SD3"
+              },
+              {
+                "day": "JU",
+                "start": "0940",
+                "room": "SD3"
+              },
+              {
+                "day": "JU",
+                "start": "1030",
+                "room": "SD3"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|12",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "12",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "ZAMORA R VICTOR L",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1120",
+                "room": "SD3"
+              },
+              {
+                "day": "MA",
+                "start": "1210",
+                "room": "SD3"
+              },
+              {
+                "day": "JU",
+                "start": "1120",
+                "room": "SD3"
+              },
+              {
+                "day": "JU",
+                "start": "1210",
+                "room": "SD3"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|13",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "13",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "CORALES H CARLOS J",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "JU",
+                "start": "0940",
+                "room": "SD1"
+              },
+              {
+                "day": "JU",
+                "start": "1030",
+                "room": "SD1"
+              },
+              {
+                "day": "VI",
+                "start": "0940",
+                "room": "SD1"
+              },
+              {
+                "day": "VI",
+                "start": "1030",
+                "room": "SD1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|14",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "14",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "CORALES H CARLOS J",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "JU",
+                "start": "1120",
+                "room": "SD1"
+              },
+              {
+                "day": "JU",
+                "start": "1210",
+                "room": "SD1"
+              },
+              {
+                "day": "VI",
+                "start": "1120",
+                "room": "SD1"
+              },
+              {
+                "day": "VI",
+                "start": "1210",
+                "room": "SD1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|15",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "15",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "PADRON M ANDRES A",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1120",
+                "room": "SD2"
+              },
+              {
+                "day": "MA",
+                "start": "1210",
+                "room": "SD2"
+              },
+              {
+                "day": "VI",
+                "start": "1120",
+                "room": "SD2"
+              },
+              {
+                "day": "VI",
+                "start": "1210",
+                "room": "SD2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|16",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "16",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "PADRON M ANDRES A",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1300",
+                "room": "SD2"
+              },
+              {
+                "day": "MA",
+                "start": "1350",
+                "room": "SD2"
+              },
+              {
+                "day": "VI",
+                "start": "1300",
+                "room": "SD2"
+              },
+              {
+                "day": "VI",
+                "start": "1350",
+                "room": "SD2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|17",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "17",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "PADRON M ANDRES A",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1440",
+                "room": "SD3"
+              },
+              {
+                "day": "MA",
+                "start": "1530",
+                "room": "SD3"
+              },
+              {
+                "day": "VI",
+                "start": "1440",
+                "room": "SD3"
+              },
+              {
+                "day": "VI",
+                "start": "1530",
+                "room": "SD3"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|18",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "18",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "DUARTE MANUEL",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MI",
+                "start": "0800",
+                "room": "SD3"
+              },
+              {
+                "day": "MI",
+                "start": "0850",
+                "room": "SD3"
+              },
+              {
+                "day": "VI",
+                "start": "0800",
+                "room": "SD3"
+              },
+              {
+                "day": "VI",
+                "start": "0850",
+                "room": "SD3"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|19",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "19",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "DUARTE MANUEL",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MI",
+                "start": "1030",
+                "room": "SD3"
+              },
+              {
+                "day": "MI",
+                "start": "1120",
+                "room": "SD3"
+              },
+              {
+                "day": "VI",
+                "start": "1030",
+                "room": "SD3"
+              },
+              {
+                "day": "VI",
+                "start": "1120",
+                "room": "SD3"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "DI2B01|20",
+          "code": "DI2B01",
+          "name": "DIBUJO I",
+          "section": "20",
+          "before": {
+            "name": "DIBUJO I",
+            "professor": "DUARTE MANUEL",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MI",
+                "start": "1120",
+                "room": "MI1210"
+              },
+              {
+                "day": "VI",
+                "start": "1120",
+                "room": "VI1210"
+              }
+            ]
+          }
+        },
+        {
+          "type": "modified",
+          "id": "FI4B06|01",
+          "code": "FI4B06",
+          "name": "FISICA MODERNA Y ONDAS",
+          "section": "01",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "JU1030"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "JU1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "A6E"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "A6E"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "A6E"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "A6E"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "removed",
+          "id": "ID2B01|01",
+          "code": "ID2B01",
+          "name": "INGLES I",
+          "section": "01",
+          "before": {
+            "name": "INGLES I",
+            "professor": "SALAZAR R FELIX J",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "LU",
+                "start": "0800",
+                "room": "AID"
+              },
+              {
+                "day": "LU",
+                "start": "0850",
+                "room": "AID"
+              },
+              {
+                "day": "MA",
+                "start": "0800",
+                "room": "AID"
+              },
+              {
+                "day": "MA",
+                "start": "0850",
+                "room": "AID"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "ID2B01|02",
+          "code": "ID2B01",
+          "name": "INGLES I",
+          "section": "02",
+          "before": {
+            "name": "INGLES I",
+            "professor": "SALAZAR R FELIX J",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "LU",
+                "start": "0940",
+                "room": "AID"
+              },
+              {
+                "day": "LU",
+                "start": "1030",
+                "room": "AID"
+              },
+              {
+                "day": "MA",
+                "start": "0940",
+                "room": "AID"
+              },
+              {
+                "day": "MA",
+                "start": "1030",
+                "room": "AID"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "ID2B01|03",
+          "code": "ID2B01",
+          "name": "INGLES I",
+          "section": "03",
+          "before": {
+            "name": "INGLES I",
+            "professor": "SALAZAR R FELIX J",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "LU",
+                "start": "1120",
+                "room": "AID"
+              },
+              {
+                "day": "LU",
+                "start": "1210",
+                "room": "AID"
+              },
+              {
+                "day": "MA",
+                "start": "1120",
+                "room": "AID"
+              },
+              {
+                "day": "MA",
+                "start": "1210",
+                "room": "AID"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "ID2B01|04",
+          "code": "ID2B01",
+          "name": "INGLES I",
+          "section": "04",
+          "before": {
+            "name": "INGLES I",
+            "professor": "ARAYA V PATRICIO",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0800",
+                "room": "AE1"
+              },
+              {
+                "day": "MA",
+                "start": "0850",
+                "room": "AE1"
+              },
+              {
+                "day": "JU",
+                "start": "0800",
+                "room": "AID"
+              },
+              {
+                "day": "JU",
+                "start": "0850",
+                "room": "AID"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "ID2B01|05",
+          "code": "ID2B01",
+          "name": "INGLES I",
+          "section": "05",
+          "before": {
+            "name": "INGLES I",
+            "professor": "ARAYA V PATRICIO",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0940",
+                "room": "AE1"
+              },
+              {
+                "day": "MA",
+                "start": "1030",
+                "room": "AE1"
+              },
+              {
+                "day": "JU",
+                "start": "0940",
+                "room": "AID"
+              },
+              {
+                "day": "JU",
+                "start": "1030",
+                "room": "AID"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "ID2B01|06",
+          "code": "ID2B01",
+          "name": "INGLES I",
+          "section": "06",
+          "before": {
+            "name": "INGLES I",
+            "professor": "CARRILLO C VICTOR A",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0800",
+                "room": "A7E"
+              },
+              {
+                "day": "MA",
+                "start": "0850",
+                "room": "A7E"
+              },
+              {
+                "day": "JU",
+                "start": "0800",
+                "room": "A7E"
+              },
+              {
+                "day": "JU",
+                "start": "0850",
+                "room": "A7E"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "ID2B01|07",
+          "code": "ID2B01",
+          "name": "INGLES I",
+          "section": "07",
+          "before": {
+            "name": "INGLES I",
+            "professor": "CARRILLO C VICTOR A",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1120",
+                "room": "A7E"
+              },
+              {
+                "day": "MA",
+                "start": "1210",
+                "room": "A7E"
+              },
+              {
+                "day": "JU",
+                "start": "1120",
+                "room": "A7E"
+              },
+              {
+                "day": "JU",
+                "start": "1210",
+                "room": "A7E"
+              }
+            ]
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|20",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "20",
+          "fields": {
+            "professor": {
+              "before": "CONDE H OSWALDO R",
+              "after": "NO ASIGNADO"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|21",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "21",
+          "fields": {
+            "professor": {
+              "before": "CONDE H OSWALDO R",
+              "after": "NO ASIGNADO"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|22",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "22",
+          "fields": {
+            "professor": {
+              "before": "JAUREGUI R EDY Z",
+              "after": "NO ASIGNADO"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|23",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "23",
+          "fields": {
+            "professor": {
+              "before": "JAUREGUI R EDY Z",
+              "after": "NO ASIGNADO"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|31",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "31",
+          "fields": {
+            "professor": {
+              "before": "ELLEBORO JULIO C",
+              "after": "NO ASIGNADO"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|20",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "20",
+          "fields": {
+            "professor": {
+              "before": "ZAVALA RENA C",
+              "after": "NO ASIGNADO"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|21",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "21",
+          "fields": {
+            "professor": {
+              "before": "ZAVALA RENA C",
+              "after": "NO ASIGNADO"
+            }
+          }
+        }
+      ]
     }
   ]
 }
