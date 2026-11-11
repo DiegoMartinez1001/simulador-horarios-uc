@@ -42131,6 +42131,196 @@
           }
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-11T01:46:17+00:00",
+      "updated_at": "10/11/2026 09:34 pm",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "10/11/2026 06:31 pm",
+        "generated_at": "2026-11-10T22:48:07+00:00",
+        "sections": 983,
+        "sha256": "9fd7b133252f40cc7e380376c4f1659677a0e9c2687a622a64ad06b3c91a1569"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "10/11/2026 09:34 pm",
+        "generated_at": "2026-11-11T01:46:17+00:00",
+        "sections": 982,
+        "sha256": "68d8acc4cf599f2004092860d1f569755fea27755329d32968c24dfb7cb7de46"
+      },
+      "summary": {
+        "added": 1,
+        "removed": 2,
+        "modified": 2,
+        "schedule_changes": 0,
+        "professor_changes": 2,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "PW4E01|41",
+          "code": "PW4E01",
+          "name": "TERMODINAMICA Y FLUIDOS",
+          "section": "41",
+          "fields": {
+            "professor": {
+              "before": "BRICEÑO G LUIS J",
+              "after": "SANCHEZ V JOSE A"
+            }
+          }
+        },
+        {
+          "type": "added",
+          "id": "TE0M11|51",
+          "code": "TE0M11",
+          "name": "REFRIGERACION",
+          "section": "51",
+          "after": {
+            "name": "REFRIGERACION",
+            "professor": "FLORES C ENRIQUE V",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "VI",
+                "start": "1120",
+                "room": "SPM"
+              },
+              {
+                "day": "VI",
+                "start": "1210",
+                "room": "SPM"
+              },
+              {
+                "day": "VI",
+                "start": "1300",
+                "room": "SPM"
+              },
+              {
+                "day": "VI",
+                "start": "1350",
+                "room": "SPM"
+              },
+              {
+                "day": "SA",
+                "start": "0800",
+                "room": "LMFM"
+              },
+              {
+                "day": "SA",
+                "start": "0850",
+                "room": "LMFM"
+              },
+              {
+                "day": "SA",
+                "start": "0940",
+                "room": "LMFM"
+              },
+              {
+                "day": "SA",
+                "start": "1030",
+                "room": "LMFM"
+              },
+              {
+                "day": "SA",
+                "start": "1120",
+                "room": "LMFM"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "TE0M16|51",
+          "code": "TE0M16",
+          "name": "MOTORES DE COMBUSTION INTERNA",
+          "section": "51",
+          "before": {
+            "name": "MOTORES DE COMBUSTION INTERNA",
+            "professor": "FLORES C ENRIQUE V",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "SA",
+                "start": "0800",
+                "room": "LMFM"
+              },
+              {
+                "day": "SA",
+                "start": "0850",
+                "room": "LMFM"
+              },
+              {
+                "day": "SA",
+                "start": "0940",
+                "room": "LMFM"
+              },
+              {
+                "day": "SA",
+                "start": "1030",
+                "room": "LMFM"
+              },
+              {
+                "day": "SA",
+                "start": "1120",
+                "room": "LMFM"
+              }
+            ]
+          }
+        },
+        {
+          "type": "modified",
+          "id": "TE5M01|52",
+          "code": "TE5M01",
+          "name": "TERMODINAMICA I",
+          "section": "52",
+          "fields": {
+            "professor": {
+              "before": "BRICEÑO G LUIS J",
+              "after": "SANCHEZ V JOSE A"
+            }
+          }
+        },
+        {
+          "type": "removed",
+          "id": "TE9M09|51",
+          "code": "TE9M09",
+          "name": "MANEJO DE FLUIDOS",
+          "section": "51",
+          "before": {
+            "name": "MANEJO DE FLUIDOS",
+            "professor": "FLORES C ENRIQUE V",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "VI",
+                "start": "1120",
+                "room": "SPM"
+              },
+              {
+                "day": "VI",
+                "start": "1210",
+                "room": "SPM"
+              },
+              {
+                "day": "VI",
+                "start": "1300",
+                "room": "SPM"
+              },
+              {
+                "day": "VI",
+                "start": "1350",
+                "room": "SPM"
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }
