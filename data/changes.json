@@ -42321,6 +42321,1249 @@
           }
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-11T11:30:29+00:00",
+      "updated_at": "11/11/2026 07:27 am",
+      "period": "1-2026",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "10/11/2026 09:34 pm",
+        "generated_at": "2026-11-11T01:46:17+00:00",
+        "sections": 982,
+        "sha256": "68d8acc4cf599f2004092860d1f569755fea27755329d32968c24dfb7cb7de46"
+      },
+      "to": {
+        "period": "1-2026",
+        "updated_at": "11/11/2026 07:27 am",
+        "generated_at": "2026-11-11T11:30:29+00:00",
+        "sections": 981,
+        "sha256": "409c17ff2dd133ae85fdc14a7deda4ce772fec2653cf3cca121dbed1f257f36a"
+      },
+      "summary": {
+        "added": 3,
+        "removed": 4,
+        "modified": 29,
+        "schedule_changes": 21,
+        "professor_changes": 8,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "added",
+          "id": "EC9E13|41",
+          "code": "EC9E13",
+          "name": "TEORIA DE LAS COMUNICACIONES II",
+          "section": "41",
+          "after": {
+            "name": "TEORIA DE LAS COMUNICACIONES II",
+            "professor": "ROBLEDO U FABIAN",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "SA",
+                "start": "0800",
+                "room": "AF2"
+              },
+              {
+                "day": "SA",
+                "start": "0850",
+                "room": "AF2"
+              },
+              {
+                "day": "SA",
+                "start": "0940",
+                "room": "AF2"
+              },
+              {
+                "day": "SA",
+                "start": "1030",
+                "room": "AF2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "EC9E13|71",
+          "code": "EC9E13",
+          "name": "TEORIA DE LAS COMUNICACIONES II",
+          "section": "71",
+          "before": {
+            "name": "TEORIA DE LAS COMUNICACIONES II",
+            "professor": "ROBLEDO U FABIAN",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "SA",
+                "start": "0800",
+                "room": "AF2"
+              },
+              {
+                "day": "SA",
+                "start": "0850",
+                "room": "AF2"
+              },
+              {
+                "day": "SA",
+                "start": "0940",
+                "room": "AF2"
+              },
+              {
+                "day": "SA",
+                "start": "1030",
+                "room": "AF2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ5I01|61",
+          "code": "IQ5I01",
+          "name": "PRINCIPIOS DE INGENIERIA QUIMICA",
+          "section": "61",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "SA",
+                  "start": "1030",
+                  "room": "LOU1"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "AE8"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "AE8"
+                },
+                {
+                  "day": "SA",
+                  "start": "1030",
+                  "room": "LOU1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ6Q05|62",
+          "code": "IQ6Q05",
+          "name": "TERMODINAMICA PARA ING QUIMICA II",
+          "section": "62",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "LCQ"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "JU0940"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "LCQ"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "LCQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "CIQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "CIQ"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ7Q08|61",
+          "code": "IQ7Q08",
+          "name": "OPERACIONES UNITARIAS",
+          "section": "61",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "LU1030"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "MA1120"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "LOU2"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "SLM"
+                },
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "SLM"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "SLM"
+                },
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "LOU2"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "LOU2"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ8Q13|62",
+          "code": "IQ8Q13",
+          "name": "PROCESOS QUIMICOS",
+          "section": "62",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "LOU2"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "LOU2"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "LOU2"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "LOU1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ9Q20|61",
+          "code": "IQ9Q20",
+          "name": "REFINACIÓN",
+          "section": "61",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "MA0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "LOU2"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "LOU2"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "LOU2"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|14",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "14",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "AF2"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AF2"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "AF2"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "AD8"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AD8"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "AD8"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "A6E"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "A6E"
+                },
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "A6E"
+                },
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "A8I"
+                },
+                {
+                  "day": "VI",
+                  "start": "0850",
+                  "room": "A8I"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "A8I"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA2034|05",
+          "code": "MA2034",
+          "name": "CÁLCULO INTEGRAL",
+          "section": "05",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "AF1"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "AF1"
+                },
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "A8I"
+                },
+                {
+                  "day": "VI",
+                  "start": "0850",
+                  "room": "A8I"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "A8I"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "AF2"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AF2"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "AD8"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AD8"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "AD8"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA2034|09",
+          "code": "MA2034",
+          "name": "CÁLCULO INTEGRAL",
+          "section": "09",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "A6E"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "A6E"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "AE8"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "AE8"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "AE8"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "AF1"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "AF1"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "AE8"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "AE8"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "AE8"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "added",
+          "id": "MP6M03L|03",
+          "code": "MP6M03L",
+          "name": "PROCESOS DE FABRICACION I",
+          "section": "03",
+          "after": {
+            "name": "PROCESOS DE FABRICACION I",
+            "professor": "ALFONZO A CARLOS R",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "JU",
+                "start": "1350",
+                "room": "LPROC"
+              },
+              {
+                "day": "JU",
+                "start": "1440",
+                "room": "LPROC"
+              }
+            ]
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW4165L|01",
+          "code": "PW4165L",
+          "name": "ELECTROTECNIA",
+          "section": "01",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "LU0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "LM3"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "LM3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW4165L|02",
+          "code": "PW4165L",
+          "name": "ELECTROTECNIA",
+          "section": "02",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "MA0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "LM3"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "LM3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW4165L|03",
+          "code": "PW4165L",
+          "name": "ELECTROTECNIA",
+          "section": "03",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "JU0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "LM3"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "LM3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW4165L|04",
+          "code": "PW4165L",
+          "name": "ELECTROTECNIA",
+          "section": "04",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "JU1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "LM3"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "LM3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW4165L|05",
+          "code": "PW4165L",
+          "name": "ELECTROTECNIA",
+          "section": "05",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "VI0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "LM3"
+                },
+                {
+                  "day": "VI",
+                  "start": "0850",
+                  "room": "LM3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW4165L|06",
+          "code": "PW4165L",
+          "name": "ELECTROTECNIA",
+          "section": "06",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "VI1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "LM3"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "LM3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW4165L|07",
+          "code": "PW4165L",
+          "name": "ELECTROTECNIA",
+          "section": "07",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "VI1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "LM3"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "LM3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW4165|41",
+          "code": "PW4165",
+          "name": "ELECTROTECNIA",
+          "section": "41",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "MI0850"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "MI1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "A7E"
+                },
+                {
+                  "day": "MI",
+                  "start": "0850",
+                  "room": "A7E"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "A7E"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "A7E"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW4165|42",
+          "code": "PW4165",
+          "name": "ELECTROTECNIA",
+          "section": "42",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "JU0850"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "JU1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "SIE2"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "SIE2"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "SIE2"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "SIE2"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW5M01L|02",
+          "code": "PW5M01L",
+          "name": "ELECTROTECNIA",
+          "section": "02",
+          "fields": {
+            "professor": {
+              "before": "ROJAS A HEBERTO J",
+              "after": "ROMERO T LEOPOLDO"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW5M01L|03",
+          "code": "PW5M01L",
+          "name": "ELECTROTECNIA",
+          "section": "03",
+          "fields": {
+            "professor": {
+              "before": "ROJAS A HEBERTO J",
+              "after": "ROMERO T LEOPOLDO"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW5M01L|04",
+          "code": "PW5M01L",
+          "name": "ELECTROTECNIA",
+          "section": "04",
+          "fields": {
+            "professor": {
+              "before": "VILLEGAS S JOSE L",
+              "after": "GUERRA SANTIAGO M"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW5M01L|05",
+          "code": "PW5M01L",
+          "name": "ELECTROTECNIA",
+          "section": "05",
+          "fields": {
+            "professor": {
+              "before": "GUERRA SANTIAGO M",
+              "after": "HERRERA RAFAEL E"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW7Q01L|02",
+          "code": "PW7Q01L",
+          "name": "ELECTROTECNIA",
+          "section": "02",
+          "fields": {
+            "professor": {
+              "before": "ROJAS A HEBERTO J",
+              "after": "ROMERO T LEOPOLDO"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW7Q01L|03",
+          "code": "PW7Q01L",
+          "name": "ELECTROTECNIA",
+          "section": "03",
+          "fields": {
+            "professor": {
+              "before": "ROJAS A HEBERTO J",
+              "after": "ROMERO T LEOPOLDO"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW7Q01L|04",
+          "code": "PW7Q01L",
+          "name": "ELECTROTECNIA",
+          "section": "04",
+          "fields": {
+            "professor": {
+              "before": "VILLEGAS S JOSE L",
+              "after": "GUERRA SANTIAGO M"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW7Q01L|05",
+          "code": "PW7Q01L",
+          "name": "ELECTROTECNIA",
+          "section": "05",
+          "fields": {
+            "professor": {
+              "before": "GUERRA SANTIAGO M",
+              "after": "HERRERA RAFAEL E"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW8E07|41",
+          "code": "PW8E07",
+          "name": "MAQUINAS ELECTRICAS III",
+          "section": "41",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1350",
+                  "room": "SIE3"
+                },
+                {
+                  "day": "LU",
+                  "start": "1440",
+                  "room": "SIE3"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "SLM"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "SLM"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "LPE"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "LPE"
+                },
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "LPE"
+                },
+                {
+                  "day": "MI",
+                  "start": "0850",
+                  "room": "LPE"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "PW8E08|41",
+          "code": "PW8E08",
+          "name": "ACCIONAMIENTOS ELECTRICOS",
+          "section": "41",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "LPE"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "LPE"
+                },
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "LPE"
+                },
+                {
+                  "day": "MI",
+                  "start": "0850",
+                  "room": "LPE"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1350",
+                  "room": "SIE3"
+                },
+                {
+                  "day": "LU",
+                  "start": "1440",
+                  "room": "SIE3"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "SLM"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "SLM"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "QM4B03L|04",
+          "code": "QM4B03L",
+          "name": "LAB. DE QUIMICA GENERAL",
+          "section": "04",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "SA",
+                  "start": "0800",
+                  "room": "SA0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "SA",
+                  "start": "0800",
+                  "room": "LQG"
+                },
+                {
+                  "day": "SA",
+                  "start": "0850",
+                  "room": "LQG"
+                },
+                {
+                  "day": "SA",
+                  "start": "0940",
+                  "room": "LQG"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "QM9B03L|04",
+          "code": "QM9B03L",
+          "name": "LABORATORIO I DE QUIMICA",
+          "section": "04",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "MA0850"
+                },
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "SA0800"
+                },
+                {
+                  "day": "SA",
+                  "start": "0850",
+                  "room": "SA0940"
+                }
+              ],
+              "after": [
+                {
+                  "day": "SA",
+                  "start": "0800",
+                  "room": "LQG"
+                },
+                {
+                  "day": "SA",
+                  "start": "0850",
+                  "room": "LQG"
+                },
+                {
+                  "day": "SA",
+                  "start": "0940",
+                  "room": "LQG"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "removed",
+          "id": "QM9B03L|05",
+          "code": "QM9B03L",
+          "name": "LABORATORIO I DE QUIMICA",
+          "section": "05",
+          "before": {
+            "name": "LABORATORIO I DE QUIMICA",
+            "professor": "CARTES G PAMELA A",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MI",
+                "start": "0800",
+                "room": "MI0850"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "QM9B03L|06",
+          "code": "QM9B03L",
+          "name": "LABORATORIO I DE QUIMICA",
+          "section": "06",
+          "before": {
+            "name": "LABORATORIO I DE QUIMICA",
+            "professor": "VILLANUEVA S IVAN J",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "VI",
+                "start": "0800",
+                "room": "VI0850"
+              }
+            ]
+          }
+        },
+        {
+          "type": "removed",
+          "id": "QM9B03L|07",
+          "code": "QM9B03L",
+          "name": "LABORATORIO I DE QUIMICA",
+          "section": "07",
+          "before": {
+            "name": "LABORATORIO I DE QUIMICA",
+            "professor": "HERNANDEZ C JUAN C",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "SA",
+                "start": "0800",
+                "room": "SA0850"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "TE9M09|51",
+          "code": "TE9M09",
+          "name": "MANEJO DE FLUIDOS",
+          "section": "51",
+          "after": {
+            "name": "MANEJO DE FLUIDOS",
+            "professor": "FLORES C ENRIQUE V",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "VI",
+                "start": "1120",
+                "room": "SPM"
+              },
+              {
+                "day": "VI",
+                "start": "1210",
+                "room": "SPM"
+              },
+              {
+                "day": "VI",
+                "start": "1300",
+                "room": "SPM"
+              },
+              {
+                "day": "VI",
+                "start": "1350",
+                "room": "SPM"
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }
