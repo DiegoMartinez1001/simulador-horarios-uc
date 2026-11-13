@@ -47960,6 +47960,344 @@
           }
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-13T12:31:18+00:00",
+      "updated_at": "13/11/2026 07:33 am",
+      "period": "1-2026",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "13/11/2026 07:24 am",
+        "generated_at": "2026-11-13T11:33:12+00:00",
+        "sections": 1000,
+        "sha256": "63d42dc38b7f5dcd75d06aa452322bebb0f429c1ee456ca56c25042fc7a6d18f"
+      },
+      "to": {
+        "period": "1-2026",
+        "updated_at": "13/11/2026 07:33 am",
+        "generated_at": "2026-11-13T12:31:18+00:00",
+        "sections": 1000,
+        "sha256": "a44773ddfaa199a44b06c95548d642e6ae2677de1410dcb28a83775db623f44c"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 6,
+        "schedule_changes": 6,
+        "professor_changes": 6,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "DI2013|19",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "19",
+          "fields": {
+            "professor": {
+              "before": "DUARTE MANUEL (NUEVA)",
+              "after": "DUARTE MANUEL (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "MI1030"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "VI1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "AVING"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "AVING"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "AVING"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "AVING"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI3B01|19",
+          "code": "DI3B01",
+          "name": "DIBUJO I",
+          "section": "19",
+          "fields": {
+            "professor": {
+              "before": "DUARTE MANUEL (NUEVA)",
+              "after": "DUARTE MANUEL (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "SD3"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "SD3"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "SD3"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "SD3"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "AVING"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "AVING"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "AVING"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AVING"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ8Q12|62",
+          "code": "IQ8Q12",
+          "name": "LAB. DE INGENIERIA QUIMICA II",
+          "section": "62",
+          "fields": {
+            "professor": {
+              "before": "RODRIGUEZ R JULIO I (NUEVA)",
+              "after": "RODRIGUEZ R JULIO I (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "JU0850"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "JU1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "AVING"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "AVING"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "AVING"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "AVING"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ8Q12|63",
+          "code": "IQ8Q12",
+          "name": "LAB. DE INGENIERIA QUIMICA II",
+          "section": "63",
+          "fields": {
+            "professor": {
+              "before": "RODRIGUEZ R JULIO I (NUEVA)",
+              "after": "RODRIGUEZ R JULIO I (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "JU1210"
+                },
+                {
+                  "day": "JU",
+                  "start": "1300",
+                  "room": "JU1350"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AVING"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AVING"
+                },
+                {
+                  "day": "JU",
+                  "start": "1300",
+                  "room": "AVING"
+                },
+                {
+                  "day": "JU",
+                  "start": "1350",
+                  "room": "AVING"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ8Q13|62",
+          "code": "IQ8Q13",
+          "name": "PROCESOS QUIMICOS",
+          "section": "62",
+          "fields": {
+            "professor": {
+              "before": "JIMENEZ N MILAGROS D V (NUEVA)",
+              "after": "JIMENEZ N MILAGROS D V (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "LOU1"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "AVING"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "AVING"
+                },
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "AVING"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "SA9103|41",
+          "code": "SA9103",
+          "name": "ROBOTICA Y VISION INDUSTRIAL",
+          "section": "41",
+          "fields": {
+            "professor": {
+              "before": "ESCALONA G LUIS W (NUEVA)",
+              "after": "ESCALONA G LUIS W (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1440",
+                  "room": "LU1530"
+                },
+                {
+                  "day": "MI",
+                  "start": "1440",
+                  "room": "MI1530"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1440",
+                  "room": "AVING"
+                },
+                {
+                  "day": "LU",
+                  "start": "1530",
+                  "room": "AVING"
+                },
+                {
+                  "day": "MI",
+                  "start": "1440",
+                  "room": "AVING"
+                },
+                {
+                  "day": "MI",
+                  "start": "1530",
+                  "room": "AVING"
+                },
+                {
+                  "day": "JU",
+                  "start": "1440",
+                  "room": "AVING"
+                }
+              ]
+            }
+          }
+        }
+      ]
     }
   ]
 }
