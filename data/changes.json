@@ -45467,6 +45467,2499 @@
           }
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-13T11:33:12+00:00",
+      "updated_at": "13/11/2026 07:24 am",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "12/11/2026 06:30 am",
+        "generated_at": "2026-11-12T10:40:38+00:00",
+        "sections": 995,
+        "sha256": "4ceaaf11b0a7d920addba300459b16e30a87710fba2ea6db0f89803b3d15b29c"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "13/11/2026 07:24 am",
+        "generated_at": "2026-11-13T11:33:12+00:00",
+        "sections": 1000,
+        "sha256": "63d42dc38b7f5dcd75d06aa452322bebb0f429c1ee456ca56c25042fc7a6d18f"
+      },
+      "summary": {
+        "added": 5,
+        "removed": 0,
+        "modified": 71,
+        "schedule_changes": 43,
+        "professor_changes": 28,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "CA3013|01",
+          "code": "CA3013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "01",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "LU0850"
+                },
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "MI0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "LC1"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "LC1"
+                },
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "LC1"
+                },
+                {
+                  "day": "MI",
+                  "start": "0850",
+                  "room": "LC1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA3013|02",
+          "code": "CA3013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "02",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "LU1030"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "MI1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "LC1"
+                },
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "LC1"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "LC1"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "LC1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA3013|03",
+          "code": "CA3013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "03",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "LU1210"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "MI1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "LC1"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "LC1"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "LC1"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "LC1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA3013|04",
+          "code": "CA3013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "04",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "VI0850"
+                },
+                {
+                  "day": "SA",
+                  "start": "0800",
+                  "room": "SA0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "LC1"
+                },
+                {
+                  "day": "VI",
+                  "start": "0850",
+                  "room": "LC1"
+                },
+                {
+                  "day": "SA",
+                  "start": "0800",
+                  "room": "LC1"
+                },
+                {
+                  "day": "SA",
+                  "start": "0850",
+                  "room": "LC1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA3013|05",
+          "code": "CA3013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "05",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "VI1030"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "VI1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "LC1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "LC1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "LC1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "LC1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA3013|06",
+          "code": "CA3013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "06",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "SA",
+                  "start": "0940",
+                  "room": "SA1030"
+                },
+                {
+                  "day": "SA",
+                  "start": "1120",
+                  "room": "SA1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "SA",
+                  "start": "0940",
+                  "room": "LC1"
+                },
+                {
+                  "day": "SA",
+                  "start": "1030",
+                  "room": "LC1"
+                },
+                {
+                  "day": "SA",
+                  "start": "1120",
+                  "room": "LC1"
+                },
+                {
+                  "day": "SA",
+                  "start": "1210",
+                  "room": "LC1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA4013|01",
+          "code": "CA4013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "01",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "LU0850"
+                },
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "MI0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "LC1"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "LC1"
+                },
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "LC1"
+                },
+                {
+                  "day": "MI",
+                  "start": "0850",
+                  "room": "LC1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA4013|02",
+          "code": "CA4013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "02",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "LU1030"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "MI1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "LC1"
+                },
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "LC1"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "LC1"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "LC1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA4013|03",
+          "code": "CA4013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "03",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "LU1210"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "MI1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "LC1"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "LC1"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "LC1"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "LC1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA4013|04",
+          "code": "CA4013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "04",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "VI0850"
+                },
+                {
+                  "day": "SA",
+                  "start": "0800",
+                  "room": "SA0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "LC1"
+                },
+                {
+                  "day": "VI",
+                  "start": "0850",
+                  "room": "LC1"
+                },
+                {
+                  "day": "SA",
+                  "start": "0800",
+                  "room": "LC1"
+                },
+                {
+                  "day": "SA",
+                  "start": "0850",
+                  "room": "LC1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA4013|05",
+          "code": "CA4013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "05",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "VI1030"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "VI1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "LC1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "LC1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "LC1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "LC1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA4013|06",
+          "code": "CA4013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "06",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "SA",
+                  "start": "0940",
+                  "room": "SA1030"
+                },
+                {
+                  "day": "SA",
+                  "start": "1120",
+                  "room": "SA1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "SA",
+                  "start": "0940",
+                  "room": "LC1"
+                },
+                {
+                  "day": "SA",
+                  "start": "1030",
+                  "room": "LC1"
+                },
+                {
+                  "day": "SA",
+                  "start": "1120",
+                  "room": "LC1"
+                },
+                {
+                  "day": "SA",
+                  "start": "1210",
+                  "room": "LC1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA4023|01",
+          "code": "CA4023",
+          "name": "PROGRAMACIÓN DE APLICACIONES EN INGENIERÍA",
+          "section": "01",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "LU0850"
+                },
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "MI0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "LC3"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "LC3"
+                },
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "LC3"
+                },
+                {
+                  "day": "MI",
+                  "start": "0850",
+                  "room": "LC3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA4023|02",
+          "code": "CA4023",
+          "name": "PROGRAMACIÓN DE APLICACIONES EN INGENIERÍA",
+          "section": "02",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "LU1030"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "MI1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "LC3"
+                },
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "LC3"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "LC3"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "LC3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA4023|03",
+          "code": "CA4023",
+          "name": "PROGRAMACIÓN DE APLICACIONES EN INGENIERÍA",
+          "section": "03",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "MA0850"
+                },
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "MA1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "LC3"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "LC3"
+                },
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "LC3"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "LC3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA4023|04",
+          "code": "CA4023",
+          "name": "PROGRAMACIÓN DE APLICACIONES EN INGENIERÍA",
+          "section": "04",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "JU0850"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "JU1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "LC3"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "LC3"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "LC3"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "LC3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CA4023|05",
+          "code": "CA4023",
+          "name": "PROGRAMACIÓN DE APLICACIONES EN INGENIERÍA",
+          "section": "05",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "VI0850"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "VI1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "LC3"
+                },
+                {
+                  "day": "VI",
+                  "start": "0850",
+                  "room": "LC3"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "LC3"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "LC3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CM4014|41",
+          "code": "CM4014",
+          "name": "CIRCUITOS ELECTRICOS EN DC Y REGIMEN TRANSITORIO",
+          "section": "41",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "MI1210"
+                },
+                {
+                  "day": "MI",
+                  "start": "1300",
+                  "room": "VI1120"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "SIE2"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "SIE2"
+                },
+                {
+                  "day": "MI",
+                  "start": "1300",
+                  "room": "SIE2"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "SLM"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "SLM"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DA4015|52",
+          "code": "DA4015",
+          "name": "DIBUJO MECANICO",
+          "section": "52",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "JU1210"
+                },
+                {
+                  "day": "JU",
+                  "start": "1300",
+                  "room": "VI1120"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "LDM"
+                },
+                {
+                  "day": "VI",
+                  "start": "1300",
+                  "room": "LDM"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "SPM"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "SPM"
+                },
+                {
+                  "day": "JU",
+                  "start": "1300",
+                  "room": "SPM"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "LDM"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "LDM"
+                },
+                {
+                  "day": "VI",
+                  "start": "1300",
+                  "room": "LDM"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DA4015|53",
+          "code": "DA4015",
+          "name": "DIBUJO MECANICO",
+          "section": "53",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "JU1210"
+                },
+                {
+                  "day": "JU",
+                  "start": "1300",
+                  "room": "VI1350"
+                },
+                {
+                  "day": "VI",
+                  "start": "1440",
+                  "room": "LDM"
+                },
+                {
+                  "day": "VI",
+                  "start": "1530",
+                  "room": "LDM"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "SPM"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "SPM"
+                },
+                {
+                  "day": "JU",
+                  "start": "1300",
+                  "room": "SPM"
+                },
+                {
+                  "day": "VI",
+                  "start": "1350",
+                  "room": "LDM"
+                },
+                {
+                  "day": "VI",
+                  "start": "1440",
+                  "room": "LDM"
+                },
+                {
+                  "day": "VI",
+                  "start": "1530",
+                  "room": "LDM"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI2013|10",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "10",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "MA0850"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "JU0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "SD3"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "SD3"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "SD3"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "SD3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI2013|11",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "11",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "MA1030"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "JU1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "SD3"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "SD3"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "SD3"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "SD3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI2013|12",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "12",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "MA1210"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "JU1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "SD3"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "SD3"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "SD3"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "SD3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI2013|13",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "13",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "JU1030"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "VI1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "SD1"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "SD1"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "SD1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "SD1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI2013|14",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "14",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "JU1210"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "VI1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "SD1"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "SD1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "SD1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "SD1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI2013|15",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "15",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "MA1210"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "VI1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "SD2"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "SD2"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "SD2"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "SD2"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI2013|16",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "16",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1300",
+                  "room": "MA1350"
+                },
+                {
+                  "day": "VI",
+                  "start": "1300",
+                  "room": "VI1350"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1300",
+                  "room": "SD2"
+                },
+                {
+                  "day": "MA",
+                  "start": "1350",
+                  "room": "SD2"
+                },
+                {
+                  "day": "VI",
+                  "start": "1300",
+                  "room": "SD2"
+                },
+                {
+                  "day": "VI",
+                  "start": "1350",
+                  "room": "SD2"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI2013|17",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "17",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1440",
+                  "room": "MA1530"
+                },
+                {
+                  "day": "VI",
+                  "start": "1440",
+                  "room": "VI1530"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1440",
+                  "room": "SD3"
+                },
+                {
+                  "day": "MA",
+                  "start": "1530",
+                  "room": "SD3"
+                },
+                {
+                  "day": "VI",
+                  "start": "1440",
+                  "room": "SD3"
+                },
+                {
+                  "day": "VI",
+                  "start": "1530",
+                  "room": "SD3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI2013|18",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "18",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "MI0850"
+                },
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "VI0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "SD3"
+                },
+                {
+                  "day": "MI",
+                  "start": "0850",
+                  "room": "SD3"
+                },
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "SD3"
+                },
+                {
+                  "day": "VI",
+                  "start": "0850",
+                  "room": "SD3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI2013|19",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "19",
+          "fields": {
+            "professor": {
+              "before": "DUARTE MANUEL",
+              "after": "DUARTE MANUEL (NUEVA)"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI2013|20",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "20",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "MI1210"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "VI1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "SD3"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "SD3"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "SD3"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "SD3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "added",
+          "id": "DI2013|21",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "21",
+          "after": {
+            "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+            "professor": "DUARTE MANUEL",
+            "status": "ACTIVA",
+            "curriculum": "nuevo",
+            "slots": [
+              {
+                "day": "MI",
+                "start": "0940",
+                "room": "SD3"
+              },
+              {
+                "day": "MI",
+                "start": "1030",
+                "room": "SD3"
+              },
+              {
+                "day": "VI",
+                "start": "0940",
+                "room": "SD3"
+              },
+              {
+                "day": "VI",
+                "start": "1030",
+                "room": "SD3"
+              }
+            ]
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI3B01|19",
+          "code": "DI3B01",
+          "name": "DIBUJO I",
+          "section": "19",
+          "fields": {
+            "professor": {
+              "before": "DUARTE MANUEL",
+              "after": "DUARTE MANUEL (NUEVA)"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI3B01|20",
+          "code": "DI3B01",
+          "name": "DIBUJO I",
+          "section": "20",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "MI1210"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "VI1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "SD3"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "SD3"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "SD3"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "SD3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "added",
+          "id": "DI3B01|21",
+          "code": "DI3B01",
+          "name": "DIBUJO I",
+          "section": "21",
+          "after": {
+            "name": "DIBUJO I",
+            "professor": "DUARTE MANUEL",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MI",
+                "start": "0940",
+                "room": "SD3"
+              },
+              {
+                "day": "MI",
+                "start": "1030",
+                "room": "SD3"
+              },
+              {
+                "day": "VI",
+                "start": "0940",
+                "room": "SD3"
+              },
+              {
+                "day": "VI",
+                "start": "1030",
+                "room": "SD3"
+              }
+            ]
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU1022|04",
+          "code": "HU1022",
+          "name": "CULTURA",
+          "section": "04",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "SANCHEZ HERNANDEZ EDUAR RAFAEL"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU1022|05",
+          "code": "HU1022",
+          "name": "CULTURA",
+          "section": "05",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "SANCHEZ HERNANDEZ EDUAR RAFAEL"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU1022|06",
+          "code": "HU1022",
+          "name": "CULTURA",
+          "section": "06",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "SANCHEZ HERNANDEZ EDUAR RAFAEL"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU1073|09",
+          "code": "HU1073",
+          "name": "DESARROLLO DE HABILIDADES DEL PENSAMIENTO",
+          "section": "09",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "A6E"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "A6E"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AE8"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AE8"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "A6E"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "A6E"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AE9"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AE9"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU1092|13",
+          "code": "HU1092",
+          "name": "ACONDICIONAMIENTO FISICO PARA LA SALUD",
+          "section": "13",
+          "fields": {
+            "professor": {
+              "before": "PEREZ S EDGAR A",
+              "after": "PEREZ SOLORZANO EDGAR ALIX"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU1092|14",
+          "code": "HU1092",
+          "name": "ACONDICIONAMIENTO FISICO PARA LA SALUD",
+          "section": "14",
+          "fields": {
+            "professor": {
+              "before": "PEREZ S EDGAR A",
+              "after": "PEREZ SOLORZANO EDGAR ALIX"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU1092|15",
+          "code": "HU1092",
+          "name": "ACONDICIONAMIENTO FISICO PARA LA SALUD",
+          "section": "15",
+          "fields": {
+            "professor": {
+              "before": "PEREZ S EDGAR A",
+              "after": "PEREZ SOLORZANO EDGAR ALIX"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU1092|16",
+          "code": "HU1092",
+          "name": "ACONDICIONAMIENTO FISICO PARA LA SALUD",
+          "section": "16",
+          "fields": {
+            "professor": {
+              "before": "PEREZ S EDGAR A",
+              "after": "PEREZ SOLORZANO EDGAR ALIX"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU1092|17",
+          "code": "HU1092",
+          "name": "ACONDICIONAMIENTO FISICO PARA LA SALUD",
+          "section": "17",
+          "fields": {
+            "professor": {
+              "before": "PEREZ S EDGAR A",
+              "after": "PEREZ SOLORZANO EDGAR ALIX"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU1092|18",
+          "code": "HU1092",
+          "name": "ACONDICIONAMIENTO FISICO PARA LA SALUD",
+          "section": "18",
+          "fields": {
+            "professor": {
+              "before": "PEREZ S EDGAR A",
+              "after": "PEREZ SOLORZANO EDGAR ALIX"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU3B02|04",
+          "code": "HU3B02",
+          "name": "CULTURA",
+          "section": "04",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "SANCHEZ HERNANDEZ EDUAR RAFAEL"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU3B02|05",
+          "code": "HU3B02",
+          "name": "CULTURA",
+          "section": "05",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "SANCHEZ HERNANDEZ EDUAR RAFAEL"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU3B02|06",
+          "code": "HU3B02",
+          "name": "CULTURA",
+          "section": "06",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "SANCHEZ HERNANDEZ EDUAR RAFAEL"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID3023|03",
+          "code": "ID3023",
+          "name": "INGLÉS INSTRUMENTAL",
+          "section": "03",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "CAMPOS B KARLA C"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID3023|04",
+          "code": "ID3023",
+          "name": "INGLÉS INSTRUMENTAL",
+          "section": "04",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "CAMPOS B KARLA C"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID3023|05",
+          "code": "ID3023",
+          "name": "INGLÉS INSTRUMENTAL",
+          "section": "05",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "CAMPOS B KARLA C"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID3023|06",
+          "code": "ID3023",
+          "name": "INGLÉS INSTRUMENTAL",
+          "section": "06",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "QUIROZ D NEYDA C"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID3023|07",
+          "code": "ID3023",
+          "name": "INGLÉS INSTRUMENTAL",
+          "section": "07",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "QUIROZ D NEYDA C"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID3023|08",
+          "code": "ID3023",
+          "name": "INGLÉS INSTRUMENTAL",
+          "section": "08",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "QUIROZ D NEYDA C"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID3023|09",
+          "code": "ID3023",
+          "name": "INGLÉS INSTRUMENTAL",
+          "section": "09",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "ALCALA H SHARIN B"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID3023|10",
+          "code": "ID3023",
+          "name": "INGLÉS INSTRUMENTAL",
+          "section": "10",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "ALCALA H SHARIN B"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID3023|11",
+          "code": "ID3023",
+          "name": "INGLÉS INSTRUMENTAL",
+          "section": "11",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "ALCALA H SHARIN B"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID4032|01",
+          "code": "ID4032",
+          "name": "MANEJO DE TEXTOS TÉCNICOS CIENTÍFICOS",
+          "section": "01",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "MA1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "SEIN"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "SEIN"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID4032|02",
+          "code": "ID4032",
+          "name": "MANEJO DE TEXTOS TÉCNICOS CIENTÍFICOS",
+          "section": "02",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "JU1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AID"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AID"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID4032|03",
+          "code": "ID4032",
+          "name": "MANEJO DE TEXTOS TÉCNICOS CIENTÍFICOS",
+          "section": "03",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "MA1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "A7E"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "A7E"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID4032|04",
+          "code": "ID4032",
+          "name": "MANEJO DE TEXTOS TÉCNICOS CIENTÍFICOS",
+          "section": "04",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "JU1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "A7E"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "A7E"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IE4223|81",
+          "code": "IE4223",
+          "name": "RESISTENCIA DE MATERIALES FUNDAMENTAL",
+          "section": "81",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "AE1"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "AE1"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "AE8"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "AE8"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "AE1"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "AE1"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "AE9"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "AE9"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IN4163|31",
+          "code": "IN4163",
+          "name": "ESTADÍSTICA APLICADA A LA INGENIERÍA CIVIL",
+          "section": "31",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "MA0850"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "JU0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "SUM"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "SUM"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "SUM"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "SUM"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "added",
+          "id": "IQ5Q03|62",
+          "code": "IQ5Q03",
+          "name": "FENOMENOS DE TRANSPORTE I",
+          "section": "62",
+          "after": {
+            "name": "FENOMENOS DE TRANSPORTE I",
+            "professor": "RODRIGUEZ R JULIO I",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1120",
+                "room": "AE6"
+              },
+              {
+                "day": "MA",
+                "start": "1210",
+                "room": "AE6"
+              },
+              {
+                "day": "JU",
+                "start": "0800",
+                "room": "LOU2"
+              },
+              {
+                "day": "JU",
+                "start": "0850",
+                "room": "LOU2"
+              },
+              {
+                "day": "JU",
+                "start": "0940",
+                "room": "LOU2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ8Q12|62",
+          "code": "IQ8Q12",
+          "name": "LAB. DE INGENIERIA QUIMICA II",
+          "section": "62",
+          "fields": {
+            "professor": {
+              "before": "RODRIGUEZ R JULIO I",
+              "after": "RODRIGUEZ R JULIO I (NUEVA)"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ8Q12|63",
+          "code": "IQ8Q12",
+          "name": "LAB. DE INGENIERIA QUIMICA II",
+          "section": "63",
+          "fields": {
+            "professor": {
+              "before": "RODRIGUEZ R JULIO I",
+              "after": "RODRIGUEZ R JULIO I (NUEVA)"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ8Q13|62",
+          "code": "IQ8Q13",
+          "name": "PROCESOS QUIMICOS",
+          "section": "62",
+          "fields": {
+            "professor": {
+              "before": "JIMENEZ N MILAGROS D V",
+              "after": "JIMENEZ N MILAGROS D V (NUEVA)"
+            }
+          }
+        },
+        {
+          "type": "added",
+          "id": "IQ8Q13|63",
+          "code": "IQ8Q13",
+          "name": "PROCESOS QUIMICOS",
+          "section": "63",
+          "after": {
+            "name": "PROCESOS QUIMICOS",
+            "professor": "JIMENEZ N MILAGROS D V",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "LU",
+                "start": "0800",
+                "room": "AEIQ"
+              },
+              {
+                "day": "LU",
+                "start": "0850",
+                "room": "AEIQ"
+              },
+              {
+                "day": "LU",
+                "start": "0940",
+                "room": "AEIQ"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "IQ8Q14|62",
+          "code": "IQ8Q14",
+          "name": "MATERIALES DE ING. DE PROCESOS",
+          "section": "62",
+          "after": {
+            "name": "MATERIALES DE ING. DE PROCESOS",
+            "professor": "RODRIGUEZ R JULIO I",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "JU",
+                "start": "1030",
+                "room": "CIQ"
+              },
+              {
+                "day": "JU",
+                "start": "1120",
+                "room": "CIQ"
+              },
+              {
+                "day": "JU",
+                "start": "1210",
+                "room": "CIQ"
+              }
+            ]
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ9Q20|61",
+          "code": "IQ9Q20",
+          "name": "REFINACIÓN",
+          "section": "61",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "LOU2"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "LOU2"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "LOU2"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "CIQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "CIQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "CIQ"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA3053|01",
+          "code": "MA3053",
+          "name": "FUNCIONES VECTORIALES",
+          "section": "01",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1440",
+                  "room": "LU1530"
+                },
+                {
+                  "day": "MI",
+                  "start": "1440",
+                  "room": "MI1530"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1440",
+                  "room": "AD5"
+                },
+                {
+                  "day": "LU",
+                  "start": "1530",
+                  "room": "AD5"
+                },
+                {
+                  "day": "MI",
+                  "start": "1440",
+                  "room": "AD6"
+                },
+                {
+                  "day": "MI",
+                  "start": "1530",
+                  "room": "AD6"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA3063|01",
+          "code": "MA3063",
+          "name": "ECUACIONES DIFERENCIALES",
+          "section": "01",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "MA1210"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "JU1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "AD5"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "AD5"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AD8"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AD8"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA3B06|03",
+          "code": "MA3B06",
+          "name": "ECUACIONES DIFERENCIALES",
+          "section": "03",
+          "fields": {
+            "professor": {
+              "before": "ROMAN R YANITZA CH",
+              "after": "TERAN T MARIA A"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA4073|01",
+          "code": "MA4073",
+          "name": "MATEMÁTICAS APLICADAS",
+          "section": "01",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "MA0850"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "JU0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "ALT"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "AE9"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "AE9"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "SA9103|41",
+          "code": "SA9103",
+          "name": "ROBOTICA Y VISION INDUSTRIAL",
+          "section": "41",
+          "fields": {
+            "professor": {
+              "before": "ESCALONA G LUIS W",
+              "after": "ESCALONA G LUIS W (NUEVA)"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "TG9C01|03",
+          "code": "TG9C01",
+          "name": "TRABAJO ESPECIAL DE GRADO I",
+          "section": "03",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "AE8"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "AE8"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "AE6"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "AE6"
+                }
+              ]
+            }
+          }
+        }
+      ]
     }
   ]
 }
