@@ -2,34 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-14T14:24:42+00:00",
-      "updated_at": "14/11/2026 10:16 am",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "13/11/2026 08:57 pm",
-        "generated_at": "2026-11-14T01:52:28+00:00",
-        "sections": 1004,
-        "sha256": "570356491e716a440c6b589ee2f621543ab7f1fd73da752f6686f0738614dae2"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "14/11/2026 10:16 am",
-        "generated_at": "2026-11-14T14:24:42+00:00",
-        "sections": 1004,
-        "sha256": "570356491e716a440c6b589ee2f621543ab7f1fd73da752f6686f0738614dae2"
-      },
-      "summary": {
-        "added": 0,
-        "removed": 0,
-        "modified": 0,
-        "schedule_changes": 0,
-        "professor_changes": 0,
-        "status_changes": 0
-      },
-      "changes": []
-    },
-    {
       "generated_at": "2026-11-14T16:20:13+00:00",
       "updated_at": "14/11/2026 12:17 pm",
       "period": "2-2026 R",
@@ -4414,6 +4386,90 @@
         "status_changes": 0
       },
       "changes": []
+    },
+    {
+      "generated_at": "2026-11-17T16:28:19+00:00",
+      "updated_at": "17/11/2026 11:49 am",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "17/11/2026 04:12 am",
+        "generated_at": "2026-11-17T08:22:40+00:00",
+        "sections": 1027,
+        "sha256": "a853464071cf97dc849d95082b2260c4a4626e27db77ce8a726f6586f3529db2"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "17/11/2026 11:49 am",
+        "generated_at": "2026-11-17T16:28:19+00:00",
+        "sections": 1027,
+        "sha256": "d1511178af9db2870ac817f86c29259fd9b00a56940c8ace13164a77525b58e5"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 1,
+        "schedule_changes": 1,
+        "professor_changes": 0,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "MA2043|11",
+          "code": "MA2043",
+          "name": "ÁLGEBRA LINEAL",
+          "section": "11",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "A8I"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "SIE5"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "SIE5"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "SIE5"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "SIE5"
+                }
+              ]
+            }
+          }
+        }
+      ]
     }
   ]
 }
