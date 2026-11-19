@@ -2,522 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-14T17:31:39+00:00",
-      "updated_at": "14/11/2026 01:08 pm",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "14/11/2026 12:17 pm",
-        "generated_at": "2026-11-14T16:20:13+00:00",
-        "sections": 1004,
-        "sha256": "570356491e716a440c6b589ee2f621543ab7f1fd73da752f6686f0738614dae2"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "14/11/2026 01:08 pm",
-        "generated_at": "2026-11-14T17:31:39+00:00",
-        "sections": 1009,
-        "sha256": "74c26195152994ee8858f56ac2c5f1efc98ed40f6095e91d8725ac5d938c1fb5"
-      },
-      "summary": {
-        "added": 5,
-        "removed": 0,
-        "modified": 7,
-        "schedule_changes": 5,
-        "professor_changes": 6,
-        "status_changes": 0
-      },
-      "changes": [
-        {
-          "type": "modified",
-          "id": "DI2013|14",
-          "code": "DI2013",
-          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
-          "section": "14",
-          "fields": {
-            "professor": {
-              "before": "CORALES H CARLOS J",
-              "after": "CORALES H CARLOS J (CERRADA)"
-            },
-            "slots": {
-              "before": [
-                {
-                  "day": "JU",
-                  "start": "1120",
-                  "room": "SD1"
-                },
-                {
-                  "day": "JU",
-                  "start": "1210",
-                  "room": "SD1"
-                },
-                {
-                  "day": "VI",
-                  "start": "1120",
-                  "room": "SD1"
-                },
-                {
-                  "day": "VI",
-                  "start": "1210",
-                  "room": "SD1"
-                }
-              ],
-              "after": [
-                {
-                  "day": "JU",
-                  "start": "1120",
-                  "room": "AVING"
-                },
-                {
-                  "day": "JU",
-                  "start": "1210",
-                  "room": "AVING"
-                },
-                {
-                  "day": "VI",
-                  "start": "1120",
-                  "room": "AVING"
-                },
-                {
-                  "day": "VI",
-                  "start": "1210",
-                  "room": "AVING"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "added",
-          "id": "DI3023|02",
-          "code": "DI3023",
-          "name": "DIBUJO INDUSTRIAL PARA INGENIERIA",
-          "section": "02",
-          "after": {
-            "name": "DIBUJO INDUSTRIAL PARA INGENIERIA",
-            "professor": "CORALES H CARLOS J",
-            "status": "ACTIVA",
-            "curriculum": "nuevo",
-            "slots": [
-              {
-                "day": "JU",
-                "start": "1120",
-                "room": "JU1210"
-              },
-              {
-                "day": "VI",
-                "start": "1120",
-                "room": "VI1210"
-              }
-            ]
-          }
-        },
-        {
-          "type": "modified",
-          "id": "DI3B01|14",
-          "code": "DI3B01",
-          "name": "DIBUJO I",
-          "section": "14",
-          "fields": {
-            "professor": {
-              "before": "CORALES H CARLOS J",
-              "after": "CORALES H CARLOS J (CERRADA)"
-            },
-            "slots": {
-              "before": [
-                {
-                  "day": "JU",
-                  "start": "1120",
-                  "room": "SD1"
-                },
-                {
-                  "day": "JU",
-                  "start": "1210",
-                  "room": "SD1"
-                },
-                {
-                  "day": "VI",
-                  "start": "1120",
-                  "room": "SD1"
-                },
-                {
-                  "day": "VI",
-                  "start": "1210",
-                  "room": "SD1"
-                }
-              ],
-              "after": [
-                {
-                  "day": "JU",
-                  "start": "1120",
-                  "room": "AVING"
-                },
-                {
-                  "day": "JU",
-                  "start": "1210",
-                  "room": "AVING"
-                },
-                {
-                  "day": "VI",
-                  "start": "1120",
-                  "room": "AVING"
-                },
-                {
-                  "day": "VI",
-                  "start": "1210",
-                  "room": "AVING"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "added",
-          "id": "DI4B02|02",
-          "code": "DI4B02",
-          "name": "DIBUJO II",
-          "section": "02",
-          "after": {
-            "name": "DIBUJO II",
-            "professor": "CORALES H CARLOS J",
-            "status": "ACTIVA",
-            "curriculum": "viejo",
-            "slots": [
-              {
-                "day": "JU",
-                "start": "1120",
-                "room": "SD1"
-              },
-              {
-                "day": "JU",
-                "start": "1210",
-                "room": "SD1"
-              },
-              {
-                "day": "VI",
-                "start": "1120",
-                "room": "SD1"
-              },
-              {
-                "day": "VI",
-                "start": "1210",
-                "room": "SD1"
-              }
-            ]
-          }
-        },
-        {
-          "type": "modified",
-          "id": "IQ8Q16|61",
-          "code": "IQ8Q16",
-          "name": "SEMINARIO",
-          "section": "61",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "LU",
-                  "start": "0800",
-                  "room": "LU0850"
-                }
-              ],
-              "after": [
-                {
-                  "day": "LU",
-                  "start": "0800",
-                  "room": "SIE6"
-                },
-                {
-                  "day": "LU",
-                  "start": "0850",
-                  "room": "SIE6"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "MA1015|18",
-          "code": "MA1015",
-          "name": "CÁLCULO DIFERENCIAL",
-          "section": "18",
-          "fields": {
-            "professor": {
-              "before": "PEREZ M ANYELA W",
-              "after": "PEREZ M ANYELA W (CERRADA)"
-            },
-            "slots": {
-              "before": [
-                {
-                  "day": "MA",
-                  "start": "1530",
-                  "room": "AD7"
-                },
-                {
-                  "day": "MA",
-                  "start": "1620",
-                  "room": "AD7"
-                },
-                {
-                  "day": "MA",
-                  "start": "1710",
-                  "room": "AD7"
-                },
-                {
-                  "day": "JU",
-                  "start": "1530",
-                  "room": "A3M"
-                },
-                {
-                  "day": "JU",
-                  "start": "1620",
-                  "room": "A3M"
-                },
-                {
-                  "day": "JU",
-                  "start": "1710",
-                  "room": "A3M"
-                }
-              ],
-              "after": [
-                {
-                  "day": "MA",
-                  "start": "1530",
-                  "room": "AVING"
-                },
-                {
-                  "day": "MA",
-                  "start": "1620",
-                  "room": "AVING"
-                },
-                {
-                  "day": "MA",
-                  "start": "1710",
-                  "room": "AVING"
-                },
-                {
-                  "day": "JU",
-                  "start": "1530",
-                  "room": "AVING"
-                },
-                {
-                  "day": "JU",
-                  "start": "1620",
-                  "room": "AVING"
-                },
-                {
-                  "day": "JU",
-                  "start": "1710",
-                  "room": "AVING"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "MA1015|20",
-          "code": "MA1015",
-          "name": "CÁLCULO DIFERENCIAL",
-          "section": "20",
-          "fields": {
-            "professor": {
-              "before": "NO ASIGNADO",
-              "after": "CONDE H OSWALDO R"
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "MA1015|21",
-          "code": "MA1015",
-          "name": "CÁLCULO DIFERENCIAL",
-          "section": "21",
-          "fields": {
-            "professor": {
-              "before": "NO ASIGNADO",
-              "after": "CONDE H OSWALDO R"
-            }
-          }
-        },
-        {
-          "type": "added",
-          "id": "MA1015|36",
-          "code": "MA1015",
-          "name": "CÁLCULO DIFERENCIAL",
-          "section": "36",
-          "after": {
-            "name": "CÁLCULO DIFERENCIAL",
-            "professor": "PEREZ M ANYELA W",
-            "status": "ACTIVA",
-            "curriculum": "nuevo",
-            "slots": [
-              {
-                "day": "MA",
-                "start": "1530",
-                "room": "AD7"
-              },
-              {
-                "day": "MA",
-                "start": "1620",
-                "room": "AD7"
-              },
-              {
-                "day": "MA",
-                "start": "1710",
-                "room": "AD7"
-              },
-              {
-                "day": "VI",
-                "start": "1530",
-                "room": "A3M"
-              },
-              {
-                "day": "VI",
-                "start": "1620",
-                "room": "A3M"
-              },
-              {
-                "day": "VI",
-                "start": "1710",
-                "room": "A3M"
-              }
-            ]
-          }
-        },
-        {
-          "type": "modified",
-          "id": "MA2043|04",
-          "code": "MA2043",
-          "name": "ÁLGEBRA LINEAL",
-          "section": "04",
-          "fields": {
-            "professor": {
-              "before": "TELLEZ J IVONNE E",
-              "after": "TELLEZ J IVONNE E (CERRADA)"
-            },
-            "slots": {
-              "before": [
-                {
-                  "day": "VI",
-                  "start": "1120",
-                  "room": "SEIN"
-                },
-                {
-                  "day": "VI",
-                  "start": "1210",
-                  "room": "SEIN"
-                },
-                {
-                  "day": "VI",
-                  "start": "1300",
-                  "room": "SEIN"
-                },
-                {
-                  "day": "VI",
-                  "start": "1350",
-                  "room": "SEIN"
-                }
-              ],
-              "after": [
-                {
-                  "day": "VI",
-                  "start": "1120",
-                  "room": "AVING"
-                },
-                {
-                  "day": "VI",
-                  "start": "1210",
-                  "room": "AVING"
-                },
-                {
-                  "day": "VI",
-                  "start": "1300",
-                  "room": "AVING"
-                },
-                {
-                  "day": "VI",
-                  "start": "1350",
-                  "room": "AVING"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "added",
-          "id": "MA2043|09",
-          "code": "MA2043",
-          "name": "ÁLGEBRA LINEAL",
-          "section": "09",
-          "after": {
-            "name": "ÁLGEBRA LINEAL",
-            "professor": "TELLEZ J IVONNE E",
-            "status": "ACTIVA",
-            "curriculum": "nuevo",
-            "slots": [
-              {
-                "day": "VI",
-                "start": "1210",
-                "room": "SEIN"
-              },
-              {
-                "day": "VI",
-                "start": "1300",
-                "room": "SEIN"
-              },
-              {
-                "day": "VI",
-                "start": "1350",
-                "room": "SEIN"
-              },
-              {
-                "day": "VI",
-                "start": "1440",
-                "room": "SEIN"
-              }
-            ]
-          }
-        },
-        {
-          "type": "added",
-          "id": "MA2043|10",
-          "code": "MA2043",
-          "name": "ÁLGEBRA LINEAL",
-          "section": "10",
-          "after": {
-            "name": "ÁLGEBRA LINEAL",
-            "professor": "REQUENA P JESUS F",
-            "status": "ACTIVA",
-            "curriculum": "nuevo",
-            "slots": [
-              {
-                "day": "MA",
-                "start": "1120",
-                "room": "SIE5"
-              },
-              {
-                "day": "MA",
-                "start": "1210",
-                "room": "SIE5"
-              },
-              {
-                "day": "MA",
-                "start": "1300",
-                "room": "SIE5"
-              },
-              {
-                "day": "MA",
-                "start": "1350",
-                "room": "SIE5"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
       "generated_at": "2026-11-14T18:08:18+00:00",
       "updated_at": "14/11/2026 01:58 pm",
       "period": "2-2026 R",
@@ -6745,6 +6229,145 @@
                   "day": "JU",
                   "start": "1030",
                   "room": "SIE5"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "generated_at": "2026-11-19T19:24:37+00:00",
+      "updated_at": "19/11/2026 03:01 pm",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "19/11/2026 01:54 pm",
+        "generated_at": "2026-11-19T18:18:33+00:00",
+        "sections": 1041,
+        "sha256": "33c46dc0b8cec3a1bb5448033dd0e9de9ab948d09a43b692a19cbaeca6a11329"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "19/11/2026 03:01 pm",
+        "generated_at": "2026-11-19T19:24:37+00:00",
+        "sections": 1041,
+        "sha256": "8ab183f57d98b3a613aa2ba4c1d6cf1e1d5693110b7e1d345715152e8d641d09"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 2,
+        "schedule_changes": 2,
+        "professor_changes": 0,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "EC5E01|41",
+          "code": "EC5E01",
+          "name": "ELECTRONICA I",
+          "section": "41",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1530",
+                  "room": "SIE2"
+                },
+                {
+                  "day": "MA",
+                  "start": "1620",
+                  "room": "SIE2"
+                },
+                {
+                  "day": "JU",
+                  "start": "1530",
+                  "room": "SIE2"
+                },
+                {
+                  "day": "JU",
+                  "start": "1620",
+                  "room": "SIE2"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1530",
+                  "room": "AF1"
+                },
+                {
+                  "day": "MA",
+                  "start": "1620",
+                  "room": "AF1"
+                },
+                {
+                  "day": "JU",
+                  "start": "1530",
+                  "room": "A3M"
+                },
+                {
+                  "day": "JU",
+                  "start": "1620",
+                  "room": "A3M"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "EC5T01|41",
+          "code": "EC5T01",
+          "name": "ELECTRONICA I",
+          "section": "41",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1530",
+                  "room": "SIE2"
+                },
+                {
+                  "day": "MA",
+                  "start": "1620",
+                  "room": "SIE2"
+                },
+                {
+                  "day": "JU",
+                  "start": "1530",
+                  "room": "SIE2"
+                },
+                {
+                  "day": "JU",
+                  "start": "1620",
+                  "room": "SIE2"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1530",
+                  "room": "AF1"
+                },
+                {
+                  "day": "MA",
+                  "start": "1620",
+                  "room": "AF1"
+                },
+                {
+                  "day": "JU",
+                  "start": "1530",
+                  "room": "A3M"
+                },
+                {
+                  "day": "JU",
+                  "start": "1620",
+                  "room": "A3M"
                 }
               ]
             }
