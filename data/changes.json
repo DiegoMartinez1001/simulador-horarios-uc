@@ -2,70 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-14T23:03:50+00:00",
-      "updated_at": "14/11/2026 06:42 pm",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "14/11/2026 01:58 pm",
-        "generated_at": "2026-11-14T18:08:18+00:00",
-        "sections": 1010,
-        "sha256": "da18a1903df487215255970b2d663e65f5590a02c79bfc4e90ce4d2fefa0e369"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "14/11/2026 06:42 pm",
-        "generated_at": "2026-11-14T23:03:50+00:00",
-        "sections": 1011,
-        "sha256": "6f833d6c7941e80125bb1d83890016af20febf156807e2029ec28ff1d945b5ec"
-      },
-      "summary": {
-        "added": 1,
-        "removed": 0,
-        "modified": 0,
-        "schedule_changes": 0,
-        "professor_changes": 0,
-        "status_changes": 0
-      },
-      "changes": [
-        {
-          "type": "added",
-          "id": "MA2043|11",
-          "code": "MA2043",
-          "name": "ÁLGEBRA LINEAL",
-          "section": "11",
-          "after": {
-            "name": "ÁLGEBRA LINEAL",
-            "professor": "GUERRA H AMALIA J",
-            "status": "ACTIVA",
-            "curriculum": "nuevo",
-            "slots": [
-              {
-                "day": "MA",
-                "start": "1120",
-                "room": "SIE4"
-              },
-              {
-                "day": "MA",
-                "start": "1210",
-                "room": "SIE4"
-              },
-              {
-                "day": "JU",
-                "start": "1120",
-                "room": "SIE6"
-              },
-              {
-                "day": "JU",
-                "start": "1210",
-                "room": "SIE6"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
       "generated_at": "2026-11-15T00:11:21+00:00",
       "updated_at": "14/11/2026 08:10 pm",
       "period": "2-2026 R",
@@ -6363,6 +6299,34 @@
           }
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-19T22:51:40+00:00",
+      "updated_at": "19/11/2026 06:17 pm",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "19/11/2026 04:55 pm",
+        "generated_at": "2026-11-19T21:14:42+00:00",
+        "sections": 1042,
+        "sha256": "09245b2d44fc792864f1bac3429bffc668ca51ae16d28b9a05b53d91059f091c"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "19/11/2026 06:17 pm",
+        "generated_at": "2026-11-19T22:51:40+00:00",
+        "sections": 1042,
+        "sha256": "09245b2d44fc792864f1bac3429bffc668ca51ae16d28b9a05b53d91059f091c"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 0,
+        "schedule_changes": 0,
+        "professor_changes": 0,
+        "status_changes": 0
+      },
+      "changes": []
     }
   ]
 }
