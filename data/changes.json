@@ -2,86 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-14T18:08:18+00:00",
-      "updated_at": "14/11/2026 01:58 pm",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "14/11/2026 01:08 pm",
-        "generated_at": "2026-11-14T17:31:39+00:00",
-        "sections": 1009,
-        "sha256": "74c26195152994ee8858f56ac2c5f1efc98ed40f6095e91d8725ac5d938c1fb5"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "14/11/2026 01:58 pm",
-        "generated_at": "2026-11-14T18:08:18+00:00",
-        "sections": 1010,
-        "sha256": "da18a1903df487215255970b2d663e65f5590a02c79bfc4e90ce4d2fefa0e369"
-      },
-      "summary": {
-        "added": 1,
-        "removed": 0,
-        "modified": 2,
-        "schedule_changes": 0,
-        "professor_changes": 2,
-        "status_changes": 0
-      },
-      "changes": [
-        {
-          "type": "modified",
-          "id": "EC9E11L|01",
-          "code": "EC9E11L",
-          "name": "DISEÑO DE CIRCUITOS DE COMUNIC",
-          "section": "01",
-          "fields": {
-            "professor": {
-              "before": "TORRES M BILL S",
-              "after": "FREITES V JOSE A"
-            }
-          }
-        },
-        {
-          "type": "added",
-          "id": "EC9E11|01",
-          "code": "EC9E11",
-          "name": "DISEÑO DE CIRCUITOS DE COMUNIC",
-          "section": "01",
-          "after": {
-            "name": "DISEÑO DE CIRCUITOS DE COMUNIC",
-            "professor": "FREITES V JOSE A",
-            "status": "ACTIVA",
-            "curriculum": "viejo",
-            "slots": [
-              {
-                "day": "JU",
-                "start": "0800",
-                "room": "LABSS"
-              },
-              {
-                "day": "JU",
-                "start": "0850",
-                "room": "LABSS"
-              }
-            ]
-          }
-        },
-        {
-          "type": "modified",
-          "id": "EC9E11|71",
-          "code": "EC9E11",
-          "name": "DISEÑO DE CIRCUITOS DE COMUNIC",
-          "section": "71",
-          "fields": {
-            "professor": {
-              "before": "TORRES M BILL S",
-              "after": "FREITES V JOSE A"
-            }
-          }
-        }
-      ]
-    },
-    {
       "generated_at": "2026-11-14T23:03:50+00:00",
       "updated_at": "14/11/2026 06:42 pm",
       "period": "2-2026 R",
@@ -6371,6 +6291,75 @@
                 }
               ]
             }
+          }
+        }
+      ]
+    },
+    {
+      "generated_at": "2026-11-19T21:14:42+00:00",
+      "updated_at": "19/11/2026 04:55 pm",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "19/11/2026 03:01 pm",
+        "generated_at": "2026-11-19T19:24:37+00:00",
+        "sections": 1041,
+        "sha256": "8ab183f57d98b3a613aa2ba4c1d6cf1e1d5693110b7e1d345715152e8d641d09"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "19/11/2026 04:55 pm",
+        "generated_at": "2026-11-19T21:14:42+00:00",
+        "sections": 1042,
+        "sha256": "09245b2d44fc792864f1bac3429bffc668ca51ae16d28b9a05b53d91059f091c"
+      },
+      "summary": {
+        "added": 1,
+        "removed": 0,
+        "modified": 0,
+        "schedule_changes": 0,
+        "professor_changes": 0,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "added",
+          "id": "DA9M11|02",
+          "code": "DA9M11",
+          "name": "AUTOMATIZACION INDUSTRIAL",
+          "section": "02",
+          "after": {
+            "name": "AUTOMATIZACION INDUSTRIAL",
+            "professor": "ESCALONA G LUIS W",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MI",
+                "start": "0800",
+                "room": "SIE3"
+              },
+              {
+                "day": "MI",
+                "start": "0850",
+                "room": "SIE3"
+              },
+              {
+                "day": "MI",
+                "start": "0940",
+                "room": "SIE3"
+              },
+              {
+                "day": "VI",
+                "start": "0800",
+                "room": "LDM"
+              },
+              {
+                "day": "VI",
+                "start": "0850",
+                "room": "LDM"
+              }
+            ]
           }
         }
       ]
