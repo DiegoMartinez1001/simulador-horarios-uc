@@ -1,13 +1,13 @@
 {
   "period": "2-2026 R",
-  "updated_at": "17/11/2026 11:49 am",
-  "generated_at": "2026-11-17T16:28:19+00:00",
-  "sections": 1027,
+  "updated_at": "19/11/2026 01:54 pm",
+  "generated_at": "2026-11-19T18:18:33+00:00",
+  "sections": 1041,
   "subjects": 362,
-  "sections_with_professor": 1015,
-  "slots": 3482,
+  "sections_with_professor": 1029,
+  "slots": 3540,
   "source_url": "https://dae.ing.uc.edu.ve/horarios/",
   "source_page": "https://dae.ing.uc.edu.ve/horarios/",
-  "sha256": "d1511178af9db2870ac817f86c29259fd9b00a56940c8ace13164a77525b58e5",
+  "sha256": "33c46dc0b8cec3a1bb5448033dd0e9de9ab948d09a43b692a19cbaeca6a11329",
   "status": "ok"
 }

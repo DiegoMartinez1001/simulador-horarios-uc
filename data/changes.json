@@ -2,34 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-14T16:20:13+00:00",
-      "updated_at": "14/11/2026 12:17 pm",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "14/11/2026 10:16 am",
-        "generated_at": "2026-11-14T14:24:42+00:00",
-        "sections": 1004,
-        "sha256": "570356491e716a440c6b589ee2f621543ab7f1fd73da752f6686f0738614dae2"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "14/11/2026 12:17 pm",
-        "generated_at": "2026-11-14T16:20:13+00:00",
-        "sections": 1004,
-        "sha256": "570356491e716a440c6b589ee2f621543ab7f1fd73da752f6686f0738614dae2"
-      },
-      "summary": {
-        "added": 0,
-        "removed": 0,
-        "modified": 0,
-        "schedule_changes": 0,
-        "professor_changes": 0,
-        "status_changes": 0
-      },
-      "changes": []
-    },
-    {
       "generated_at": "2026-11-14T17:31:39+00:00",
       "updated_at": "14/11/2026 01:08 pm",
       "period": "2-2026 R",
@@ -4463,6 +4435,2315 @@
                 {
                   "day": "JU",
                   "start": "1210",
+                  "room": "SIE5"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "generated_at": "2026-11-19T18:18:33+00:00",
+      "updated_at": "19/11/2026 01:54 pm",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "17/11/2026 11:49 am",
+        "generated_at": "2026-11-17T16:28:19+00:00",
+        "sections": 1027,
+        "sha256": "d1511178af9db2870ac817f86c29259fd9b00a56940c8ace13164a77525b58e5"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "19/11/2026 01:54 pm",
+        "generated_at": "2026-11-19T18:18:33+00:00",
+        "sections": 1041,
+        "sha256": "33c46dc0b8cec3a1bb5448033dd0e9de9ab948d09a43b692a19cbaeca6a11329"
+      },
+      "summary": {
+        "added": 14,
+        "removed": 0,
+        "modified": 30,
+        "schedule_changes": 30,
+        "professor_changes": 5,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "added",
+          "id": "CA3013|07",
+          "code": "CA3013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "07",
+          "after": {
+            "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+            "professor": "CARRERO BRITO GABRIEL DE JESUS",
+            "status": "ACTIVA",
+            "curriculum": "nuevo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0800",
+                "room": "LC1"
+              },
+              {
+                "day": "MA",
+                "start": "0850",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "0800",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "0850",
+                "room": "LC1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "CA3013|08",
+          "code": "CA3013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "08",
+          "after": {
+            "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+            "professor": "CARRERO BRITO GABRIEL DE JESUS",
+            "status": "ACTIVA",
+            "curriculum": "nuevo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0940",
+                "room": "LC1"
+              },
+              {
+                "day": "MA",
+                "start": "1030",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "0940",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "1030",
+                "room": "LC1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "CA3013|09",
+          "code": "CA3013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "09",
+          "after": {
+            "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+            "professor": "CARRERO BRITO GABRIEL DE JESUS",
+            "status": "ACTIVA",
+            "curriculum": "nuevo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1120",
+                "room": "LC1"
+              },
+              {
+                "day": "MA",
+                "start": "1210",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "1120",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "1210",
+                "room": "LC1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "CA3B01|07",
+          "code": "CA3B01",
+          "name": "COMPUTACION I",
+          "section": "07",
+          "after": {
+            "name": "COMPUTACION I",
+            "professor": "CARRERO BRITO GABRIEL DE JESUS",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0800",
+                "room": "LC1"
+              },
+              {
+                "day": "MA",
+                "start": "0850",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "0800",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "0850",
+                "room": "LC1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "CA3B01|08",
+          "code": "CA3B01",
+          "name": "COMPUTACION I",
+          "section": "08",
+          "after": {
+            "name": "COMPUTACION I",
+            "professor": "CARRERO BRITO GABRIEL DE JESUS",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0940",
+                "room": "LC1"
+              },
+              {
+                "day": "MA",
+                "start": "1030",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "0940",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "1030",
+                "room": "LC1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "CA3B01|09",
+          "code": "CA3B01",
+          "name": "COMPUTACION I",
+          "section": "09",
+          "after": {
+            "name": "COMPUTACION I",
+            "professor": "CARRERO BRITO GABRIEL DE JESUS",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1120",
+                "room": "LC1"
+              },
+              {
+                "day": "MA",
+                "start": "1210",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "1120",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "1210",
+                "room": "LC1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "CA4013|07",
+          "code": "CA4013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "07",
+          "after": {
+            "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+            "professor": "CARRERO BRITO GABRIEL DE JESUS",
+            "status": "ACTIVA",
+            "curriculum": "nuevo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0800",
+                "room": "LC1"
+              },
+              {
+                "day": "MA",
+                "start": "0850",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "0800",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "0850",
+                "room": "LC1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "CA4013|08",
+          "code": "CA4013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "08",
+          "after": {
+            "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+            "professor": "CARRERO BRITO GABRIEL DE JESUS",
+            "status": "ACTIVA",
+            "curriculum": "nuevo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0940",
+                "room": "LC1"
+              },
+              {
+                "day": "MA",
+                "start": "1030",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "0940",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "1030",
+                "room": "LC1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "CA4013|09",
+          "code": "CA4013",
+          "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+          "section": "09",
+          "after": {
+            "name": "FUNDAMENTOS DE PROGRAMACIÓN",
+            "professor": "CARRERO BRITO GABRIEL DE JESUS",
+            "status": "ACTIVA",
+            "curriculum": "nuevo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1120",
+                "room": "LC1"
+              },
+              {
+                "day": "MA",
+                "start": "1210",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "1120",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "1210",
+                "room": "LC1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "CA4B01|07",
+          "code": "CA4B01",
+          "name": "COMPUTACION I",
+          "section": "07",
+          "after": {
+            "name": "COMPUTACION I",
+            "professor": "CARRERO BRITO GABRIEL DE JESUS",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0800",
+                "room": "LC1"
+              },
+              {
+                "day": "MA",
+                "start": "0850",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "0800",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "0850",
+                "room": "LC1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "CA4B01|08",
+          "code": "CA4B01",
+          "name": "COMPUTACION I",
+          "section": "08",
+          "after": {
+            "name": "COMPUTACION I",
+            "professor": "CARRERO BRITO GABRIEL DE JESUS",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0940",
+                "room": "LC1"
+              },
+              {
+                "day": "MA",
+                "start": "1030",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "0940",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "1030",
+                "room": "LC1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "CA4B01|09",
+          "code": "CA4B01",
+          "name": "COMPUTACION I",
+          "section": "09",
+          "after": {
+            "name": "COMPUTACION I",
+            "professor": "CARRERO BRITO GABRIEL DE JESUS",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1120",
+                "room": "LC1"
+              },
+              {
+                "day": "MA",
+                "start": "1210",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "1120",
+                "room": "LC1"
+              },
+              {
+                "day": "JU",
+                "start": "1210",
+                "room": "LC1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "modified",
+          "id": "GE0M02|32",
+          "code": "GE0M02",
+          "name": "ADMINISTRACION DE EMPRESAS",
+          "section": "32",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "A8I"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "ALT"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "GE9E02|32",
+          "code": "GE9E02",
+          "name": "PRINCIPIO DE GERENCIA",
+          "section": "32",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "A8I"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "ALT"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "GE9Q02|32",
+          "code": "GE9Q02",
+          "name": "PRINCIPIOS DE GERENCIA",
+          "section": "32",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "A8I"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "ALT"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU1073|09",
+          "code": "HU1073",
+          "name": "DESARROLLO DE HABILIDADES DEL PENSAMIENTO",
+          "section": "09",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "A6E"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "A6E"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AE9"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AE9"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "AA09"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "AA09"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AA09"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AA09"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID3023|11",
+          "code": "ID3023",
+          "name": "INGLÉS INSTRUMENTAL",
+          "section": "11",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "AE1"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "AE1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AE9"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "AE9"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "AE1"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "AE1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AF2"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "AF2"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IE4223|81",
+          "code": "IE4223",
+          "name": "RESISTENCIA DE MATERIALES FUNDAMENTAL",
+          "section": "81",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "AE1"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "AE1"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "AE9"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "AE9"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "AE1"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "AE1"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "AF2"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "AF2"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IE5C03|82",
+          "code": "IE5C03",
+          "name": "RESISTENCIA DE MATERIALES",
+          "section": "82",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "LSL"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "LSL"
+                },
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "AE9"
+                },
+                {
+                  "day": "MI",
+                  "start": "0850",
+                  "room": "AE9"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "AE9"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "LSL"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "LSL"
+                },
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "AF2"
+                },
+                {
+                  "day": "MI",
+                  "start": "0850",
+                  "room": "AF2"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "AF2"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IE8C09|81",
+          "code": "IE8C09",
+          "name": "CONCRETO ARMADO II",
+          "section": "81",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "A7E"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "A7E"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "AF2"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AF2"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "AF2"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "A7E"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "A7E"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "SIE4"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "SIE4"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "SIE4"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IE8C12|81",
+          "code": "IE8C12",
+          "name": "FUNDACIONES Y MUROS",
+          "section": "81",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "ALH"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "ALH"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "A6E"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "A6E"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "ALH"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "ALH"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "SIE4"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "SIE4"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ4023|62",
+          "code": "IQ4023",
+          "name": "INTRODUCCIÓN A LA TERMODINÁMICA",
+          "section": "62",
+          "fields": {
+            "professor": {
+              "before": "MOSTAFA L ISAAC A",
+              "after": "MOSTAFA L ISAAC A (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "MI0940"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AVING"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "AVING"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "AVING"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "AVING"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "added",
+          "id": "IQ4023|63",
+          "code": "IQ4023",
+          "name": "INTRODUCCIÓN A LA TERMODINÁMICA",
+          "section": "63",
+          "after": {
+            "name": "INTRODUCCIÓN A LA TERMODINÁMICA",
+            "professor": "MOSTAFA L ISAAC A",
+            "status": "ACTIVA",
+            "curriculum": "nuevo",
+            "slots": [
+              {
+                "day": "LU",
+                "start": "1120",
+                "room": "LU1210"
+              },
+              {
+                "day": "JU",
+                "start": "1120",
+                "room": "JU1210"
+              }
+            ]
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ5I01|61",
+          "code": "IQ5I01",
+          "name": "PRINCIPIOS DE INGENIERIA QUIMICA",
+          "section": "61",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "AA09"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "AA09"
+                },
+                {
+                  "day": "SA",
+                  "start": "1030",
+                  "room": "LOU1"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "SIE4"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "SIE4"
+                },
+                {
+                  "day": "SA",
+                  "start": "1030",
+                  "room": "LOU1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ5Q02|62",
+          "code": "IQ5Q02",
+          "name": "TERMODINAMICA PARA ING. QUIMICA",
+          "section": "62",
+          "fields": {
+            "professor": {
+              "before": "MOSTAFA L ISAAC A",
+              "after": "MOSTAFA L ISAAC A (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "LU1210"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "MI1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AVING"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "AVING"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "AVING"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "AVING"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "added",
+          "id": "IQ5Q02|63",
+          "code": "IQ5Q02",
+          "name": "TERMODINAMICA PARA ING. QUIMICA",
+          "section": "63",
+          "after": {
+            "name": "TERMODINAMICA PARA ING. QUIMICA",
+            "professor": "MOSTAFA L ISAAC A",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "LU",
+                "start": "1120",
+                "room": "LOU1"
+              },
+              {
+                "day": "LU",
+                "start": "1210",
+                "room": "LOU1"
+              },
+              {
+                "day": "JU",
+                "start": "1120",
+                "room": "AF1"
+              },
+              {
+                "day": "JU",
+                "start": "1210",
+                "room": "AF1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|06",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "06",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "AD7"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AD7"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "AD7"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "AD7"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "AD7"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "AD7"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "SIE6"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|08",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "08",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1300",
+                  "room": "AD6"
+                },
+                {
+                  "day": "LU",
+                  "start": "1350",
+                  "room": "AD6"
+                },
+                {
+                  "day": "LU",
+                  "start": "1440",
+                  "room": "AD6"
+                },
+                {
+                  "day": "MI",
+                  "start": "1300",
+                  "room": "AD7"
+                },
+                {
+                  "day": "MI",
+                  "start": "1350",
+                  "room": "AD7"
+                },
+                {
+                  "day": "MI",
+                  "start": "1440",
+                  "room": "AD7"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1300",
+                  "room": "AE5"
+                },
+                {
+                  "day": "LU",
+                  "start": "1350",
+                  "room": "AE5"
+                },
+                {
+                  "day": "LU",
+                  "start": "1440",
+                  "room": "AE5"
+                },
+                {
+                  "day": "MI",
+                  "start": "1300",
+                  "room": "AE5"
+                },
+                {
+                  "day": "MI",
+                  "start": "1350",
+                  "room": "AE5"
+                },
+                {
+                  "day": "MI",
+                  "start": "1440",
+                  "room": "AE5"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|09",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "09",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "AE5"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AE5"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "AE5"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "ALT"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "AE5"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AE5"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "AE5"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "A8I"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|27",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "27",
+          "fields": {
+            "professor": {
+              "before": "SANDOVAL C PEDRO J",
+              "after": "SANDOVAL C PEDRO J (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1300",
+                  "room": "AD7"
+                },
+                {
+                  "day": "LU",
+                  "start": "1350",
+                  "room": "AD7"
+                },
+                {
+                  "day": "LU",
+                  "start": "1440",
+                  "room": "AD7"
+                },
+                {
+                  "day": "SA",
+                  "start": "0800",
+                  "room": "AE3"
+                },
+                {
+                  "day": "SA",
+                  "start": "0850",
+                  "room": "AE3"
+                },
+                {
+                  "day": "SA",
+                  "start": "0940",
+                  "room": "AE3"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1300",
+                  "room": "AVING"
+                },
+                {
+                  "day": "LU",
+                  "start": "1350",
+                  "room": "AVING"
+                },
+                {
+                  "day": "LU",
+                  "start": "1440",
+                  "room": "AVING"
+                },
+                {
+                  "day": "SA",
+                  "start": "0800",
+                  "room": "AVING"
+                },
+                {
+                  "day": "SA",
+                  "start": "0850",
+                  "room": "AVING"
+                },
+                {
+                  "day": "SA",
+                  "start": "0940",
+                  "room": "AVING"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|28",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "28",
+          "fields": {
+            "professor": {
+              "before": "SANDOVAL C PEDRO J",
+              "after": "SANDOVAL C PEDRO J (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1530",
+                  "room": "A3M"
+                },
+                {
+                  "day": "LU",
+                  "start": "1620",
+                  "room": "A3M"
+                },
+                {
+                  "day": "LU",
+                  "start": "1710",
+                  "room": "A3M"
+                },
+                {
+                  "day": "SA",
+                  "start": "1030",
+                  "room": "A4M"
+                },
+                {
+                  "day": "SA",
+                  "start": "1120",
+                  "room": "A4M"
+                },
+                {
+                  "day": "SA",
+                  "start": "1210",
+                  "room": "A4M"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1530",
+                  "room": "AVING"
+                },
+                {
+                  "day": "LU",
+                  "start": "1620",
+                  "room": "AVING"
+                },
+                {
+                  "day": "LU",
+                  "start": "1710",
+                  "room": "AVING"
+                },
+                {
+                  "day": "SA",
+                  "start": "1030",
+                  "room": "AVING"
+                },
+                {
+                  "day": "SA",
+                  "start": "1120",
+                  "room": "AVING"
+                },
+                {
+                  "day": "SA",
+                  "start": "1210",
+                  "room": "AVING"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1015|31",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "31",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO (CERRADA)",
+              "after": "NO ASIGNADO"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "MI",
+                  "start": "1350",
+                  "room": "AVING"
+                },
+                {
+                  "day": "MI",
+                  "start": "1440",
+                  "room": "AVING"
+                },
+                {
+                  "day": "MI",
+                  "start": "1530",
+                  "room": "AVING"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "AVING"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AVING"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "AVING"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MI",
+                  "start": "1350",
+                  "room": "A3M"
+                },
+                {
+                  "day": "MI",
+                  "start": "1440",
+                  "room": "A3M"
+                },
+                {
+                  "day": "MI",
+                  "start": "1530",
+                  "room": "A3M"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "AE2"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AE2"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "AE2"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|06",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "06",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "ALT"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "A8I"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|07",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "07",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "AE9"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "AE9"
+                },
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "AE9"
+                },
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "AE3"
+                },
+                {
+                  "day": "MI",
+                  "start": "0850",
+                  "room": "AE3"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "AE3"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "AA09"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "AA09"
+                },
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "AA09"
+                },
+                {
+                  "day": "MI",
+                  "start": "0800",
+                  "room": "AE3"
+                },
+                {
+                  "day": "MI",
+                  "start": "0850",
+                  "room": "AE3"
+                },
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "AE3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA2034|01",
+          "code": "MA2034",
+          "name": "CÁLCULO INTEGRAL",
+          "section": "01",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "AE9"
+                },
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "AE9"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "AE9"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "A4M"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "A4M"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "ANM"
+                },
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "ANM"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "ANM"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "A4M"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "A4M"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA2043|02",
+          "code": "MA2043",
+          "name": "ÁLGEBRA LINEAL",
+          "section": "02",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "AE9"
+                },
+                {
+                  "day": "VI",
+                  "start": "0850",
+                  "room": "AE9"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "AE9"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "AE9"
+                }
+              ],
+              "after": [
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "ASM"
+                },
+                {
+                  "day": "VI",
+                  "start": "0850",
+                  "room": "ASM"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "ASM"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "ASM"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA3053|04",
+          "code": "MA3053",
+          "name": "FUNCIONES VECTORIALES",
+          "section": "04",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A6E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "A6E"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "AD7"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AD7"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AD2"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "AD2"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "AD7"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AD7"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA3B05|04",
+          "code": "MA3B05",
+          "name": "FUNCIONES VECTORIALES",
+          "section": "04",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A6E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "A6E"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "AD7"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AD7"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AD2"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "AD2"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "AD7"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AD7"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA4073|01",
+          "code": "MA4073",
+          "name": "MATEMÁTICAS APLICADAS",
+          "section": "01",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "ALT"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "AE9"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "AE9"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "ALT"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "A6E"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "A6E"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA4B07|01",
+          "code": "MA4B07",
+          "name": "MATEMATICAS APLICADAS",
+          "section": "01",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "ALT"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "AE9"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "AE9"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "ALT"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "A6E"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "A6E"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "QM2013|05",
+          "code": "QM2013",
+          "name": "FUNDAMENTOS DE QUÍMICA GENERAL",
+          "section": "05",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AD2"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "AD2"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AD2"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AD2"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A6E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "A6E"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AD2"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AD2"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "QM2013|11",
+          "code": "QM2013",
+          "name": "FUNDAMENTOS DE QUÍMICA GENERAL",
+          "section": "11",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "AE5"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "AE5"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "AE9"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "AE9"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "AE5"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "AE5"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "SIE4"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "SIE4"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "QM2013|15",
+          "code": "QM2013",
+          "name": "FUNDAMENTOS DE QUÍMICA GENERAL",
+          "section": "15",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "A8I"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "A8I"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "A8I"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "ALT"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "ALT"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "QM2013|20",
+          "code": "QM2013",
+          "name": "FUNDAMENTOS DE QUÍMICA GENERAL",
+          "section": "20",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "AA09"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "AA09"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "SIE5"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "SIE5"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "SIE4"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "SIE4"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "SIE5"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
                   "room": "SIE5"
                 }
               ]
