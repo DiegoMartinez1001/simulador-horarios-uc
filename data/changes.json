@@ -2,90 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-15T00:11:21+00:00",
-      "updated_at": "14/11/2026 08:10 pm",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "14/11/2026 06:42 pm",
-        "generated_at": "2026-11-14T23:03:50+00:00",
-        "sections": 1011,
-        "sha256": "6f833d6c7941e80125bb1d83890016af20febf156807e2029ec28ff1d945b5ec"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "14/11/2026 08:10 pm",
-        "generated_at": "2026-11-15T00:11:21+00:00",
-        "sections": 1011,
-        "sha256": "acbff72491308f7e64ebc703d8811c9405fcbc7c9d8e19fd5b0bcc7776db3abc"
-      },
-      "summary": {
-        "added": 0,
-        "removed": 0,
-        "modified": 1,
-        "schedule_changes": 1,
-        "professor_changes": 0,
-        "status_changes": 0
-      },
-      "changes": [
-        {
-          "type": "modified",
-          "id": "MA2043|11",
-          "code": "MA2043",
-          "name": "ÁLGEBRA LINEAL",
-          "section": "11",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "MA",
-                  "start": "1120",
-                  "room": "SIE4"
-                },
-                {
-                  "day": "MA",
-                  "start": "1210",
-                  "room": "SIE4"
-                },
-                {
-                  "day": "JU",
-                  "start": "1120",
-                  "room": "SIE6"
-                },
-                {
-                  "day": "JU",
-                  "start": "1210",
-                  "room": "SIE6"
-                }
-              ],
-              "after": [
-                {
-                  "day": "MA",
-                  "start": "1120",
-                  "room": "A8I"
-                },
-                {
-                  "day": "MA",
-                  "start": "1210",
-                  "room": "A8I"
-                },
-                {
-                  "day": "JU",
-                  "start": "1120",
-                  "room": "SIE5"
-                },
-                {
-                  "day": "JU",
-                  "start": "1210",
-                  "room": "SIE5"
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
       "generated_at": "2026-11-15T03:08:26+00:00",
       "updated_at": "14/11/2026 10:44 pm",
       "period": "2-2026 R",
@@ -6327,6 +6243,324 @@
         "status_changes": 0
       },
       "changes": []
+    },
+    {
+      "generated_at": "2026-11-19T23:29:57+00:00",
+      "updated_at": "19/11/2026 07:22 pm",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "19/11/2026 06:17 pm",
+        "generated_at": "2026-11-19T22:51:40+00:00",
+        "sections": 1042,
+        "sha256": "09245b2d44fc792864f1bac3429bffc668ca51ae16d28b9a05b53d91059f091c"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "19/11/2026 07:22 pm",
+        "generated_at": "2026-11-19T23:29:57+00:00",
+        "sections": 1042,
+        "sha256": "0aba561e89726db2e238f0901a6cf4b62b41ecc6d1011e3761043fd1cfd5b2c4"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 6,
+        "schedule_changes": 6,
+        "professor_changes": 1,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "CM5T03L|01",
+          "code": "CM5T03L",
+          "name": "MEDICIONES ELECTRICAS",
+          "section": "01",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "LU0850"
+                },
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "LCM"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "LCM"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "LCM"
+                },
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "LCM"
+                },
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "LCM"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CM5T03L|02",
+          "code": "CM5T03L",
+          "name": "MEDICIONES ELECTRICAS",
+          "section": "02",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "LCM"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "MI1120"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MI",
+                  "start": "0940",
+                  "room": "LCM"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "LCM"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "LCM"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "LCM"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CM5T03L|03",
+          "code": "CM5T03L",
+          "name": "MEDICIONES ELECTRICAS",
+          "section": "03",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "JU0850"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "LCM"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "LCM"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "LCM"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "LCM"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "LCM"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "CM5T03L|04",
+          "code": "CM5T03L",
+          "name": "MEDICIONES ELECTRICAS",
+          "section": "04",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "VI0850"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "VI1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "LCM"
+                },
+                {
+                  "day": "VI",
+                  "start": "0850",
+                  "room": "LCM"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "LCM"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "LCM"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DA8M09|51",
+          "code": "DA8M09",
+          "name": "INSTRUMENTACION INDUSTRIAL",
+          "section": "51",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "LCAU"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "LCAU"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "ANM"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "ANM"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "SIE3"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "SIE3"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "SIE3"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "SIE3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DA8M09|53",
+          "code": "DA8M09",
+          "name": "INSTRUMENTACION INDUSTRIAL",
+          "section": "53",
+          "fields": {
+            "professor": {
+              "before": "ESCALONA G LUIS W",
+              "after": "ESCALONA G LUIS W (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "LU1210"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "LCAU"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "LCAU"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AVING"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "AVING"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AVING"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AVING"
+                }
+              ]
+            }
+          }
+        }
+      ]
     }
   ]
 }
