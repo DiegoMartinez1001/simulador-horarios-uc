@@ -2,93 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-15T19:44:38+00:00",
-      "updated_at": "15/11/2026 03:40 pm",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "15/11/2026 02:54 pm",
-        "generated_at": "2026-11-15T19:03:52+00:00",
-        "sections": 1028,
-        "sha256": "fec39eb95b12d5534b7b4b87eff8eef0f5df38ef364c9002cca680b03264a484"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "15/11/2026 03:40 pm",
-        "generated_at": "2026-11-15T19:44:38+00:00",
-        "sections": 1029,
-        "sha256": "7e3398c5ac8f159e3813649a47515764206a0808e6bfc42472145fd10d9d4d4b"
-      },
-      "summary": {
-        "added": 1,
-        "removed": 0,
-        "modified": 1,
-        "schedule_changes": 0,
-        "professor_changes": 1,
-        "status_changes": 0
-      },
-      "changes": [
-        {
-          "type": "modified",
-          "id": "MA1015|26",
-          "code": "MA1015",
-          "name": "CÁLCULO DIFERENCIAL",
-          "section": "26",
-          "fields": {
-            "professor": {
-              "before": "NO ASIGNADO",
-              "after": "PINTO C ARLINYS R"
-            }
-          }
-        },
-        {
-          "type": "added",
-          "id": "MA1015|37",
-          "code": "MA1015",
-          "name": "CÁLCULO DIFERENCIAL",
-          "section": "37",
-          "after": {
-            "name": "CÁLCULO DIFERENCIAL",
-            "professor": "MARCANO O JOSSEILIN J",
-            "status": "ACTIVA",
-            "curriculum": "nuevo",
-            "slots": [
-              {
-                "day": "MI",
-                "start": "1030",
-                "room": "AD8"
-              },
-              {
-                "day": "MI",
-                "start": "1120",
-                "room": "AD8"
-              },
-              {
-                "day": "MI",
-                "start": "1210",
-                "room": "AD8"
-              },
-              {
-                "day": "SA",
-                "start": "1030",
-                "room": "AD1"
-              },
-              {
-                "day": "SA",
-                "start": "1120",
-                "room": "AD1"
-              },
-              {
-                "day": "SA",
-                "start": "1210",
-                "room": "AD1"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
       "generated_at": "2026-11-16T23:25:02+00:00",
       "updated_at": "16/11/2026 07:04 pm",
       "period": "2-2026 R",
@@ -5749,6 +5662,175 @@
         "status_changes": 0
       },
       "changes": []
+    },
+    {
+      "generated_at": "2026-11-20T21:18:07+00:00",
+      "updated_at": "20/11/2026 04:54 pm",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "20/11/2026 11:50 am",
+        "generated_at": "2026-11-20T16:38:45+00:00",
+        "sections": 1043,
+        "sha256": "9f7144640c7edf107f6f307e9dc6f34c2c02ab6762183a773d6b69af5c848b5f"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "20/11/2026 04:54 pm",
+        "generated_at": "2026-11-20T21:18:07+00:00",
+        "sections": 1043,
+        "sha256": "66a8edbd85b76d09250314b4072bcdffd8055c7ea566546be72a9c4e782fed99"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 2,
+        "schedule_changes": 2,
+        "professor_changes": 0,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "IE4M01|81",
+          "code": "IE4M01",
+          "name": "MECANICA RACIONAL",
+          "section": "81",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "A6E"
+                },
+                {
+                  "day": "VI",
+                  "start": "0850",
+                  "room": "A6E"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "A6E"
+                },
+                {
+                  "day": "SA",
+                  "start": "1030",
+                  "room": "A5E"
+                },
+                {
+                  "day": "SA",
+                  "start": "1120",
+                  "room": "A5E"
+                }
+              ],
+              "after": [
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "VI",
+                  "start": "0850",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "SA",
+                  "start": "1030",
+                  "room": "A5E"
+                },
+                {
+                  "day": "SA",
+                  "start": "1120",
+                  "room": "A5E"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|29",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "29",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "AA09"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "AA09"
+                },
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "AA09"
+                },
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "VI",
+                  "start": "0850",
+                  "room": "SIE6"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "SIE6"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "AA09"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "AA09"
+                },
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "AA09"
+                },
+                {
+                  "day": "VI",
+                  "start": "0800",
+                  "room": "A6E"
+                },
+                {
+                  "day": "VI",
+                  "start": "0850",
+                  "room": "A6E"
+                },
+                {
+                  "day": "VI",
+                  "start": "0940",
+                  "room": "A6E"
+                }
+              ]
+            }
+          }
+        }
+      ]
     }
   ]
 }
