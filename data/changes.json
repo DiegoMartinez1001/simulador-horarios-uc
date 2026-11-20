@@ -2,61 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-15T13:40:20+00:00",
-      "updated_at": "15/11/2026 09:39 am",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "15/11/2026 08:42 am",
-        "generated_at": "2026-11-15T12:52:45+00:00",
-        "sections": 1011,
-        "sha256": "64117fc94c46d1753e95d4c2f08da4b6e96853b84e1a78e4da6e4747e6bd4694"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "15/11/2026 09:39 am",
-        "generated_at": "2026-11-15T13:40:20+00:00",
-        "sections": 1011,
-        "sha256": "3bcba05d4c02fc7f239a7e62b8faa4de7cb546c4e590d31419fe5702a1e5154b"
-      },
-      "summary": {
-        "added": 0,
-        "removed": 0,
-        "modified": 2,
-        "schedule_changes": 0,
-        "professor_changes": 2,
-        "status_changes": 0
-      },
-      "changes": [
-        {
-          "type": "modified",
-          "id": "PW7E03L|06",
-          "code": "PW7E03L",
-          "name": "MAQUINAS ELECTRICAS II",
-          "section": "06",
-          "fields": {
-            "professor": {
-              "before": "ROJAS R GUSTAVO A",
-              "after": "RUIZ P GUSTAVO A"
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "PW7E03L|08",
-          "code": "PW7E03L",
-          "name": "MAQUINAS ELECTRICAS II",
-          "section": "08",
-          "fields": {
-            "professor": {
-              "before": "ROJAS R GUSTAVO A",
-              "after": "RUIZ P GUSTAVO A"
-            }
-          }
-        }
-      ]
-    },
-    {
       "generated_at": "2026-11-15T15:10:06+00:00",
       "updated_at": "15/11/2026 10:55 am",
       "period": "2-2026 R",
@@ -6388,6 +6333,34 @@
           }
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-20T14:45:16+00:00",
+      "updated_at": "20/11/2026 10:02 am",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "20/11/2026 08:39 am",
+        "generated_at": "2026-11-20T13:54:31+00:00",
+        "sections": 1043,
+        "sha256": "e4a4d9d446eea43f70d6dbf890ff84b1009e65dceea286252e7b4f63620e794c"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "20/11/2026 10:02 am",
+        "generated_at": "2026-11-20T14:45:16+00:00",
+        "sections": 1043,
+        "sha256": "e4a4d9d446eea43f70d6dbf890ff84b1009e65dceea286252e7b4f63620e794c"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 0,
+        "schedule_changes": 0,
+        "professor_changes": 0,
+        "status_changes": 0
+      },
+      "changes": []
     }
   ]
 }
