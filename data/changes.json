@@ -2,90 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-15T15:10:06+00:00",
-      "updated_at": "15/11/2026 10:55 am",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "15/11/2026 09:39 am",
-        "generated_at": "2026-11-15T13:40:20+00:00",
-        "sections": 1011,
-        "sha256": "3bcba05d4c02fc7f239a7e62b8faa4de7cb546c4e590d31419fe5702a1e5154b"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "15/11/2026 10:55 am",
-        "generated_at": "2026-11-15T15:10:06+00:00",
-        "sections": 1011,
-        "sha256": "63ef40090f2ce805a27bb787a31beae0f15e6122681b63534014cbcf2800001b"
-      },
-      "summary": {
-        "added": 0,
-        "removed": 0,
-        "modified": 1,
-        "schedule_changes": 1,
-        "professor_changes": 0,
-        "status_changes": 0
-      },
-      "changes": [
-        {
-          "type": "modified",
-          "id": "PW9E09|41",
-          "code": "PW9E09",
-          "name": "SISTEMAS DE POTENCIA II",
-          "section": "41",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "LU",
-                  "start": "0940",
-                  "room": "SIE2"
-                },
-                {
-                  "day": "LU",
-                  "start": "1030",
-                  "room": "SIE2"
-                },
-                {
-                  "day": "MA",
-                  "start": "0940",
-                  "room": "LPE"
-                },
-                {
-                  "day": "MA",
-                  "start": "1030",
-                  "room": "LPE"
-                }
-              ],
-              "after": [
-                {
-                  "day": "LU",
-                  "start": "0940",
-                  "room": "SIE2"
-                },
-                {
-                  "day": "LU",
-                  "start": "1030",
-                  "room": "SIE2"
-                },
-                {
-                  "day": "MI",
-                  "start": "0940",
-                  "room": "LPE"
-                },
-                {
-                  "day": "MI",
-                  "start": "1030",
-                  "room": "LPE"
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
       "generated_at": "2026-11-15T19:03:52+00:00",
       "updated_at": "15/11/2026 02:54 pm",
       "period": "2-2026 R",
@@ -6361,6 +6277,320 @@
         "status_changes": 0
       },
       "changes": []
+    },
+    {
+      "generated_at": "2026-11-20T15:40:08+00:00",
+      "updated_at": "20/11/2026 11:22 am",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "20/11/2026 10:02 am",
+        "generated_at": "2026-11-20T14:45:16+00:00",
+        "sections": 1043,
+        "sha256": "e4a4d9d446eea43f70d6dbf890ff84b1009e65dceea286252e7b4f63620e794c"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "20/11/2026 11:22 am",
+        "generated_at": "2026-11-20T15:40:08+00:00",
+        "sections": 1043,
+        "sha256": "9f7144640c7edf107f6f307e9dc6f34c2c02ab6762183a773d6b69af5c848b5f"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 6,
+        "schedule_changes": 6,
+        "professor_changes": 0,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "IQ4023|63",
+          "code": "IQ4023",
+          "name": "INTRODUCCIÓN A LA TERMODINÁMICA",
+          "section": "63",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "LU1210"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "JU1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AF1"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AF1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ4Q01|62",
+          "code": "IQ4Q01",
+          "name": "PRINCIPIOS DE ING. QUIMICA",
+          "section": "62",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "LU0850"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "JU0850"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "LCQ"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "LCQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "LOU1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ6Q05|61",
+          "code": "IQ6Q05",
+          "name": "TERMODINAMICA PARA ING QUIMICA II",
+          "section": "61",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "MA1210"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "JU1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "A6E"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "A6E"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "CIQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "CIQ"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ6Q05|62",
+          "code": "IQ6Q05",
+          "name": "TERMODINAMICA PARA ING QUIMICA II",
+          "section": "62",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "LCQ"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "LCQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "CIQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "CIQ"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "LCQ"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "LCQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "LCQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "LCQ"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ8Q14|62",
+          "code": "IQ8Q14",
+          "name": "MATERIALES DE ING. DE PROCESOS",
+          "section": "62",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "CIQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "CIQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "CIQ"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "CEIQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "CEIQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "CEIQ"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "IQ9Q20|61",
+          "code": "IQ9Q20",
+          "name": "REFINACIÓN",
+          "section": "61",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "CIQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "CIQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "CIQ"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "CEIQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "CEIQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "CEIQ"
+                }
+              ]
+            }
+          }
+        }
+      ]
     }
   ]
 }
