@@ -2,110 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-15T03:08:26+00:00",
-      "updated_at": "14/11/2026 10:44 pm",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "14/11/2026 08:10 pm",
-        "generated_at": "2026-11-15T00:11:21+00:00",
-        "sections": 1011,
-        "sha256": "acbff72491308f7e64ebc703d8811c9405fcbc7c9d8e19fd5b0bcc7776db3abc"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "14/11/2026 10:44 pm",
-        "generated_at": "2026-11-15T03:08:26+00:00",
-        "sections": 1011,
-        "sha256": "452b0e457085ca09ad28122521a1042662cb4e90c489385edd3d9690608bd432"
-      },
-      "summary": {
-        "added": 0,
-        "removed": 0,
-        "modified": 1,
-        "schedule_changes": 1,
-        "professor_changes": 0,
-        "status_changes": 0
-      },
-      "changes": [
-        {
-          "type": "modified",
-          "id": "DA4015|51",
-          "code": "DA4015",
-          "name": "DIBUJO MECANICO",
-          "section": "51",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "JU",
-                  "start": "1120",
-                  "room": "SPM"
-                },
-                {
-                  "day": "JU",
-                  "start": "1210",
-                  "room": "SPM"
-                },
-                {
-                  "day": "JU",
-                  "start": "1300",
-                  "room": "SPM"
-                },
-                {
-                  "day": "JU",
-                  "start": "1350",
-                  "room": "SPM"
-                },
-                {
-                  "day": "JU",
-                  "start": "1440",
-                  "room": "SPM"
-                },
-                {
-                  "day": "JU",
-                  "start": "1530",
-                  "room": "SPM"
-                }
-              ],
-              "after": [
-                {
-                  "day": "JU",
-                  "start": "1120",
-                  "room": "SPM"
-                },
-                {
-                  "day": "JU",
-                  "start": "1210",
-                  "room": "SPM"
-                },
-                {
-                  "day": "JU",
-                  "start": "1300",
-                  "room": "SPM"
-                },
-                {
-                  "day": "JU",
-                  "start": "1350",
-                  "room": "LDM"
-                },
-                {
-                  "day": "JU",
-                  "start": "1440",
-                  "room": "LDM"
-                },
-                {
-                  "day": "JU",
-                  "start": "1530",
-                  "room": "LDM"
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
       "generated_at": "2026-11-15T12:52:45+00:00",
       "updated_at": "15/11/2026 08:42 am",
       "period": "2-2026 R",
@@ -6558,6 +6454,84 @@
                 }
               ]
             }
+          }
+        }
+      ]
+    },
+    {
+      "generated_at": "2026-11-20T02:30:47+00:00",
+      "updated_at": "19/11/2026 10:07 pm",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "19/11/2026 07:22 pm",
+        "generated_at": "2026-11-19T23:29:57+00:00",
+        "sections": 1042,
+        "sha256": "0aba561e89726db2e238f0901a6cf4b62b41ecc6d1011e3761043fd1cfd5b2c4"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "19/11/2026 10:07 pm",
+        "generated_at": "2026-11-20T02:30:47+00:00",
+        "sections": 1043,
+        "sha256": "a3703aa06998ffd0a897c475068e3dcbfa12382fc30532f31bce1abb313c37fe"
+      },
+      "summary": {
+        "added": 1,
+        "removed": 0,
+        "modified": 1,
+        "schedule_changes": 1,
+        "professor_changes": 1,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "PG9E01|01",
+          "code": "PG9E01",
+          "name": "PROYECTO DE GRADO I",
+          "section": "01",
+          "fields": {
+            "professor": {
+              "before": "GUERRA LEDY L",
+              "after": "GUERRA LEDY L (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "SLM"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "AVING"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "added",
+          "id": "PG9E01|03",
+          "code": "PG9E01",
+          "name": "PROYECTO DE GRADO I",
+          "section": "03",
+          "after": {
+            "name": "PROYECTO DE GRADO I",
+            "professor": "GUERRA LEDY L",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "SA",
+                "start": "1120",
+                "room": "SLM"
+              }
+            ]
           }
         }
       ]
