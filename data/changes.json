@@ -2,665 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-17T02:22:02+00:00",
-      "updated_at": "16/11/2026 09:42 pm",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "16/11/2026 07:04 pm",
-        "generated_at": "2026-11-16T23:25:02+00:00",
-        "sections": 1027,
-        "sha256": "2b50a1078a0e2e004ea14aa7b6964ed128447efc06e0c9a532196dea5e5d7e33"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "16/11/2026 09:42 pm",
-        "generated_at": "2026-11-17T02:22:02+00:00",
-        "sections": 1027,
-        "sha256": "a853464071cf97dc849d95082b2260c4a4626e27db77ce8a726f6586f3529db2"
-      },
-      "summary": {
-        "added": 0,
-        "removed": 0,
-        "modified": 14,
-        "schedule_changes": 14,
-        "professor_changes": 0,
-        "status_changes": 0
-      },
-      "changes": [
-        {
-          "type": "modified",
-          "id": "DI2013|01",
-          "code": "DI2013",
-          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
-          "section": "01",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "LU",
-                  "start": "0800",
-                  "room": "LU0850"
-                },
-                {
-                  "day": "MI",
-                  "start": "0800",
-                  "room": "MI0850"
-                }
-              ],
-              "after": [
-                {
-                  "day": "LU",
-                  "start": "0800",
-                  "room": "SD1"
-                },
-                {
-                  "day": "LU",
-                  "start": "0850",
-                  "room": "SD1"
-                },
-                {
-                  "day": "MI",
-                  "start": "0800",
-                  "room": "SD1"
-                },
-                {
-                  "day": "MI",
-                  "start": "0850",
-                  "room": "SD1"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "DI2013|02",
-          "code": "DI2013",
-          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
-          "section": "02",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "LU",
-                  "start": "0940",
-                  "room": "LU1030"
-                },
-                {
-                  "day": "MI",
-                  "start": "0940",
-                  "room": "MI1030"
-                }
-              ],
-              "after": [
-                {
-                  "day": "LU",
-                  "start": "0940",
-                  "room": "SD1"
-                },
-                {
-                  "day": "LU",
-                  "start": "1030",
-                  "room": "SD1"
-                },
-                {
-                  "day": "MI",
-                  "start": "0940",
-                  "room": "SD1"
-                },
-                {
-                  "day": "MI",
-                  "start": "1030",
-                  "room": "SD1"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "DI2013|03",
-          "code": "DI2013",
-          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
-          "section": "03",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "LU",
-                  "start": "1120",
-                  "room": "LU1210"
-                },
-                {
-                  "day": "MI",
-                  "start": "1120",
-                  "room": "MI1210"
-                }
-              ],
-              "after": [
-                {
-                  "day": "LU",
-                  "start": "1120",
-                  "room": "SD1"
-                },
-                {
-                  "day": "LU",
-                  "start": "1210",
-                  "room": "SD1"
-                },
-                {
-                  "day": "MI",
-                  "start": "1120",
-                  "room": "SD1"
-                },
-                {
-                  "day": "MI",
-                  "start": "1210",
-                  "room": "SD1"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "DI2013|04",
-          "code": "DI2013",
-          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
-          "section": "04",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "LU",
-                  "start": "0800",
-                  "room": "LU0850"
-                },
-                {
-                  "day": "MI",
-                  "start": "0800",
-                  "room": "MI0850"
-                }
-              ],
-              "after": [
-                {
-                  "day": "LU",
-                  "start": "0800",
-                  "room": "SD2"
-                },
-                {
-                  "day": "LU",
-                  "start": "0850",
-                  "room": "SD2"
-                },
-                {
-                  "day": "MI",
-                  "start": "0800",
-                  "room": "SD2"
-                },
-                {
-                  "day": "MI",
-                  "start": "0850",
-                  "room": "SD2"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "DI2013|05",
-          "code": "DI2013",
-          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
-          "section": "05",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "LU",
-                  "start": "0940",
-                  "room": "LU1030"
-                },
-                {
-                  "day": "MI",
-                  "start": "0940",
-                  "room": "MI1030"
-                }
-              ],
-              "after": [
-                {
-                  "day": "LU",
-                  "start": "0940",
-                  "room": "SD2"
-                },
-                {
-                  "day": "LU",
-                  "start": "1030",
-                  "room": "SD2"
-                },
-                {
-                  "day": "MI",
-                  "start": "0940",
-                  "room": "SD2"
-                },
-                {
-                  "day": "MI",
-                  "start": "1030",
-                  "room": "SD2"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "DI2013|06",
-          "code": "DI2013",
-          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
-          "section": "06",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "LU",
-                  "start": "1120",
-                  "room": "LU1210"
-                },
-                {
-                  "day": "MI",
-                  "start": "1120",
-                  "room": "MI1210"
-                }
-              ],
-              "after": [
-                {
-                  "day": "LU",
-                  "start": "1120",
-                  "room": "SD2"
-                },
-                {
-                  "day": "LU",
-                  "start": "1210",
-                  "room": "SD2"
-                },
-                {
-                  "day": "MI",
-                  "start": "1120",
-                  "room": "SD2"
-                },
-                {
-                  "day": "MI",
-                  "start": "1210",
-                  "room": "SD2"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "DI3B01|07",
-          "code": "DI3B01",
-          "name": "DIBUJO I",
-          "section": "07",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "MA",
-                  "start": "0800",
-                  "room": "MA0850"
-                },
-                {
-                  "day": "JU",
-                  "start": "0800",
-                  "room": "JU0850"
-                }
-              ],
-              "after": [
-                {
-                  "day": "MA",
-                  "start": "0800",
-                  "room": "SD1"
-                },
-                {
-                  "day": "MA",
-                  "start": "0850",
-                  "room": "SD1"
-                },
-                {
-                  "day": "JU",
-                  "start": "0800",
-                  "room": "SD2"
-                },
-                {
-                  "day": "JU",
-                  "start": "0850",
-                  "room": "SD2"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "DI3B01|08",
-          "code": "DI3B01",
-          "name": "DIBUJO I",
-          "section": "08",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "MA",
-                  "start": "0940",
-                  "room": "MA1030"
-                },
-                {
-                  "day": "JU",
-                  "start": "0940",
-                  "room": "JU1030"
-                }
-              ],
-              "after": [
-                {
-                  "day": "MA",
-                  "start": "0940",
-                  "room": "SD1"
-                },
-                {
-                  "day": "MA",
-                  "start": "1030",
-                  "room": "SD1"
-                },
-                {
-                  "day": "JU",
-                  "start": "0940",
-                  "room": "SD2"
-                },
-                {
-                  "day": "JU",
-                  "start": "1030",
-                  "room": "SD2"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "DI3B01|09",
-          "code": "DI3B01",
-          "name": "DIBUJO I",
-          "section": "09",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "MA",
-                  "start": "1120",
-                  "room": "MA1210"
-                },
-                {
-                  "day": "JU",
-                  "start": "1120",
-                  "room": "JU1210"
-                }
-              ],
-              "after": [
-                {
-                  "day": "MA",
-                  "start": "1120",
-                  "room": "SD1"
-                },
-                {
-                  "day": "MA",
-                  "start": "1210",
-                  "room": "SD1"
-                },
-                {
-                  "day": "JU",
-                  "start": "1120",
-                  "room": "SD2"
-                },
-                {
-                  "day": "JU",
-                  "start": "1210",
-                  "room": "SD2"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "FI3B02|01",
-          "code": "FI3B02",
-          "name": "FISICA II",
-          "section": "01",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "MA",
-                  "start": "0800",
-                  "room": "MA0850"
-                },
-                {
-                  "day": "JU",
-                  "start": "0800",
-                  "room": "JU0850"
-                }
-              ],
-              "after": [
-                {
-                  "day": "MA",
-                  "start": "0800",
-                  "room": "AF2"
-                },
-                {
-                  "day": "MA",
-                  "start": "0850",
-                  "room": "AF2"
-                },
-                {
-                  "day": "JU",
-                  "start": "0800",
-                  "room": "AF2"
-                },
-                {
-                  "day": "JU",
-                  "start": "0850",
-                  "room": "AF2"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "FI3B02|02",
-          "code": "FI3B02",
-          "name": "FISICA II",
-          "section": "02",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "MA",
-                  "start": "0800",
-                  "room": "MA0850"
-                },
-                {
-                  "day": "JU",
-                  "start": "0800",
-                  "room": "JU0850"
-                }
-              ],
-              "after": [
-                {
-                  "day": "MA",
-                  "start": "0800",
-                  "room": "AF1"
-                },
-                {
-                  "day": "MA",
-                  "start": "0850",
-                  "room": "AF1"
-                },
-                {
-                  "day": "JU",
-                  "start": "0800",
-                  "room": "AF1"
-                },
-                {
-                  "day": "JU",
-                  "start": "0850",
-                  "room": "AF1"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "FI3B02|03",
-          "code": "FI3B02",
-          "name": "FISICA II",
-          "section": "03",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "MA",
-                  "start": "0940",
-                  "room": "MA1030"
-                },
-                {
-                  "day": "JU",
-                  "start": "0940",
-                  "room": "JU1030"
-                }
-              ],
-              "after": [
-                {
-                  "day": "MA",
-                  "start": "0940",
-                  "room": "AF2"
-                },
-                {
-                  "day": "MA",
-                  "start": "1030",
-                  "room": "AF2"
-                },
-                {
-                  "day": "JU",
-                  "start": "0940",
-                  "room": "AF2"
-                },
-                {
-                  "day": "JU",
-                  "start": "1030",
-                  "room": "AF2"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "FI3B02|04",
-          "code": "FI3B02",
-          "name": "FISICA II",
-          "section": "04",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "MA",
-                  "start": "0940",
-                  "room": "MA1030"
-                },
-                {
-                  "day": "JU",
-                  "start": "0940",
-                  "room": "JU1030"
-                }
-              ],
-              "after": [
-                {
-                  "day": "MA",
-                  "start": "0940",
-                  "room": "AF1"
-                },
-                {
-                  "day": "MA",
-                  "start": "1030",
-                  "room": "AF1"
-                },
-                {
-                  "day": "JU",
-                  "start": "0940",
-                  "room": "AF1"
-                },
-                {
-                  "day": "JU",
-                  "start": "1030",
-                  "room": "AF1"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "FI3B02|05",
-          "code": "FI3B02",
-          "name": "FISICA II",
-          "section": "05",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "MA",
-                  "start": "1300",
-                  "room": "MA1350"
-                },
-                {
-                  "day": "JU",
-                  "start": "1300",
-                  "room": "JU1350"
-                }
-              ],
-              "after": [
-                {
-                  "day": "MA",
-                  "start": "1300",
-                  "room": "AF2"
-                },
-                {
-                  "day": "MA",
-                  "start": "1350",
-                  "room": "AF2"
-                },
-                {
-                  "day": "JU",
-                  "start": "1300",
-                  "room": "AF2"
-                },
-                {
-                  "day": "JU",
-                  "start": "1350",
-                  "room": "AF2"
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
       "generated_at": "2026-11-17T08:22:40+00:00",
       "updated_at": "17/11/2026 04:12 am",
       "period": "2-2026 R",
@@ -4456,6 +3797,80 @@
                   "day": "VI",
                   "start": "1210",
                   "room": "SD1"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "generated_at": "2026-11-21T15:43:24+00:00",
+      "updated_at": "21/11/2026 11:29 am",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "21/11/2026 08:42 am",
+        "generated_at": "2026-11-21T13:15:00+00:00",
+        "sections": 1043,
+        "sha256": "b09d439da8f060f48a2fa8a023207614afd0007cca2526916a7c685434b7b1c5"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "21/11/2026 11:29 am",
+        "generated_at": "2026-11-21T15:43:24+00:00",
+        "sections": 1043,
+        "sha256": "1f5a22845bf00e254cf8571872dc80b71dbdaaad5b3ee917ddb93908dc74e2d3"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 1,
+        "schedule_changes": 1,
+        "professor_changes": 0,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "PW4E01|41",
+          "code": "PW4E01",
+          "name": "TERMODINAMICA Y FLUIDOS",
+          "section": "41",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "SA",
+                  "start": "1120",
+                  "room": "SIE3"
+                },
+                {
+                  "day": "SA",
+                  "start": "1210",
+                  "room": "SIE3"
+                },
+                {
+                  "day": "SA",
+                  "start": "1300",
+                  "room": "SIE3"
+                }
+              ],
+              "after": [
+                {
+                  "day": "SA",
+                  "start": "1120",
+                  "room": "A4M"
+                },
+                {
+                  "day": "SA",
+                  "start": "1210",
+                  "room": "A4M"
+                },
+                {
+                  "day": "SA",
+                  "start": "1300",
+                  "room": "A4M"
                 }
               ]
             }
