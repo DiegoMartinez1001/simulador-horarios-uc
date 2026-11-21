@@ -2,34 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-17T08:22:40+00:00",
-      "updated_at": "17/11/2026 04:12 am",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "16/11/2026 09:42 pm",
-        "generated_at": "2026-11-17T02:22:02+00:00",
-        "sections": 1027,
-        "sha256": "a853464071cf97dc849d95082b2260c4a4626e27db77ce8a726f6586f3529db2"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "17/11/2026 04:12 am",
-        "generated_at": "2026-11-17T08:22:40+00:00",
-        "sections": 1027,
-        "sha256": "a853464071cf97dc849d95082b2260c4a4626e27db77ce8a726f6586f3529db2"
-      },
-      "summary": {
-        "added": 0,
-        "removed": 0,
-        "modified": 0,
-        "schedule_changes": 0,
-        "professor_changes": 0,
-        "status_changes": 0
-      },
-      "changes": []
-    },
-    {
       "generated_at": "2026-11-17T16:28:19+00:00",
       "updated_at": "17/11/2026 11:49 am",
       "period": "2-2026 R",
@@ -3871,6 +3843,110 @@
                   "day": "SA",
                   "start": "1300",
                   "room": "A4M"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "generated_at": "2026-11-21T16:26:38+00:00",
+      "updated_at": "21/11/2026 12:21 pm",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "21/11/2026 11:29 am",
+        "generated_at": "2026-11-21T15:43:24+00:00",
+        "sections": 1043,
+        "sha256": "1f5a22845bf00e254cf8571872dc80b71dbdaaad5b3ee917ddb93908dc74e2d3"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "21/11/2026 12:21 pm",
+        "generated_at": "2026-11-21T16:26:38+00:00",
+        "sections": 1043,
+        "sha256": "f8c133ef9cba3fd0382c30a4a4cec206b2781a427fc889705d6b9929e40760cc"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 1,
+        "schedule_changes": 1,
+        "professor_changes": 0,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "MA1015|09",
+          "code": "MA1015",
+          "name": "CÁLCULO DIFERENCIAL",
+          "section": "09",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "AE5"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AE5"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "AE5"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "A8I"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "AD7"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AD7"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "AD7"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "A8I"
                 }
               ]
             }
