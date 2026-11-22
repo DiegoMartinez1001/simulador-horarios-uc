@@ -2,34 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-19T22:51:40+00:00",
-      "updated_at": "19/11/2026 06:17 pm",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "19/11/2026 04:55 pm",
-        "generated_at": "2026-11-19T21:14:42+00:00",
-        "sections": 1042,
-        "sha256": "09245b2d44fc792864f1bac3429bffc668ca51ae16d28b9a05b53d91059f091c"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "19/11/2026 06:17 pm",
-        "generated_at": "2026-11-19T22:51:40+00:00",
-        "sections": 1042,
-        "sha256": "09245b2d44fc792864f1bac3429bffc668ca51ae16d28b9a05b53d91059f091c"
-      },
-      "summary": {
-        "added": 0,
-        "removed": 0,
-        "modified": 0,
-        "schedule_changes": 0,
-        "professor_changes": 0,
-        "status_changes": 0
-      },
-      "changes": []
-    },
-    {
       "generated_at": "2026-11-19T23:29:57+00:00",
       "updated_at": "19/11/2026 07:22 pm",
       "period": "2-2026 R",
@@ -1945,6 +1917,935 @@
                   "day": "VI",
                   "start": "1210",
                   "room": "AVING"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "generated_at": "2026-11-22T22:29:37+00:00",
+      "updated_at": "22/11/2026 06:23 pm",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "22/11/2026 11:28 am",
+        "generated_at": "2026-11-22T15:51:32+00:00",
+        "sections": 1049,
+        "sha256": "4d31ba7144a579fc0b9672cd3ed1ed8c8c15424d40bf51523edaab7d54b75a0b"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "22/11/2026 06:23 pm",
+        "generated_at": "2026-11-22T22:29:37+00:00",
+        "sections": 1049,
+        "sha256": "5d79b6132fd8252ef766aff58348569e99c6119ebab909c5b859d73213170cc3"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 16,
+        "schedule_changes": 16,
+        "professor_changes": 0,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "DQ6Q03|62",
+          "code": "DQ6Q03",
+          "name": "FISICOQUIMICA",
+          "section": "62",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1300",
+                  "room": "AEIQ"
+                },
+                {
+                  "day": "MA",
+                  "start": "1350",
+                  "room": "AEIQ"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "LOU1"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1300",
+                  "room": "A4M"
+                },
+                {
+                  "day": "MA",
+                  "start": "1350",
+                  "room": "A4M"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "LOU1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "FI2015|06",
+          "code": "FI2015",
+          "name": "FÍSICA MECÁNICA",
+          "section": "06",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "A8I"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A8I"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "A8I"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "A3M"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "A3M"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "A3M"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "A6E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A6E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "A6E"
+                },
+                {
+                  "day": "MI",
+                  "start": "1030",
+                  "room": "A3M"
+                },
+                {
+                  "day": "MI",
+                  "start": "1120",
+                  "room": "A3M"
+                },
+                {
+                  "day": "MI",
+                  "start": "1210",
+                  "room": "A3M"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "GE0M02|31",
+          "code": "GE0M02",
+          "name": "ADMINISTRACION DE EMPRESAS",
+          "section": "31",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "A9I"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "A9I"
+                },
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "A9I"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "AE4"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "AE4"
+                },
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "AE4"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "GE8E01|33",
+          "code": "GE8E01",
+          "name": "INGENIERIA ECONOMICA",
+          "section": "33",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "A9I"
+                },
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "A9I"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A9I"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "A7E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "A7E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A7E"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "GE8M01|33",
+          "code": "GE8M01",
+          "name": "INGENIERIA ECONOMICA",
+          "section": "33",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "A9I"
+                },
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "A9I"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A9I"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "A7E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "A7E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A7E"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "GE8T01|33",
+          "code": "GE8T01",
+          "name": "INGENIERIA ECONOMICA",
+          "section": "33",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "A9I"
+                },
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "A9I"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A9I"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "A7E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "A7E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A7E"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "GE9C01|33",
+          "code": "GE9C01",
+          "name": "INGENIERIA ECONOMICA",
+          "section": "33",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "A9I"
+                },
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "A9I"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A9I"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0940",
+                  "room": "A7E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "A7E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A7E"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "GE9E02|31",
+          "code": "GE9E02",
+          "name": "PRINCIPIO DE GERENCIA",
+          "section": "31",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "A9I"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "A9I"
+                },
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "A9I"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "AE4"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "AE4"
+                },
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "AE4"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "GE9Q02|31",
+          "code": "GE9Q02",
+          "name": "PRINCIPIOS DE GERENCIA",
+          "section": "31",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "A9I"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "A9I"
+                },
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "A9I"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "AE4"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "AE4"
+                },
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "AE4"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "HU1013|22",
+          "code": "HU1013",
+          "name": "FUNDAMENTOS DE CIENCIAS HUMANAS",
+          "section": "22",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "AE4"
+                },
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "AE4"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "AE4"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "A9I"
+                },
+                {
+                  "day": "MA",
+                  "start": "1120",
+                  "room": "A9I"
+                },
+                {
+                  "day": "MA",
+                  "start": "1210",
+                  "room": "A9I"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "ID3023|01",
+          "code": "ID3023",
+          "name": "INGLÉS INSTRUMENTAL",
+          "section": "01",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "A9I"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "A9I"
+                },
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "A9I"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "A9I"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "0800",
+                  "room": "A9I"
+                },
+                {
+                  "day": "LU",
+                  "start": "0850",
+                  "room": "A9I"
+                },
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "AE4"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "AE4"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|13",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "13",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "AE4"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AE4"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "AE4"
+                },
+                {
+                  "day": "SA",
+                  "start": "1030",
+                  "room": "AD8"
+                },
+                {
+                  "day": "SA",
+                  "start": "1120",
+                  "room": "AD8"
+                },
+                {
+                  "day": "SA",
+                  "start": "1210",
+                  "room": "AD8"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "A8I"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A8I"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "A8I"
+                },
+                {
+                  "day": "SA",
+                  "start": "1030",
+                  "room": "AD8"
+                },
+                {
+                  "day": "SA",
+                  "start": "1120",
+                  "room": "AD8"
+                },
+                {
+                  "day": "SA",
+                  "start": "1210",
+                  "room": "AD8"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|17",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "17",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "AE4"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "AE4"
+                },
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "AE4"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "A10"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "A10"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "A10"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "A9I"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "A9I"
+                },
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "A9I"
+                },
+                {
+                  "day": "JU",
+                  "start": "0800",
+                  "room": "A10"
+                },
+                {
+                  "day": "JU",
+                  "start": "0850",
+                  "room": "A10"
+                },
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "A10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|22",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "22",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "1300",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1350",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1440",
+                  "room": "A8I"
+                },
+                {
+                  "day": "SA",
+                  "start": "0800",
+                  "room": "A7E"
+                },
+                {
+                  "day": "SA",
+                  "start": "0850",
+                  "room": "A7E"
+                },
+                {
+                  "day": "SA",
+                  "start": "0940",
+                  "room": "A7E"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "1300",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1350",
+                  "room": "A8I"
+                },
+                {
+                  "day": "JU",
+                  "start": "1440",
+                  "room": "A8I"
+                },
+                {
+                  "day": "SA",
+                  "start": "0800",
+                  "room": "AA09"
+                },
+                {
+                  "day": "SA",
+                  "start": "0850",
+                  "room": "AA09"
+                },
+                {
+                  "day": "SA",
+                  "start": "0940",
+                  "room": "AA09"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "MA1025|28",
+          "code": "MA1025",
+          "name": "GEOMETRÍA ANALÍTICA",
+          "section": "28",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "A7E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A7E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "A7E"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "AA09"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AA09"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "AA09"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1030",
+                  "room": "A9I"
+                },
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A9I"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "A9I"
+                },
+                {
+                  "day": "VI",
+                  "start": "1030",
+                  "room": "AA09"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AA09"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "AA09"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "QM2013|05",
+          "code": "QM2013",
+          "name": "FUNDAMENTOS DE QUÍMICA GENERAL",
+          "section": "05",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "A6E"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "A6E"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AD2"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AD2"
+                }
+              ],
+              "after": [
+                {
+                  "day": "LU",
+                  "start": "1120",
+                  "room": "AE4"
+                },
+                {
+                  "day": "LU",
+                  "start": "1210",
+                  "room": "AE4"
+                },
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AD2"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AD2"
                 }
               ]
             }
