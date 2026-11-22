@@ -2,90 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-17T16:28:19+00:00",
-      "updated_at": "17/11/2026 11:49 am",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "17/11/2026 04:12 am",
-        "generated_at": "2026-11-17T08:22:40+00:00",
-        "sections": 1027,
-        "sha256": "a853464071cf97dc849d95082b2260c4a4626e27db77ce8a726f6586f3529db2"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "17/11/2026 11:49 am",
-        "generated_at": "2026-11-17T16:28:19+00:00",
-        "sections": 1027,
-        "sha256": "d1511178af9db2870ac817f86c29259fd9b00a56940c8ace13164a77525b58e5"
-      },
-      "summary": {
-        "added": 0,
-        "removed": 0,
-        "modified": 1,
-        "schedule_changes": 1,
-        "professor_changes": 0,
-        "status_changes": 0
-      },
-      "changes": [
-        {
-          "type": "modified",
-          "id": "MA2043|11",
-          "code": "MA2043",
-          "name": "ÁLGEBRA LINEAL",
-          "section": "11",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "MA",
-                  "start": "1120",
-                  "room": "A8I"
-                },
-                {
-                  "day": "MA",
-                  "start": "1210",
-                  "room": "A8I"
-                },
-                {
-                  "day": "JU",
-                  "start": "1120",
-                  "room": "SIE5"
-                },
-                {
-                  "day": "JU",
-                  "start": "1210",
-                  "room": "SIE5"
-                }
-              ],
-              "after": [
-                {
-                  "day": "MA",
-                  "start": "1120",
-                  "room": "SIE6"
-                },
-                {
-                  "day": "MA",
-                  "start": "1210",
-                  "room": "SIE6"
-                },
-                {
-                  "day": "JU",
-                  "start": "1120",
-                  "room": "SIE5"
-                },
-                {
-                  "day": "JU",
-                  "start": "1210",
-                  "room": "SIE5"
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
       "generated_at": "2026-11-19T18:18:33+00:00",
       "updated_at": "19/11/2026 01:54 pm",
       "period": "2-2026 R",
@@ -3947,6 +3863,80 @@
                   "day": "JU",
                   "start": "1210",
                   "room": "A8I"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "generated_at": "2026-11-22T11:41:39+00:00",
+      "updated_at": "22/11/2026 07:34 am",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "21/11/2026 12:21 pm",
+        "generated_at": "2026-11-21T16:26:38+00:00",
+        "sections": 1043,
+        "sha256": "f8c133ef9cba3fd0382c30a4a4cec206b2781a427fc889705d6b9929e40760cc"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "22/11/2026 07:34 am",
+        "generated_at": "2026-11-22T11:41:39+00:00",
+        "sections": 1043,
+        "sha256": "67a43e1a9ad0df9af421e80c630b2eca0be7ace966fbe8410ddbcf852e791655"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 1,
+        "schedule_changes": 1,
+        "professor_changes": 0,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "IQ8Q12|61",
+          "code": "IQ8Q12",
+          "name": "LAB. DE INGENIERIA QUIMICA II",
+          "section": "61",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "MA0850"
+                },
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "MA1030"
+                }
+              ],
+              "after": [
+                {
+                  "day": "MA",
+                  "start": "0800",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "MA",
+                  "start": "0850",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "MA",
+                  "start": "0940",
+                  "room": "LOU1"
+                },
+                {
+                  "day": "MA",
+                  "start": "1030",
+                  "room": "LOU1"
                 }
               ]
             }
