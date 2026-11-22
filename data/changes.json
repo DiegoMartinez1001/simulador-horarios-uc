@@ -2,75 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-19T21:14:42+00:00",
-      "updated_at": "19/11/2026 04:55 pm",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "19/11/2026 03:01 pm",
-        "generated_at": "2026-11-19T19:24:37+00:00",
-        "sections": 1041,
-        "sha256": "8ab183f57d98b3a613aa2ba4c1d6cf1e1d5693110b7e1d345715152e8d641d09"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "19/11/2026 04:55 pm",
-        "generated_at": "2026-11-19T21:14:42+00:00",
-        "sections": 1042,
-        "sha256": "09245b2d44fc792864f1bac3429bffc668ca51ae16d28b9a05b53d91059f091c"
-      },
-      "summary": {
-        "added": 1,
-        "removed": 0,
-        "modified": 0,
-        "schedule_changes": 0,
-        "professor_changes": 0,
-        "status_changes": 0
-      },
-      "changes": [
-        {
-          "type": "added",
-          "id": "DA9M11|02",
-          "code": "DA9M11",
-          "name": "AUTOMATIZACION INDUSTRIAL",
-          "section": "02",
-          "after": {
-            "name": "AUTOMATIZACION INDUSTRIAL",
-            "professor": "ESCALONA G LUIS W",
-            "status": "ACTIVA",
-            "curriculum": "viejo",
-            "slots": [
-              {
-                "day": "MI",
-                "start": "0800",
-                "room": "SIE3"
-              },
-              {
-                "day": "MI",
-                "start": "0850",
-                "room": "SIE3"
-              },
-              {
-                "day": "MI",
-                "start": "0940",
-                "room": "SIE3"
-              },
-              {
-                "day": "VI",
-                "start": "0800",
-                "room": "LDM"
-              },
-              {
-                "day": "VI",
-                "start": "0850",
-                "room": "LDM"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
       "generated_at": "2026-11-19T22:51:40+00:00",
       "updated_at": "19/11/2026 06:17 pm",
       "period": "2-2026 R",
@@ -1824,6 +1755,198 @@
             "professor": {
               "before": "NO ASIGNADO",
               "after": "GARCIA D MARIA D"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "generated_at": "2026-11-22T15:51:32+00:00",
+      "updated_at": "22/11/2026 11:28 am",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "22/11/2026 10:45 am",
+        "generated_at": "2026-11-22T15:08:17+00:00",
+        "sections": 1049,
+        "sha256": "e321c5fed8812580e0b50b62df2c5c975c41a728bb188db8fd1aa191c154985e"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "22/11/2026 11:28 am",
+        "generated_at": "2026-11-22T15:51:32+00:00",
+        "sections": 1049,
+        "sha256": "4d31ba7144a579fc0b9672cd3ed1ed8c8c15424d40bf51523edaab7d54b75a0b"
+      },
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "modified": 3,
+        "schedule_changes": 3,
+        "professor_changes": 2,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "DI2013|14",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "14",
+          "fields": {
+            "professor": {
+              "before": "CORALES H CARLOS J",
+              "after": "CORALES H CARLOS J (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "SD1"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "SD1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "SD1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "SD1"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AVING"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AVING"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AVING"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "AVING"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI3023|02",
+          "code": "DI3023",
+          "name": "DIBUJO INDUSTRIAL PARA INGENIERIA",
+          "section": "02",
+          "fields": {
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "JU1210"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "VI1210"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "SD1"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "SD1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "SD1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "SD1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "DI3B01|14",
+          "code": "DI3B01",
+          "name": "DIBUJO I",
+          "section": "14",
+          "fields": {
+            "professor": {
+              "before": "CORALES H CARLOS J",
+              "after": "CORALES H CARLOS J (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "SD1"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "SD1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "SD1"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "SD1"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "1120",
+                  "room": "AVING"
+                },
+                {
+                  "day": "JU",
+                  "start": "1210",
+                  "room": "AVING"
+                },
+                {
+                  "day": "VI",
+                  "start": "1120",
+                  "room": "AVING"
+                },
+                {
+                  "day": "VI",
+                  "start": "1210",
+                  "room": "AVING"
+                }
+              ]
             }
           }
         }
