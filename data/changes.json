@@ -2,145 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-19T19:24:37+00:00",
-      "updated_at": "19/11/2026 03:01 pm",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "19/11/2026 01:54 pm",
-        "generated_at": "2026-11-19T18:18:33+00:00",
-        "sections": 1041,
-        "sha256": "33c46dc0b8cec3a1bb5448033dd0e9de9ab948d09a43b692a19cbaeca6a11329"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "19/11/2026 03:01 pm",
-        "generated_at": "2026-11-19T19:24:37+00:00",
-        "sections": 1041,
-        "sha256": "8ab183f57d98b3a613aa2ba4c1d6cf1e1d5693110b7e1d345715152e8d641d09"
-      },
-      "summary": {
-        "added": 0,
-        "removed": 0,
-        "modified": 2,
-        "schedule_changes": 2,
-        "professor_changes": 0,
-        "status_changes": 0
-      },
-      "changes": [
-        {
-          "type": "modified",
-          "id": "EC5E01|41",
-          "code": "EC5E01",
-          "name": "ELECTRONICA I",
-          "section": "41",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "MA",
-                  "start": "1530",
-                  "room": "SIE2"
-                },
-                {
-                  "day": "MA",
-                  "start": "1620",
-                  "room": "SIE2"
-                },
-                {
-                  "day": "JU",
-                  "start": "1530",
-                  "room": "SIE2"
-                },
-                {
-                  "day": "JU",
-                  "start": "1620",
-                  "room": "SIE2"
-                }
-              ],
-              "after": [
-                {
-                  "day": "MA",
-                  "start": "1530",
-                  "room": "AF1"
-                },
-                {
-                  "day": "MA",
-                  "start": "1620",
-                  "room": "AF1"
-                },
-                {
-                  "day": "JU",
-                  "start": "1530",
-                  "room": "A3M"
-                },
-                {
-                  "day": "JU",
-                  "start": "1620",
-                  "room": "A3M"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "type": "modified",
-          "id": "EC5T01|41",
-          "code": "EC5T01",
-          "name": "ELECTRONICA I",
-          "section": "41",
-          "fields": {
-            "slots": {
-              "before": [
-                {
-                  "day": "MA",
-                  "start": "1530",
-                  "room": "SIE2"
-                },
-                {
-                  "day": "MA",
-                  "start": "1620",
-                  "room": "SIE2"
-                },
-                {
-                  "day": "JU",
-                  "start": "1530",
-                  "room": "SIE2"
-                },
-                {
-                  "day": "JU",
-                  "start": "1620",
-                  "room": "SIE2"
-                }
-              ],
-              "after": [
-                {
-                  "day": "MA",
-                  "start": "1530",
-                  "room": "AF1"
-                },
-                {
-                  "day": "MA",
-                  "start": "1620",
-                  "room": "AF1"
-                },
-                {
-                  "day": "JU",
-                  "start": "1530",
-                  "room": "A3M"
-                },
-                {
-                  "day": "JU",
-                  "start": "1620",
-                  "room": "A3M"
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
       "generated_at": "2026-11-19T21:14:42+00:00",
       "updated_at": "19/11/2026 04:55 pm",
       "period": "2-2026 R",
@@ -1672,6 +1533,297 @@
             "professor": {
               "before": "NO ASIGNADO",
               "after": "AROCHA M GLADYS R"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "generated_at": "2026-11-22T15:08:17+00:00",
+      "updated_at": "22/11/2026 10:45 am",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "22/11/2026 08:00 am",
+        "generated_at": "2026-11-22T12:27:32+00:00",
+        "sections": 1043,
+        "sha256": "4787c905bc44a13e05c99943963eaa31b9a8f3c9a20fb2b6fc2eec32cdf87015"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "22/11/2026 10:45 am",
+        "generated_at": "2026-11-22T15:08:17+00:00",
+        "sections": 1049,
+        "sha256": "e321c5fed8812580e0b50b62df2c5c975c41a728bb188db8fd1aa191c154985e"
+      },
+      "summary": {
+        "added": 6,
+        "removed": 0,
+        "modified": 4,
+        "schedule_changes": 0,
+        "professor_changes": 4,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "added",
+          "id": "DI2013|22",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "22",
+          "after": {
+            "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+            "professor": "NUÑEZ M JAHZEEL S",
+            "status": "ACTIVA",
+            "curriculum": "nuevo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1440",
+                "room": "SD1"
+              },
+              {
+                "day": "MA",
+                "start": "1530",
+                "room": "SD1"
+              },
+              {
+                "day": "JU",
+                "start": "1440",
+                "room": "SD1"
+              },
+              {
+                "day": "JU",
+                "start": "1530",
+                "room": "SD1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "DI2013|23",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "23",
+          "after": {
+            "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+            "professor": "NUÑEZ M JAHZEEL S",
+            "status": "ACTIVA",
+            "curriculum": "nuevo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1620",
+                "room": "SD1"
+              },
+              {
+                "day": "MA",
+                "start": "1710",
+                "room": "SD1"
+              },
+              {
+                "day": "JU",
+                "start": "1620",
+                "room": "SD1"
+              },
+              {
+                "day": "JU",
+                "start": "1710",
+                "room": "SD1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "DI2013|24",
+          "code": "DI2013",
+          "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+          "section": "24",
+          "after": {
+            "name": "FUNDAMENTOS DE DIBUJO PARA INGENIERÍA",
+            "professor": "NUÑEZ M JAHZEEL S",
+            "status": "ACTIVA",
+            "curriculum": "nuevo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0940",
+                "room": "SD2"
+              },
+              {
+                "day": "MA",
+                "start": "1030",
+                "room": "SD2"
+              },
+              {
+                "day": "VI",
+                "start": "0940",
+                "room": "SD2"
+              },
+              {
+                "day": "VI",
+                "start": "1030",
+                "room": "SD2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "DI3B01|22",
+          "code": "DI3B01",
+          "name": "DIBUJO I",
+          "section": "22",
+          "after": {
+            "name": "DIBUJO I",
+            "professor": "NUÑEZ M JAHZEEL S",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1440",
+                "room": "SD1"
+              },
+              {
+                "day": "MA",
+                "start": "1530",
+                "room": "SD1"
+              },
+              {
+                "day": "JU",
+                "start": "1440",
+                "room": "SD1"
+              },
+              {
+                "day": "JU",
+                "start": "1530",
+                "room": "SD1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "DI3B01|23",
+          "code": "DI3B01",
+          "name": "DIBUJO I",
+          "section": "23",
+          "after": {
+            "name": "DIBUJO I",
+            "professor": "NUÑEZ M JAHZEEL S",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "1620",
+                "room": "SD1"
+              },
+              {
+                "day": "MA",
+                "start": "1710",
+                "room": "SD1"
+              },
+              {
+                "day": "JU",
+                "start": "1620",
+                "room": "SD1"
+              },
+              {
+                "day": "JU",
+                "start": "1710",
+                "room": "SD1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "id": "DI3B01|24",
+          "code": "DI3B01",
+          "name": "DIBUJO I",
+          "section": "24",
+          "after": {
+            "name": "DIBUJO I",
+            "professor": "NUÑEZ M JAHZEEL S",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "MA",
+                "start": "0940",
+                "room": "SD2"
+              },
+              {
+                "day": "MA",
+                "start": "1030",
+                "room": "SD2"
+              },
+              {
+                "day": "VI",
+                "start": "0940",
+                "room": "SD2"
+              },
+              {
+                "day": "VI",
+                "start": "1030",
+                "room": "SD2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "modified",
+          "id": "FI3033|12",
+          "code": "FI3033",
+          "name": "FÍSICA EXPERIMENTAL",
+          "section": "12",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "GARCIA D MARIA D"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "FI3033|15",
+          "code": "FI3033",
+          "name": "FÍSICA EXPERIMENTAL",
+          "section": "15",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "GARCIA D MARIA D"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "FI3B03|12",
+          "code": "FI3B03",
+          "name": "LABORATORIO I DE FISICA",
+          "section": "12",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "GARCIA D MARIA D"
+            }
+          }
+        },
+        {
+          "type": "modified",
+          "id": "FI3B03|15",
+          "code": "FI3B03",
+          "name": "LABORATORIO I DE FISICA",
+          "section": "15",
+          "fields": {
+            "professor": {
+              "before": "NO ASIGNADO",
+              "after": "GARCIA D MARIA D"
             }
           }
         }
