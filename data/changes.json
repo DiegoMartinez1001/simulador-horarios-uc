@@ -2,34 +2,6 @@
   "schema_version": 1,
   "history": [
     {
-      "generated_at": "2026-11-20T14:45:16+00:00",
-      "updated_at": "20/11/2026 10:02 am",
-      "period": "2-2026 R",
-      "from": {
-        "period": "2-2026 R",
-        "updated_at": "20/11/2026 08:39 am",
-        "generated_at": "2026-11-20T13:54:31+00:00",
-        "sections": 1043,
-        "sha256": "e4a4d9d446eea43f70d6dbf890ff84b1009e65dceea286252e7b4f63620e794c"
-      },
-      "to": {
-        "period": "2-2026 R",
-        "updated_at": "20/11/2026 10:02 am",
-        "generated_at": "2026-11-20T14:45:16+00:00",
-        "sections": 1043,
-        "sha256": "e4a4d9d446eea43f70d6dbf890ff84b1009e65dceea286252e7b4f63620e794c"
-      },
-      "summary": {
-        "added": 0,
-        "removed": 0,
-        "modified": 0,
-        "schedule_changes": 0,
-        "professor_changes": 0,
-        "status_changes": 0
-      },
-      "changes": []
-    },
-    {
       "generated_at": "2026-11-20T15:40:08+00:00",
       "updated_at": "20/11/2026 11:22 am",
       "period": "2-2026 R",
@@ -2660,6 +2632,99 @@
                 }
               ]
             }
+          }
+        }
+      ]
+    },
+    {
+      "generated_at": "2026-11-27T21:25:53+00:00",
+      "updated_at": "27/11/2026 05:11 pm",
+      "period": "2-2026 R",
+      "from": {
+        "period": "2-2026 R",
+        "updated_at": "27/11/2026 11:50 am",
+        "generated_at": "2026-11-27T16:43:41+00:00",
+        "sections": 1049,
+        "sha256": "db0b2f1d005614fa512c0a1f842549b7b1ba8fcdab278baa8bf30610604e54c2"
+      },
+      "to": {
+        "period": "2-2026 R",
+        "updated_at": "27/11/2026 05:11 pm",
+        "generated_at": "2026-11-27T21:25:53+00:00",
+        "sections": 1050,
+        "sha256": "d97be21392291ffcd45f1dc7d72a9230d3cf894b640a30ee27e0274678686255"
+      },
+      "summary": {
+        "added": 1,
+        "removed": 0,
+        "modified": 1,
+        "schedule_changes": 1,
+        "professor_changes": 1,
+        "status_changes": 0
+      },
+      "changes": [
+        {
+          "type": "modified",
+          "id": "MP7I01L|02",
+          "code": "MP7I01L",
+          "name": "PROCESOS DE MANUFACTURA",
+          "section": "02",
+          "fields": {
+            "professor": {
+              "before": "FRANCO A WILFREDO J",
+              "after": "FRANCO A WILFREDO J (CERRADA)"
+            },
+            "slots": {
+              "before": [
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "LPROC"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "LPROC"
+                }
+              ],
+              "after": [
+                {
+                  "day": "JU",
+                  "start": "0940",
+                  "room": "AVING"
+                },
+                {
+                  "day": "JU",
+                  "start": "1030",
+                  "room": "AVING"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "added",
+          "id": "MP7I01L|04",
+          "code": "MP7I01L",
+          "name": "PROCESOS DE MANUFACTURA",
+          "section": "04",
+          "after": {
+            "name": "PROCESOS DE MANUFACTURA",
+            "professor": "FRANCO A WILFREDO J",
+            "status": "ACTIVA",
+            "curriculum": "viejo",
+            "slots": [
+              {
+                "day": "JU",
+                "start": "1300",
+                "room": "LPROC"
+              },
+              {
+                "day": "JU",
+                "start": "1350",
+                "room": "LPROC"
+              }
+            ]
           }
         }
       ]
